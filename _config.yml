@@ -1,19 +1,19 @@
 # Site settings
 title: An00bRektn
-description: "Not another cs student blog"
+description: "Not Another CS Student Blog"
 baseurl: "/" # for test: remove string '/space-jekyll-template' to ''
-url: "http://An00bRektn.github.io" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
+url: "https://An00bRektn.github.io" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
 
 # User settings
 username: An00bRektn
 user_title: An00bRektn
 email: ryan.syed1305@gmail.com
-twitter_username: loremipsum
+#twitter_username: loremipsum
 github_username:  An00bRektn
-gplus_username:  loremipsum
-linkedin_public_url: loremipsum # Example: For public profile 'www.linkedin.com/in/john-smith', 'john-smith' is your linkedin_public_url
-disqus_username: loremipsum
-profile_picture: https://68.media.tumblr.com/93f384858e9273d5b980b418e2f2f4d5/tumblr_o5i2aybLJG1uapsfmo2_250.png
+#gplus_username:  loremipsum
+#linkedin_public_url: loremipsum # Example: For public profile 'www.linkedin.com/in/john-smith', 'john-smith' is your linkedin_public_url
+#disqus_username: loremipsum
+profile_picture: https://avatars.githubusercontent.com/u/58986498?s=460&u=ae50f9e5e53e1b2402d7702abdef2d0492cb8958&v=4
 
 # Build settings
 markdown: kramdown
@@ -47,12 +47,12 @@ links:
       key_trigger: 5
   section_2:
     - title: github
-      url: http://www.github.com/victorvoid
+      url: http://www.github.com/An00bRektn
       new_tab: true
       key_trigger: g
-    - title: twitter
-      url: http://www.twitter.com/victorvoid
-      key_trigger: t
+    #- title: twitter
+    #  url: http://www.twitter.com/victorvoid
+    #  key_trigger: t
     - title: search
       url: ""
       key_trigger: s #WARNING: search only works with "s"
@@ -61,7 +61,7 @@ links:
 projects:
   - name: John The Child
     url: https://github.com/An00bRektn/john-the-child
-  - name: Network-related Data Science Research
+  - name: Network-Related Data Science Research [In-Progress]
     url: TBD
  
 
