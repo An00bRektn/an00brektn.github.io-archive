@@ -66,4 +66,4 @@ projects:
  
 
 # exclude my node related stuff
-exclude: ['package.json', 'src', 'node_modules']
+exclude: ['package.json', 'src/js', 'src/styl', 'node_modules']
