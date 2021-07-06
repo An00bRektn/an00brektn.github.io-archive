@@ -14,9 +14,7 @@ published: true
 comments: false
 ---
 
-<p align="center">
-    <img src="../src/img/THMlogo.png" alt="TryHackMe" width="412px" height="230px">
-</p>
+![THMLogo.png](https://an00brektn.github.io/img/THMlogo.png)
 
 ## Introduction
 
@@ -31,17 +29,15 @@ Eventually, I learned the basics of networking on my own and with TryHackMe, but
 
 ## Act 2: Introducing the Pre-Security Path
 
-<p align="center">
-    <img src="../src/img/presecurity-header.png">
-</p>
+![presecurity-header.png](https://an00brektn.github.io/img/presecurity-header.png)
+
 
 TL;DR: I honestly wish the pre-security path had come sooner.
 
 The [Pre-Security Path](https://tryhackme.com/path/outline/presecurity) assumes you have basic computing knowledge (and by that I mean you know how to use a computer) and takes you from ground-zero, to having the foundational knowledge needed to begin learning about security. The course outline is as follows:
 
-<p align="center">
-    <img src="../src/img/presecurity-outline.png" alt="Content Outline" width="566px" height="353px">
-</p>
+![presecurity-outline.png](https://an00brektn.github.io/img/presecurity-outline.png)
+
 
 - Cyber Security Introduction
     - Learning Cyber Security
@@ -69,14 +65,13 @@ While each room is pretty well designed in its own right, I will briefly touch o
 ## Act 3: Networking (not the LinkedIn kind)
 
 This module takes you from understanding what a network is, introduces you to what framework has been set up to codify networking, and describes the function of networks *practically*. I've always struggled to remember and understand the purpose of each of the layers in the OSI model, and this section really hammers some of the main points home. Obviously, if you're a Network Administrator/Engineer, this is probably a pretty surface level look at what goes on. But, if you're just getting into security, this is a good base of information to build off of. One of my favorite bits was this OSI Dungeon game:
-<p align="center">
-    <img src="../src/img/osi-dungeon.png" alt="D&D - Domains and DNetworks (being witty is hard)" width="318px" height="362px">
-</p>
+
+![osi-dungeon.png](https://an00brektn.github.io/img/osi-dungeon.png)
 
 Another interactive demo that was especially helpful for someone like me to review was the network topologies viewer:
-<p align="center">
-    <img src="../src/img/ring-topology.png" alt="Ring around the rosie" width="434px" height="326px">
-</p>
+
+![ring-topology.png](https://an00brektn.github.io/img/ring-topology.png)
+
 Being able to visually see any sort of model is a very useful way to make sure things stick.
 
 ## Act 4: 🎵 *We're Surfing on the Internet* 🎵
@@ -93,9 +88,7 @@ The Web module covers DNS, HTTP, basic web development, and put those concepts t
 I think learning Linux on my own (before this released), was one of the more difficult parts of getting better at security for me. My (limited) programming experience had been exclusively on a Windows host, and breaking away from a GUI and using a command line was jarring at first. I completed the original Linux Fundamentals Rooms on TryHackMe before they were re-released, and then re-released again, but it still took me a while to really understand anything.
 The newly redesigned rooms are VERY beginner friendly, and appropriately hold your hand through each new concept. I especially enjoyed the addition of the split screen machine, and then telling you to learn to use `ssh`. It's very nicely progressed, and while I did think the ctf placed at the end of the original rooms was cool, I think removing it for now is very good.
 
-<p align="center">
-    <img src="../src/img/linuxfund.png" alt="nootnoot!" width="956px" height="450px" >
-</p>
+![linuxfund.png](https://an00brektn.github.io/img/linuxfund.png)
 
 ## Act 6: Windows
 
