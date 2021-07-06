@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "So you want to hack? \| TryHackMe Pre-Security Path"
+title:  So you want to hack? | TryHackMe Pre-Security Path
 image: ''
-date:   2021-07-06
+date: 2021-07-06
 tags:
 - tryhackme
 - beginner
@@ -10,7 +10,10 @@ tags:
 description: ''
 categories:
 - TryHackMe
+published: true
+comments: false
 ---
+
 <p align="center">
     <img src="../src/img/THMlogo.png" alt="TryHackMe" width="412px" height="230px">
 </p>

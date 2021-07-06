@@ -1,13 +1,16 @@
 ---
 layout: post
-title:  "Welcome!"
+title: Welcome!
 image: ''
 date:   2021-07-06 12:00:00
 tags:
 - hello-world
 description: ''
 categories:
+published: true
+comments: false
 ---
+
 <p align="center">
     <img src="../src/img/wizzyboy.jpg" alt="It me!">
 </p>
