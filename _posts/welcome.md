@@ -8,8 +8,10 @@ tags:
 description: ''
 categories:
 ---
+<p align="center">
+    <img src="../src/img/wizzyboy.jpg" alt="It me!">
+</p>
 
-<img src="../src/img/wizzyboy.jpg" alt="It me!">
 
 ## This is my blog!
 
