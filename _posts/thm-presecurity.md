@@ -2,13 +2,14 @@
 layout: post
 title:  "So you want to hack? \| TryHackMe Pre-Security Path"
 image: ''
-date:   2021-07-06 12:00:00
+date:   2021-07-06
 tags:
 - tryhackme
 - beginner
 - presecurity
 description: ''
 categories:
+- TryHackMe
 ---
 <p align="center">
     <img src="../src/img/THMlogo.png" alt="TryHackMe" width="412px" height="230px">
