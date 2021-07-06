@@ -1,15 +1,15 @@
 # Site settings
-title: Lorem Ipsum - Web Developer
-description: "A blog about lorem ipsum ..."
-baseurl: "/space-jekyll-template" # for test: remove string '/space-jekyll-template' to ''
-url: "http://victorvoid.github.io/space-jekyll-template/" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
+title: An00bRektn
+description: "Not another cs student blog"
+baseurl: "/" # for test: remove string '/space-jekyll-template' to ''
+url: "http://An00bRektn.github.io" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
 
 # User settings
-username: lorem ipsum
-user_title: Lorem Ipsum - FrontEnd
-email: lorem.lorem@ipsum.com
+username: An00bRektn
+user_title: An00bRektn
+email: ryan.syed1305@gmail.com
 twitter_username: loremipsum
-github_username:  loremipsum
+github_username:  An00bRektn
 gplus_username:  loremipsum
 linkedin_public_url: loremipsum # Example: For public profile 'www.linkedin.com/in/john-smith', 'john-smith' is your linkedin_public_url
 disqus_username: loremipsum
@@ -59,12 +59,11 @@ links:
 
 # projects in header index
 projects:
-  - name: fluany
-    url: https://github.com/fluany/fluany
-  - name: vim-frontend
-    url: https://github.com/victorvoid/vim-frontend
-  - name: generator-capybara
-    url: https://github.com/victorvoid/generator-capybara 
+  - name: John The Child
+    url: https://github.com/An00bRektn/john-the-child
+  - name: Network-related Data Science Research
+    url: TBD
+ 
 
 # exclude my node related stuff
 exclude: ['package.json', 'src', 'node_modules']
