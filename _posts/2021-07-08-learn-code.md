@@ -46,16 +46,8 @@ This is where things get a little trickier, because everybody learns a little bi
 ### Step 1: What to learn?
 
 Ask yourself what you want to program for. This [FAQ](https://www.reddit.com/r/learnprogramming/wiki/faq#wiki_getting_started) from r/learnprogramming does a very good job of clarifiying some of the questions people have about programming. I think one of the most important parts for me was seeing this table:
-**I want to learn how to...**| **Consider using...**
------|-----
-...make iPhone Apps|{::nomarkdown}Swift{:/} 
-...make Android Apps|{::nomarkdown}Kotlin/Java{:/} 
-...build a website|{::nomarkdown}JavaScript, CSS, HTML5{:/} 
-...write Windows desktop applications|{::nomarkdown}C#{:/}
-...make 2D/3D games|{::nomarkdown}JavaScript, C#, or C++{:/} 
-...program Arduinos/micro-controllers/robots|{::nomarkdown}C{:/}
-...do scientific/mathematical computing or data analysis|{::nomarkdown}Julia, Python, R, or Matlab{:/}
-...do automation and scripting|{::nomarkdown}Many languages (Python, Ruby, Bash, Powershell, AutoHotKey...){:/}
+
+![codetable.png](https://an00brektn.github.io/img/codetable.png)
 
 This table is obviously not all encompassing, but it's a good way to get an understanding of what you're working towards. If you're really ambivalent of what language you want to choose, I **HIGHLY** recommend Python, because of how versatile it is.  
 
