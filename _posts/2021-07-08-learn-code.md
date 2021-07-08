@@ -95,7 +95,7 @@ You're also going to need to install an Integrated Development Environment (IDE)
 - [Octave](https://octave-online.net/) - open-source, free version of MATLAB
 
 <p align="center">
-    <img src="https://imgs.xkcd.com/comics/real_programmers.png" style="width: 50%; height: 50%" alt="xkcd.com/378/">
+    <img src="https://imgs.xkcd.com/comics/real_programmers.png" alt="xkcd.com/378/">
 </p>
 
 Language Installs:
