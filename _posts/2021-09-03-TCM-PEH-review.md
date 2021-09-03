@@ -14,7 +14,7 @@ published: true
 comments: false
 ---
 
-![[Pasted image 20210902181454.png]]
+![Pasted image 20210902181454.png](https://an00brektn.github.io/img/Pasted image 20210902181454.png)
 
 Over this summer, I had the pleasure of going through The Cyber Mentor's **Practical Ethical Hacking** course found [here](https://academy.tcm-sec.com/p/practical-ethical-hacking-the-complete-course). Full disclosure before I continue: I recieved this course for free through a giveaway that he did a few months ago, and I had gone into this with fairly novice CTF skills. The TL;DR here is that I think the course is phenomenal and that **anyone wanting a straightforward, all-in-one-place introduction to the offensive side of security should go through this**. I will go through the major "arcs", so to speak, of this course, and give my final thoughts at the end.
 
@@ -36,7 +36,7 @@ The course, for the most part, assumes that you know very little about security.
 
 As someone who had very basic networking knowledge, the networking refresher really **reinforced some of the concepts that I didn't remember** as well (e.g. Subnetting, the OSI model). While it certainly isn't enough to get you to Network Engineering level, it certainly is a *practical* understanding of the subject matter, which is motif seen throughout the course. I did appreciate the subnetting cheat sheet though:
 
-![[Pasted image 20210902195959.png]]
+![Pasted image 20210902181454.png](https://an00brektn.github.io/img/Pasted image 20210902195959.png)
 
 I did not pay attention to the Linux and Python sections too much as I already had pretty foundational knowledge already with both. I can't comment too much on the linux section because I have yet to see anything that really makes me go "*Oh wow this actually covers every single base you would ever need to*", which is fine. The only way for people to get really good at Bash is by using it, which you will. 
 
@@ -47,7 +47,9 @@ Finally, I pretty much skimmed through the Python section because I was already 
 Does this first section fully prepare you for the next sections? Yes, but you'll need to be fully engaged with the content if you want to be successful moving forward. All topics covered give a practical, working knowledge; **it's up to you to make the most of it.**
 
 ## Act 2: Donning the Hoodie
-![[Pasted image 20210902215436.png]]
+
+![hacker](https://an00brektn.github.io/img/Pasted image 20210902215436.png)
+
 The next couple of sections covered have to do with basic exploitation:
 - The Ethical Hacker Methodology + Information Gathering
 - Scanning and Enumeration + Nessus
@@ -86,7 +88,7 @@ The execution and process to do the overflow was put together very well. Do I th
 ## Act 3: Attacktive Directory
 <sub>i'm sorry i ripped this right from thm but i had nothing else</sub>
 
-![[Pasted image 20210902224342.png]]
+![Pasted image 20210902224342.png](https://an00brektn.github.io/img/Pasted image 20210902224342.png)
 
 **I think this section alone is worth it to buy this course.** Active Directory is a very prevalent system in enterprise environments, so it is essential to understand how to abuse and leverage those features. TryHackMe and Hack The Box try their best to provide content on this, but I don't think I have seen anything better than what is covered in this course (as an introduction, obviously).
 
@@ -109,7 +111,7 @@ I **thoroughly** enjoyed setting up the lab environment. I do all of my stuff fr
 
 *We are going to ignore the fact that I almost certainly did not think about making a gateway subnet for VPN connections and had to remake the whole virtual network*
 
-![[Pasted image 20210902225832.png]]
+![Pasted image 20210902225832.png](https://an00brektn.github.io/img/Pasted image 20210902225832.png)
 
 Did I subnet this properly? Almost certainly not. Did I learn a lot about setting up a virtualized lab environment? ABSOLUTELY. I also enjoyed making my network themed after one of my favorite games of all time, [Transistor](https://www.supergiantgames.com/games/transistor/); I got to give each workstation and the domain controller its own little personality with passwords and notes left around.
 
@@ -123,7 +125,7 @@ The pacing was great, and the constant call backs to why certain attacks happene
 
 ### Post Exploitation Enumeration
 
-![[Pasted image 20210903115413.png]]
+![i hate jekyll](https://an00brektn.github.io/img/Pasted image 20210903115413.png)
 
 This section was a little bit shorter than the other two because the main focus is just two tools that are VERY good at what they do. I had already had some familiarity with using Bloodhound and PowerView after doing Forest on HackTheBox, but it was nice to learn a little bit more about how to use PowerView other than as an exploitation tool.
 
@@ -139,7 +141,7 @@ Again, this beast of a section is what really made the course for me. I'm sure y
 <sub>it's like the lion the witch and the wardrobe haha get it?</sub>
 <sub>why do i even bother when only cs and infosec people are going to see this</sub>
 
-![[Pasted image 20210903115502.png]]
+![asdf](https://an00brektn.github.io/img/Pasted image 20210903115502.png)
 
 I've lumped the last few sections together because it mostly serves to tie up loose ends, and give a small introduction to other important things related to the field. The largest section in this last leg is Web App attacks, where the course teaches the OWASP Top 10 through using the OWASP Juice Shop application. This section could very honestly be a course of its own because of how deep web app attacks can go, so only providing an introduction to Injection, Broken Authentication, etc. is a good stopping point in my opinion.
 

@@ -14,8 +14,9 @@ published: false
 comments: false
 ---
 
-![[Pasted image 20210903122049.png]]
+![intro](https://an00brektn.github.io/img/Pasted image 20210903122049.png)
 
+## Intro
 I'm pretty new to doing Hack The Box, so Forest is one the boxes that I rooted as part of the Take It Easy Dare, which taught me a good amount about approaching Active Directory machines. Forest is a domain controller with two domains, although that part isn't as relevant. I'll begin by enumerating common ports, and find users from RPC. One of the users I find is AS-REP roastable, which will allow me to get user. From there, I'll create a user with DCSync Rights so I can dump the system hashes, and pass the hash my way to domain admin.
 
 ## Recon
@@ -169,111 +170,7 @@ kali@kali:~/ctf/htb/forest$ python3 /opt/enum4linux-ng/enum4linux-ng.py 10.10.10
 [*] Enumerating users via 'enumdomusers'
 [+] Found 31 users via 'enumdomusers'
 [+] After merging user results we have 31 users total:
-'1123':
-  username: $331000-VK4ADACQNUCA
-  name: (null)
-  acb: '0x00020015'
-  description: (null)
-'1124':
-  username: SM_2c8eef0a09b545acb
-  name: Microsoft Exchange Approval Assistant
-  acb: '0x00020011'
-  description: (null)
-'1125':
-  username: SM_ca8c2ed5bdab4dc9b
-  name: Microsoft Exchange
-  acb: '0x00020011'
-  description: (null)
-'1126':
-  username: SM_75a538d3025e4db9a
-  name: Microsoft Exchange
-  acb: '0x00020011'
-  description: (null)
-'1127':
-  username: SM_681f53d4942840e18
-  name: Discovery Search Mailbox
-  acb: '0x00020011'
-  description: (null)
-'1128':
-  username: SM_1b41c9286325456bb
-  name: Microsoft Exchange Migration
-  acb: '0x00020011'
-  description: (null)
-'1129':
-  username: SM_9b69f1b9d2cc45549
-  name: Microsoft Exchange Federation Mailbox
-  acb: '0x00020011'
-  description: (null)
-'1130':
-  username: SM_7c96b981967141ebb
-  name: E4E Encryption Store - Active
-  acb: '0x00020011'
-  description: (null)
-'1131':
-  username: SM_c75ee099d0a64c91b
-  name: Microsoft Exchange
-  acb: '0x00020011'
-  description: (null)
-'1132':
-  username: SM_1ffab36a2f5f479cb
-  name: SystemMailbox{8cc370d3-822a-4ab8-a926-bb94bd0641a9}
-  acb: '0x00020011'
-  description: (null)
-'1134':
-  username: HealthMailboxc3d7722
-  name: HealthMailbox-EXCH01-Mailbox-Database-1118319013
-  acb: '0x00000210'
-  description: (null)
-'1135':
-  username: HealthMailboxfc9daad
-  name: HealthMailbox-EXCH01-001
-  acb: '0x00000210'
-  description: (null)
-'1136':
-  username: HealthMailboxc0a90c9
-  name: HealthMailbox-EXCH01-002
-  acb: '0x00000210'
-  description: (null)
-'1137':
-  username: HealthMailbox670628e
-  name: HealthMailbox-EXCH01-003
-  acb: '0x00000210'
-  description: (null)
-'1138':
-  username: HealthMailbox968e74d
-  name: HealthMailbox-EXCH01-004
-  acb: '0x00000210'
-  description: (null)
-'1139':
-  username: HealthMailbox6ded678
-  name: HealthMailbox-EXCH01-005
-  acb: '0x00000210'
-  description: (null)
-'1140':
-  username: HealthMailbox83d6781
-  name: HealthMailbox-EXCH01-006
-  acb: '0x00000210'
-  description: (null)
-'1141':
-  username: HealthMailboxfd87238
-  name: HealthMailbox-EXCH01-007
-  acb: '0x00000210'
-  description: (null)
-'1142':
-  username: HealthMailboxb01ac64
-  name: HealthMailbox-EXCH01-008
-  acb: '0x00000210'
-  description: (null)
-'1143':
-  username: HealthMailbox7108a4e
-  name: HealthMailbox-EXCH01-009
-  acb: '0x00000210'
-  description: (null)
-'1144':
-  username: HealthMailbox0659cc1
-  name: HealthMailbox-EXCH01-010
-  acb: '0x00000210'
-  description: (null)
+<Omitted for length's sake>
 '1145':
   username: sebastien
   name: Sebastien Caron
@@ -335,222 +232,7 @@ kali@kali:~/ctf/htb/forest$ python3 /opt/enum4linux-ng/enum4linux-ng.py 10.10.10
 [*] Enumerating domain groups
 [+] Found 38 groups via 'enumdomgroups'
 [+] After merging groups results we have 72 groups total:
-'1101':
-  groupname: DnsAdmins
-  type: local
-'1102':
-  groupname: DnsUpdateProxy
-  type: domain
-'1104':
-  groupname: Organization Management
-  type: domain
-'1105':
-  groupname: Recipient Management
-  type: domain
-'1106':
-  groupname: View-Only Organization Management
-  type: domain
-'1107':
-  groupname: Public Folder Management
-  type: domain
-'1108':
-  groupname: UM Management
-  type: domain
-'1109':
-  groupname: Help Desk
-  type: domain
-'1110':
-  groupname: Records Management
-  type: domain
-'1111':
-  groupname: Discovery Management
-  type: domain
-'1112':
-  groupname: Server Management
-  type: domain
-'1113':
-  groupname: Delegated Setup
-  type: domain
-'1114':
-  groupname: Hygiene Management
-  type: domain
-'1115':
-  groupname: Compliance Management
-  type: domain
-'1116':
-  groupname: Security Reader
-  type: domain
-'1117':
-  groupname: Security Administrator
-  type: domain
-'1118':
-  groupname: Exchange Servers
-  type: domain
-'1119':
-  groupname: Exchange Trusted Subsystem
-  type: domain
-'1120':
-  groupname: Managed Availability Servers
-  type: domain
-'1121':
-  groupname: Exchange Windows Permissions
-  type: domain
-'1122':
-  groupname: ExchangeLegacyInterop
-  type: domain
-'1133':
-  groupname: $D31000-NSEL5BRJ63V7
-  type: domain
-'1148':
-  groupname: Service Accounts
-  type: domain
-'1149':
-  groupname: Privileged IT Accounts
-  type: domain
-'498':
-  groupname: Enterprise Read-only Domain Controllers
-  type: domain
-'5101':
-  groupname: test
-  type: domain
-'512':
-  groupname: Domain Admins
-  type: domain
-'513':
-  groupname: Domain Users
-  type: domain
-'514':
-  groupname: Domain Guests
-  type: domain
-'515':
-  groupname: Domain Computers
-  type: domain
-'516':
-  groupname: Domain Controllers
-  type: domain
-'517':
-  groupname: Cert Publishers
-  type: local
-'518':
-  groupname: Schema Admins
-  type: domain
-'519':
-  groupname: Enterprise Admins
-  type: domain
-'520':
-  groupname: Group Policy Creator Owners
-  type: domain
-'521':
-  groupname: Read-only Domain Controllers
-  type: domain
-'522':
-  groupname: Cloneable Domain Controllers
-  type: domain
-'525':
-  groupname: Protected Users
-  type: domain
-'526':
-  groupname: Key Admins
-  type: domain
-'527':
-  groupname: Enterprise Key Admins
-  type: domain
-'544':
-  groupname: Administrators
-  type: builtin
-'545':
-  groupname: Users
-  type: builtin
-'546':
-  groupname: Guests
-  type: builtin
-'548':
-  groupname: Account Operators
-  type: builtin
-'549':
-  groupname: Server Operators
-  type: builtin
-'550':
-  groupname: Print Operators
-  type: builtin
-'551':
-  groupname: Backup Operators
-  type: builtin
-'552':
-  groupname: Replicator
-  type: builtin
-'553':
-  groupname: RAS and IAS Servers
-  type: local
-'554':
-  groupname: Pre-Windows 2000 Compatible Access
-  type: builtin
-'555':
-  groupname: Remote Desktop Users
-  type: builtin
-'556':
-  groupname: Network Configuration Operators
-  type: builtin
-'557':
-  groupname: Incoming Forest Trust Builders
-  type: builtin
-'558':
-  groupname: Performance Monitor Users
-  type: builtin
-'559':
-  groupname: Performance Log Users
-  type: builtin
-'560':
-  groupname: Windows Authorization Access Group
-  type: builtin
-'561':
-  groupname: Terminal Server License Servers
-  type: builtin
-'562':
-  groupname: Distributed COM Users
-  type: builtin
-'568':
-  groupname: IIS_IUSRS
-  type: builtin
-'569':
-  groupname: Cryptographic Operators
-  type: builtin
-'571':
-  groupname: Allowed RODC Password Replication Group
-  type: local
-'572':
-  groupname: Denied RODC Password Replication Group
-  type: local
-'573':
-  groupname: Event Log Readers
-  type: builtin
-'574':
-  groupname: Certificate Service DCOM Access
-  type: builtin
-'575':
-  groupname: RDS Remote Access Servers
-  type: builtin
-'576':
-  groupname: RDS Endpoint Servers
-  type: builtin
-'577':
-  groupname: RDS Management Servers
-  type: builtin
-'578':
-  groupname: Hyper-V Administrators
-  type: builtin
-'579':
-  groupname: Access Control Assistance Operators
-  type: builtin
-'580':
-  groupname: Remote Management Users
-  type: builtin
-'581':
-  groupname: System Managed Accounts Group
-  type: builtin
-'582':
-  groupname: Storage Replica Administrators
-  type: builtin
+<Omitted for length's sake>
 
  ======================================
 |    Shares via RPC on 10.10.10.161    |
@@ -702,14 +384,15 @@ After that's taken care of, I'll run the following command on the DC:
 
 This will allow me to collect all of the Active Directory data that this service account has to offer. I'll download the zip file that comes off of it, and drag and drop it right into Bloodhound. After that's unzipped and loaded in, I'll mark `svc-alfresco` as "owned" and look for "Shortest Path to Domain Admins".
 
-![[Pasted image 20210903163250.png]]
+![asdf](https://an00brektn.github.io/img/Pasted image 20210903163250.png)
 
 *Your path might look different than mine, but these privesc steps are all the same.*
 
 Here we see a fairly large graph. As you'll notice, there are actually two domains in this environment, `htb.local` and `forest.htb.local`, which is why this box is named the way it is (2 joined domains are a forest).
 
 From svc-alfresco, marked with a skull, we see two jumps necessary to get to domain admin. Since svc-alfresco is a part of the Account Operators group, it has the generic all privilege on the Exchange Windows Permissions group. Right clicking the edge to learn more, we find the following abuse info:
-![[Pasted image 20210903163652.png]]
+
+![asdf](https://an00brektn.github.io/img/Pasted image 20210903163652.png)
 
 Essentially, this means we can give our account, or any account, DCSync Privileges, which can allow us to run secretsdump.py or mimikatz to dump hashes. If this works, we can use the NT hash we get to pass the hash and become administrator.
 
