@@ -1,0 +1,112 @@
+I"�.<p><img src="https://an00brektn.github.io/img/THMlogo.png" alt="THMLogo.png" /></p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p><a href="https://tryhackme.com">TryHackMe</a> recently released the their “<a href="https://tryhackme.com/path/outline/presecurity">Pre-Security Path</a>”, a series of lessons intended to establish foundational knowledge for aspiring cyber security people. To celebrate, they’ve been running a “ticket” event (similar to the Monopoly events at fast-food chains and/or grocery stores) with ~$5,000 available in prizes. They’re also asking people to review the path, which is definitely not a coincidence with me starting this blog.</p>
+
+<h2 id="act-1-but-what-is-tryhackme">Act 1: But What is TryHackMe?</h2>
+
+<p><a href="https://tryhackme.com">TryHackMe</a> is a site that seeks to teach cybersecurity concepts by gameifying them. Rather than have a bunch of lectures that you listen to and take notes on, TryHackMe sets up “rooms” with different tasks to complete, most of which involve some kind of hands-on application. The site is community-driven, meaning anyone can make a room and contribute to the ever-growing catalog of topics (as long as you pass peer-review).</p>
+
+<p>Now, I had already been using TryHackMe as a way to self-learn some of the concepts that I hadn’t gotten to yet in university. I was brought in after hearing about their “<a href="https://tryhackme.com/room/adventofcyber2">Advent of Cyber 2</a>” event, which was an advent calendar style series of tasks, intended to act as a “sampler” of what the infosec field had to offer. However, one of the biggest hurdles I encountered afterward was my lack of a solid CS foundation. I had been going to school for a semester at this point, but I was still trying to get general education requirements out of the way (<em>*ahem*</em> “liberal arts school” <em>*ahem*</em>). 
+Eventually, I learned the basics of networking on my own and with TryHackMe, but at the time, it certainly hurt my ability to comprehend concepts fully. What <em>is</em> a port, really? Why are we using Linux? Who cares about the OSI model?</p>
+
+<h2 id="act-2-introducing-the-pre-security-path">Act 2: Introducing the Pre-Security Path</h2>
+
+<p><img src="https://an00brektn.github.io/img/presecurity-header.png" alt="presecurity-header.png" /></p>
+
+<p>TL;DR: I honestly wish the pre-security path had come sooner.</p>
+
+<p>The <a href="https://tryhackme.com/path/outline/presecurity">Pre-Security Path</a> assumes you have basic computing knowledge (and by that I mean you know how to use a computer) and takes you from ground-zero, to having the foundational knowledge needed to begin learning about security. The course outline is as follows:</p>
+
+<p><img src="https://an00brektn.github.io/img/presecurity-outline.png" alt="presecurity-outline.png" /></p>
+
+<ul>
+  <li>Cyber Security Introduction
+    <ul>
+      <li><a href="https://tryhackme.com/room/beginnerpathintro">Learning Cyber Security</a></li>
+    </ul>
+  </li>
+  <li>Network Fundamentals
+    <ul>
+      <li><a href="https://tryhackme.com/room/whatisnetworking">What is Networking?</a></li>
+      <li><a href="https://tryhackme.com/room/introtolan">Intro to LAN?</a></li>
+      <li><a href="https://tryhackme.com/room/osimodelzi">OSI Model*</a></li>
+      <li><a href="https://tryhackme.com/room/packetsframes">Packets and Frames*</a></li>
+      <li><a href="https://tryhackme.com/room/extendingyournetwork">Extending Your Network*</a></li>
+    </ul>
+  </li>
+  <li>How the Web Works
+    <ul>
+      <li><a href="https://tryhackme.com/room/dnsindetail">DNS in Detail</a></li>
+      <li><a href="https://tryhackme.com/room/httpindetail">HTTP in Detail</a></li>
+      <li><a href="https://tryhackme.com/room/howwebsiteswork">How the Web Works*</a></li>
+      <li><a href="https://tryhackme.com/room/puttingitalltogether">Putting it All Together*</a></li>
+    </ul>
+  </li>
+  <li>Linux Fundamentals
+    <ul>
+      <li><a href="https://tryhackme.com/room/linuxfundamentalspart1">Linux Fundamentals Part 1</a></li>
+      <li><a href="https://tryhackme.com/room/linuxfundamentalspart2">Linux Fundamentals Part 2</a></li>
+      <li><a href="https://tryhackme.com/room/linuxfundamentalspart3">Linux Fundamentals Part 3</a></li>
+    </ul>
+  </li>
+  <li>Windows Fundamentals
+    <ul>
+      <li><a href="https://tryhackme.com/room/windowsfundamentals1xbx">Windows Fundamentals Part 1</a></li>
+      <li><a href="https://tryhackme.com/room/windowsfundamentals2x0x">Windows Fundamentals Part 2</a></li>
+    </ul>
+  </li>
+</ul>
+
+<p>*<em>These rooms require a subscription to have access to. Thoughts on that will be at the end.</em></p>
+
+<p>While each room is pretty well designed in its own right, I will briefly touch on each of the modules, excluding the introduction, and then give my thoughts on the end.</p>
+
+<h2 id="act-3-networking-not-the-linkedin-kind">Act 3: Networking (not the LinkedIn kind)</h2>
+
+<p>This module takes you from understanding what a network is, introduces you to what framework has been set up to codify networking, and describes the function of networks <em>practically</em>. I’ve always struggled to remember and understand the purpose of each of the layers in the OSI model, and this section really hammers some of the main points home. Obviously, if you’re a Network Administrator/Engineer, this is probably a pretty surface level look at what goes on. But, if you’re just getting into security, this is a good base of information to build off of. One of my favorite bits was this OSI Dungeon game:</p>
+
+<p><img src="https://an00brektn.github.io/img/osi-dungeon.png" alt="osi-dungeon.png" /></p>
+
+<p>Another interactive demo that was especially helpful for someone like me to review was the network topologies viewer:</p>
+
+<p><img src="https://an00brektn.github.io/img/ring-topology.png" alt="ring-topology.png" /></p>
+
+<p>Being able to visually see any sort of model is a very useful way to make sure things stick.</p>
+
+<h2 id="act-4--were-surfing-on-the-internet-">Act 4: 🎵 <em>We’re Surfing on the Internet</em> 🎵</h2>
+
+<p>The Web module covers DNS, HTTP, basic web development, and put those concepts together. Like the network module, it also uses interactive demos to illustrate certain concept. While I personally would have liked to use a real command line to get results, I think having a prebuilt setup is less intimidating to those who aren’t as comfortable with getting in the thick of things. I think one of the most effective lessons from this module is the final “Putting it All Together Room”, which lightly touches on almost everything you’ve covered thus far in the course. Not only do you revisit some of the concepts from the web-related rooms, but it also makes you think about how networks play into it.</p>
+
+<p align="center">
+    <img src="https://static-labs.tryhackme.cloud/sites/puttingittogether/puttingitalltogether.png" alt="This is where the Beatles famously got their song 'All Together' from" />
+</p>
+
+<h2 id="act-5-noot-noot">Act 5: Noot Noot!</h2>
+
+<p>I think learning Linux on my own (before this released), was one of the more difficult parts of getting better at security for me. My (limited) programming experience had been exclusively on a Windows host, and breaking away from a GUI and using a command line was jarring at first. I completed the original Linux Fundamentals Rooms on TryHackMe before they were re-released, and then re-released again, but it still took me a while to really understand anything.
+The newly redesigned rooms are VERY beginner friendly, and appropriately hold your hand through each new concept. I especially enjoyed the addition of the split screen machine, and then telling you to learn to use <code class="language-plaintext highlighter-rouge">ssh</code>. It’s very nicely progressed, and while I did think the ctf placed at the end of the original rooms was cool, I think removing it for now is very good.</p>
+
+<p><img src="https://an00brektn.github.io/img/linuxfund.png" alt="linuxfund.png" /></p>
+
+<h2 id="act-6-windows-how-do-you-make-a-witty-title-for-this">Act 6: Windows (how do you make a witty title for this?)</h2>
+
+<p>The Windows Fundamentals rooms begin by introducing the main components of the Windows GUI, and then proceeds to get into the nitty gritty parts of things like the registry and UAC controls. While I think it does cover the important stuff associate with Windows, it feels slightly incomplete in certain areas. There is also an Intro To Windows room that’s located in the “Complete Beginner” path that I feel belongs in the pre-security path as well, so hopefully it gets the additions that it needs. 
+Furthermore, I think a section should be dedicated to navigating Windows’ <code class="language-plaintext highlighter-rouge">cmd.exe</code>, because even now I forget that <code class="language-plaintext highlighter-rouge">dir</code> is what gets used instead of <code class="language-plaintext highlighter-rouge">ls</code>. I would also say that Powershell should be added, but there’s already a room on that (that needs a little bit of fixing tbh).</p>
+
+<h2 id="act-7-closing-thoughts">Act 7: Closing Thoughts</h2>
+
+<p>For a mostly free course, this is pretty much exactly what I was looking for back in December 2020. It hits just the right balance between holding your hand and making you work for it, and covers the essential topic neccessary to go onward with learning cybersecurity. From a content perspective, the only area that seemed lackluster was the Windows Fundamentals sections. There was a lot to be learned from it, but the importance of those things isn’t very well established, so the content doesn’t stick as well. If I’m being seriously nitpicky, I think that some sections’ questions could have been written better to be a little more engaging (e.g. “What is this layer of the OSI model called?”, when there’s a huge picture telling you what the answer is), but it is still put together very well.</p>
+
+<p>As for the subscription model, I think there are a lot of people who will be upset that half of the networking and web sections are stuck behind paywalls. However, I really do not see it as a huge issue. Subscriptions allow the site to stay running, and in doing so, support more of the free content seen on the site. Subscriptions themselves are only $10 ($8 if you’re a student), which is the equivalent of about one Chipotle burrito with guacamole. Many people might compare the value of this to a subscription to Hack The Box, but I think that comaprison falls apart very quickly. Yes, Hack the Box has their Academy, but at the end of the day, Hack the Box is mostly for practice, and TryHackMe is mostly for learning. <strong>The value of a subscription largely depends on how you like to learn (e.g. taught course vs self-guided), how much time you can put into this, and how much $8-10 is worth to you.</strong></p>
+
+<p>I am in no way sponsored or endorsed by TryHackMe, I just think what they’re doing is very cool. At the end of they day, although it has its’ flaws, the Pre-Security path is a solid choice for those who want to begin learning on their own without too much of a committment, or for experienced people to refresh on some foundational content.</p>
+
+<p>If you’ve made it this far, thank you for reading &lt;3. If you’re the TryHackMe rep that’s reading this to award me tickets, I hope this was of some level of quality for you. This “challenge”, for lack of better words, has motivated me to start putting out writeups, and revise some of the concepts I may have forgotten.</p>
+
+<p>If you’re looking for more things to do on the site:<br />
+<strong>The Official Unoffical Free Path</strong>: https://blog.tryhackme.com/free_path/<br />
+<strong>Offensive Pentesting</strong>: https://tryhackme.com/path/outline/pentesting<br />
+<strong>Cyber Defense</strong>: https://tryhackme.com/path/outline/blueteam</p>
+:ET

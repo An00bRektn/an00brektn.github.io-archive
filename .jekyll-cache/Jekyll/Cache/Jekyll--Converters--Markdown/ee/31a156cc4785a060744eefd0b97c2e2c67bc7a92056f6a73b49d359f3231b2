@@ -1,0 +1,172 @@
+I"�1<p align="center">
+    <img src="https://live.staticflickr.com/3912/15090961835_c4f26e4890_b.jpg" style="width: 50%; height: 50%" alt="Would you believe me if I said C++ is like C but upgraded and C# really has nothing to do with either?" />
+</p>
+
+<p>Growing up, the idea of programming was one of the most elusive concepts I had ever heard of. For most people, it’s this mysterious black box that does some magic to make their electronic devices work. For the longest time, I wanted to learn to program, but had no idea how. Most people would immediately say, “Use the internet to learn!”, but it’s not as easy as it’s cracked up to be. My experience of trying to use the internet to learn was being stuck in a loop between “simplified” teaching tools like Scratch and Khan Academy, and the jargon put out by random people on the internet.</p>
+
+<p>In this post, I will be going over the resources and lessons that I have found over time to help me get better at programming, and what didn’t help at all. <strong>This list is not all-encompassing, and I encourage you to continue to seek out what works for you.</strong></p>
+
+<h2 id="what-did-not-work-at-all">What Did Not Work At All</h2>
+
+<p>We’re just going to start with a list for this one:</p>
+<ul>
+  <li><a href="https://scratch.mit.edu">Scratch</a></li>
+  <li><a href="https://www.khanacademy.org/computing/computer-programming">Khan Academy</a></li>
+  <li><a href="https://code.org/">code.org</a></li>
+  <li>Literally anything to do with the “Hour of Code” thing</li>
+</ul>
+
+<p>When I initially tried to teach myself as a middle schooler to high schooler, these were the resources that I heard about the most. After toying with them for a couple of weeks and then proceeding to get very bored, I soon realized:</p>
+
+<p><strong>These are programming languages for children.</strong></p>
+
+<p align="center">
+    <img src="https://www.publicdomainpictures.net/pictures/10000/nahled/2642-12745437615W13.jpg" style="width: 50%; height: 50%" alt="The average Scratch user (just a joke)" />
+</p>
+
+<p>Do I think they’re bad? Not necessarily. Realistically, they are made for an age group that is maybe just entering middle school. I think the Khan Academy stuff has changed since I last saw it to be more focused on practical languages like Javascript and SQL, so that might actually be viable now. Regardless, the big problem sites like Scratch and code.org suffer from is that they are glorified children’s toys. They teach you nothing more than the pure basics, which, honestly speaking, can be covered in one week if you’re dedicated, 2-3 weeks if you want to take your time.</p>
+
+<h2 id="so-what-does-work">So What Does Work?</h2>
+
+<p>This is where things get a little trickier, because everybody learns a little bit differently. My big breakthrough was going to a small summer camp at a university where I first learned about Python, Cryptography, and Virtual Machines. But, not everyone has access to that, and there are some steps that I think everyone should take to get started seriously.</p>
+
+<h3 id="step-1-what-to-learn">Step 1: What to learn?</h3>
+
+<p>Ask yourself what you want to program for. This <a href="https://www.reddit.com/r/learnprogramming/wiki/faq#wiki_getting_started">FAQ</a> from r/learnprogramming does a very good job of clarifiying some of the questions people have about programming. I think one of the most important parts for me was seeing this table:</p>
+
+<p><img src="https://an00brektn.github.io/img/codetable.png" alt="codetable.png" /></p>
+
+<p>This table is obviously not all encompassing, but it’s a good way to get an understanding of what you’re working towards. If you’re really ambivalent of what language you want to choose, I <strong>HIGHLY</strong> recommend Python, because of how versatile it is.</p>
+
+<p>Many people might tell you that it’s better to pick one language over another (mainly the people who think everyone should learn C first). To those people, I say that all modern programming languages are very powerful and can do great things with a good mindset. All programming languages have similarities at their very core, so the most important thing is <strong><em>LEARNING</em></strong>.</p>
+
+<h3 id="step-2-the-basics">Step 2: The Basics</h3>
+
+<p>One of the best pieces of advice that I’ve heard was from a Corridor Crew video (can’t remember which one), in which one of the guys says something like:</p>
+
+<p>“<em>First you need to learn how to do it the hard way, fully completing every step along the way. Then, start taking shortcuts</em>”</p>
+
+<p>To be an effective programmer, you cannot dive head first into trying to make the next Skyrim. You MUST understand the basics, which are:</p>
+
+<ul>
+  <li>Good Programming Style</li>
+  <li>Data Types and Variables
+    <ul>
+      <li>Strings, integers, floating point, Booleans</li>
+      <li>Comparisons and Operations (e.g. &gt;,&lt;,==,+,-)</li>
+    </ul>
+  </li>
+  <li>Conditional/Selection Statements
+    <ul>
+      <li>if, else, nested if else</li>
+    </ul>
+  </li>
+  <li>Iteration/Loops
+    <ul>
+      <li>while, for</li>
+    </ul>
+  </li>
+  <li>Functions/Methods</li>
+  <li>Data Structures
+    <ul>
+      <li>Lists, Arrays, etc.</li>
+    </ul>
+  </li>
+  <li>Methods/Functions</li>
+  <li>Exceptions</li>
+  <li>File I/O</li>
+</ul>
+
+<p>If none of that made sense to you, that’s okay! This is just a list of what I think everyone who wants to program should learn within the first year of starting. It’s hard for me to be able to link something that can work for every language someone wants to learn, but I’ll throw out a couple here that are good for learning basics.</p>
+
+<ul>
+  <li><a href="https://www.w3schools.com/">W3Schools</a> - HTML, CSS, JS, Python, Java, etc.</li>
+  <li><a href="https://www.youtube.com/c/Freecodecamp/playlists">freeCodeCamp</a> - A lot.</li>
+  <li><a href="https://www.learncpp.com/">learncpp</a> - C/C++</li>
+  <li><a href="https://www.youtube.com/playlist?list=PL0nQ4vmdWaA3GLsZESEkBiIAEvnDEge8D">Jabrils</a> - C# and Python</li>
+  <li><a href="https://www.youtube.com/c/Brackeys/playlists">Brackeys</a> - C# and Game Design</li>
+  <li><a href="https://www.reddit.com/r/learnprogramming/comments/j9napy/im_deleting_my_account_here_is_a_list_of/g8limoh/?utm_source=share&amp;utm_medium=ios_app&amp;utm_name=iossmf&amp;context=3">This Random Reddit Thread</a> - Mostly Python</li>
+  <li><a href="https://github.com/JoseDeFreitas/awesome-youtubers">Many, Many More YouTube Channels</a> - A lot.</li>
+</ul>
+
+<p>You’re also going to need to install an Integrated Development Environment (IDE) or a nicer text editor to write code, along with your respective language itself. For a program to write code, I personally recommend <a href="https://code.visualstudio.com/">Visual Studio Code</a>, unless you’re trying to write applications for phones, in which case you may or may not want something a bit more specialized like <a href="https://developer.android.com/studio">Android Studio</a>. If that’s too much, there are also IDEs in-browser that you can use while starting out:</p>
+
+<ul>
+  <li><a href="https://repl.it/">repl.it</a></li>
+  <li><a href="https://codepen.io/">codepen.io</a></li>
+  <li><a href="https://jsfiddle.net/">fiddle</a></li>
+  <li><a href="https://aws.amazon.com/cloud9/">AWS Cloud9</a></li>
+  <li><a href="https://octave-online.net/">Octave</a> - open-source, free version of MATLAB</li>
+</ul>
+
+<p align="center">
+    <img src="https://imgs.xkcd.com/comics/real_programmers.png" alt="xkcd.com/378/" />
+</p>
+
+<p>Language Installs:</p>
+<ul>
+  <li><a href="https://www.python.org/downloads/">Python</a> - Install Python3, Python2 has been discontinued</li>
+  <li><a href="https://java.com/en/download/help/download_options.html">Java</a> - VS Code has an alternative way to do this</li>
+  <li><a href="https://swift.org/download/#releases">Swift</a></li>
+  <li>C# - recommend installing <a href="https://visualstudio.microsoft.com/">Visual Studio</a> assuming you’re on Windows, not as sure if you’re on Mac</li>
+  <li><a href="https://golang.org/doc/install">Go</a></li>
+  <li><a href="https://www.guru99.com/c-gcc-install.html">C++/C</a> - If you use Linux, <code class="language-plaintext highlighter-rouge">apt install gcc</code> and <code class="language-plaintext highlighter-rouge">apt install g++</code> should have you covered with compiling these languages (Mac should also be able to do something similar with xcode)</li>
+  <li><a href="https://www.ruby-lang.org/en/downloads/">Ruby</a></li>
+  <li><a href="https://www.mathworks.com/help/install/install-products.html">MATLAB</a> - Note: I don’t believe MATLAB is free, so you’ll probably have a better time using the aforementioned Octave</li>
+</ul>
+
+<h3 id="step-3-i-have-the-tools-now-what">Step 3: I have the tools, now what?</h3>
+
+<p>Simple Answer: Go out and learn. Use the tutorials I’ve linked (and others you may have found) and follow along with them. This isn’t school, so don’t try and commit everything to memory. Learn the methodology, understand the big picture, and work your way up slowly but surely. There are plenty of forums online where people just like you are learning to program, so don’t be afraid to ask questions. Join a programming discord or subreddit. You probably know someone who programs, or know someone who knows someone who programs, and they might also be another resource.</p>
+
+<p>At the end of the day, learn at your own pace, but consistency is key.</p>
+
+<p align="center">
+    <img src="https://miro.medium.com/max/275/1*gO_CqAETq7aHUNfSdZRCPA.gif" alt="The learning process, visualized" />
+</p>
+
+<h2 id="where-to-go-from-here">Where to go from here?</h2>
+
+<p>It really depends on if you want to transition into something professional or keep it as a hobby. In both cases, making your own projects is pretty important. I would also recommend you begin to learn using <a href="https://docs.github.com/en/get-started/quickstart/set-up-git">Git</a> and host your projects on <a href="https://github.com/">GitHub</a>. But what projects should you make? Again, you have full control here, but here are some ideas:</p>
+
+<ul>
+  <li><a href="https://github.com/aceking007/100ProjectsOfCode">100 Projects of Code</a></li>
+  <li>Web Scraper - Build a tool that takes a URL as input and returns the content of the URL as HTML or XML.</li>
+  <li>Literally anything in life you want to automate - Do you need to organize things into a spreadsheet, write a program to do that for you?</li>
+  <li>Raspberry Pi Projects - A Raspberry Pi is a small, inexpensive computer. Many people have used them to make things like automatic plant waterers or Magic Mirrors. This will also get you involved with hardware stuff if that’s what you’re into</li>
+</ul>
+
+<p>Having a good background in Computer Science also helps. Here are some topics that you should take a look at once you feel more comfortable with programming.</p>
+
+<ul>
+  <li>Time and Space Complexity
+    <ul>
+      <li>Search and Sort Algorithms</li>
+    </ul>
+  </li>
+  <li>Recursion</li>
+  <li>Data Structures
+    <ul>
+      <li>Stacks, Queues, Trees, Heaps</li>
+    </ul>
+  </li>
+  <li>Programming Paradigms (namely functional programming and OOP because those are the most common)</li>
+  <li>Multithreading
+    <ul>
+      <li>Operating System Concepts as a whole, <a href="https://www.youtube.com/watch?v=dv4mXBsv6TI">link</a> to UMass Lectures</li>
+    </ul>
+  </li>
+  <li>Software Development (e.g. Agile Workflow, Architecture, SOLID Principles, Patterns)</li>
+  <li>Low Level Programming (Assembly)</li>
+  <li>Using Virtual Machines (VMs)</li>
+  <li><a href="https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA">Computerphile</a> - YouTube channel focused on CS topics</li>
+</ul>
+
+<p>Additionally, if you want to move into Computer Science for a job, don’t feel like you need to go to college (especially if you’re in the US). There are plenty of great resources out there like the <a href="https://github.com/ossu/computer-science">Open Source Society University</a> to help teach you these things on your own. I would recommend looking at job postings and using those as guidelines for what you should be learning.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Hopefully this post has given you a brief tour of all things programming (as I know it). I’m just a university student, so I’m sure there’s important things I missed along the way. If there’s only one thing you take away from this, I hope it’s that there’s no one way to go about this, and different methods help different people. I might come back to this later and update it with more resources if I find them.</p>
+
+<p>:D</p>
+:ET
