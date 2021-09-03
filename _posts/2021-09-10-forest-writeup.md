@@ -1,6 +1,6 @@
 ---
 layout: post
-title: HTB: Forest
+title: "HTB: Forest"
 image: ''
 date:   2021-09-10 12:00:00
 tags:
@@ -10,7 +10,7 @@ description: ''
 categories:
 - HTB
 - Red Team
-published: true
+published: false
 comments: false
 ---
 
