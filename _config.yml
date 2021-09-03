@@ -1,13 +1,13 @@
 # Site settings
 title: An00bRektn
-description: "Not Another CS Student Blog"
+description: "Not Another CS Student's Blog"
 baseurl: "/" # for test: remove string '/space-jekyll-template' to ''
 url: "https://An00bRektn.github.io" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
 
 # User settings
 username: An00bRektn
 user_title: An00bRektn
-email: ryan.syed1305@gmail.com
+email: rsyed.business404@gmail.com
 #twitter_username: loremipsum
 github_username:  An00bRektn
 #gplus_username:  loremipsum
