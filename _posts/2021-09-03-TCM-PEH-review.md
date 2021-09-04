@@ -20,12 +20,8 @@ Over this summer, I had the pleasure of going through The Cyber Mentor's **Pract
 
 ### Table Of Contents
 I did not realize that I was going to type a 3000+ word summary and review of the course but here we are.
-- [Act 1: Networking, Linux, and Python](##Act-1:-CS-Bootcamp-Nets,-Penguins,-and-Snakes)
-- [Act 2: Basic Hacking](##Act-2:-Donning-the-Hoodie)
-- [Interlude: Stack-based Buffer Overflows](##Interlude:-Ain't-Enough-Room-in-this-Buffer-for-the-Two-of-Us...)
-- [Act 3: Active Directory](##Act-3:-Attacktive-Directory)
-- [Act 4: Web App, Wireless, Legal](##Act-4:-The-Legal,-the-Web,-and-the-Wireless)
-- [Act 5: Closing](##Act-5:-Final-Thoughts)
+* buh
+{:toc}
 
 ## Act 1: CS Bootcamp - Nets, Penguins, and Snakes
 The course, for the most part, assumes that you know very little about security. All you really need to know going into this is how to use a computer, how one works, and what a network looks like, which is a really good start for an introductory level course. After the initial proceedings and advice on notekeeping, the course launches into the following sections.
