@@ -10,7 +10,7 @@ description: ''
 categories:
 - TryHackMe
 - Red Team
-published: true
+published: false
 comments: false
 ---
 
@@ -198,7 +198,7 @@ Assume for all of these steps I'm running the vulnerable executable through Immu
 Mona is a great plugin for Immunity Debugger that you can use to automate some of the more cumbersome parts of exploit development. You can find the plugin [here](https://github.com/corelan/mona). To install, just drag and drop `mona.py` into the PyCommands folder where the Immunity Debugger files are.
 
 ### Finding the Offset
-As of the writing of this article, the `pattern_create.rb` file many of us were used to using has now been moved to `/usr/bin/msf-pattern_create` in Kali Linux. I'll use this tool to generate a cyclic string that I can then use to locate the EIP.
+As of the writing of this article, the `pattern_create.rb` can now be used with `/usr/bin/msf-pattern_create` in Kali Linux. I'll use this tool to generate a cyclic string that I can then use to locate the EIP.
 ```bash
 kali@kali:~/ctf/thm/brainstorm$ msf-pattern_create -l 3000
 Aa0Aa1Aa2Aa3Aa4Aa5Aa6Aa7Aa8Aa9Ab0Ab1Ab2Ab3Ab4Ab5Ab6Ab7Ab8Ab9Ac0Ac1Ac2Ac3Ac4Ac5Ac6Ac7Ac8Ac9Ad0Ad1Ad2Ad3Ad4Ad5Ad...<it long>

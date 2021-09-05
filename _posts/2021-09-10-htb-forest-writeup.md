@@ -10,7 +10,7 @@ description: ''
 categories:
 - HTB
 - Red Team
-published: true
+published: false
 comments: false
 ---
 
