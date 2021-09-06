@@ -4,8 +4,8 @@ title: "THM: Brainstorm"
 image: ''
 date:   2021-09-17 12:00:00
 tags:
-- red
 - buffer-overflow
+- windows
 description: ''
 categories:
 - TryHackMe
@@ -285,7 +285,7 @@ except:
 Sometimes, programs interpret specific characters to serve a specific function, so we cannot use these in our shell code. Before jumping to grabbing the JMP ESP instuction and inserting shellcode, we need to find these bad characters. I'll steal a list of hex characters from [here](https://github.com/cytopia/badchars) and stick it in my code after the `retn` variable.
 I'm also going to ask `mona` to do the same using `!mona bytearray -cpb "\x00"`, so I can have `mona` check the bad characters for me. I'll run the exploit again, and check for what bad characters might be using `!mona -f C:\Share\bytearray.bin -a 00DCEEA8`
 
-![jekyll annoying](https://an00brektn.github.io/Pasted image 20210904165201.png)
+![jekyll_annoying](https://an00brektn.github.io/Pasted image 20210904165201.png)
 
 Here, we see that there are no bad characters, so all we have to do is find the right module and the correct instruction pointer.
 

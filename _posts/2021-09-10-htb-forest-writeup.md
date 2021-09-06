@@ -5,7 +5,8 @@ image: ''
 date:   2021-09-10 12:00:00
 tags:
 - beginner
-- Active-Directory
+- active-directory
+- windows
 description: ''
 categories:
 - HTB
@@ -396,7 +397,7 @@ From svc-alfresco, marked with a skull, we see two jumps necessary to get to dom
 
 Essentially, this means we can give our account, or any account, DCSync Privileges, which can allow us to run secretsdump.py or mimikatz to dump hashes. If this works, we can use the NT hash we get to pass the hash and become administrator.
 
-## Execution
+## Shell as Administrator
 
 Since this is a public box, I don't want to make it easy so I'll make my own account first and add it to the Exchange Windows Permissions group.
 ```powershell
