@@ -103,7 +103,7 @@ Host script results:
 
 If you were in a real engagement/assessment, you might just want to leave it at that and tell your client that they're susceptible to this attack. EternalBlue can break a system if you spam it too much, but because this is a lab environment, we're okay.
 
-## Shell as Administrator
+## Setting up the Exploit
 
 There are many versions of this exploit out there; the one I will use is is [helviojunior's](https://github.com/helviojunior/MS17-010), which is a fork of [worawit's repo](https://github.com/worawit/MS17-010). Another that I've seen be used is from [3ndG4me](https://github.com/3ndG4me/AutoBlue-MS17-010), but I don't like it as much.
 

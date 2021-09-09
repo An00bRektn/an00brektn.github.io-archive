@@ -2,7 +2,7 @@
 layout: post
 title: "HTB: Forest"
 image: ''
-date:   2021-09-10 12:00:00
+date:   2021-09-09 12:00:00
 tags:
 - beginner
 - active-directory
@@ -11,7 +11,7 @@ description: ''
 categories:
 - HTB
 - Red Team
-published: false
+published: true
 comments: false
 ---
 
