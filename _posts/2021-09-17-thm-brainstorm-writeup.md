@@ -10,7 +10,7 @@ description: ''
 categories:
 - TryHackMe
 - Red Team
-published: false
+published: true
 comments: false
 ---
 
@@ -431,3 +431,5 @@ C:\Windows\system32>type C:\Users\drake\Desktop\root.txt
 type C:\Users\drake\Desktop\root.txt
 5b1001de************************
 ```
+
+*H@cktivitycon CTF writeups soon!*
