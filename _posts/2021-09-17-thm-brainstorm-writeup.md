@@ -17,7 +17,7 @@ comments: false
 ![intro](https://an00brektn.github.io/img/Pasted image 20210904173235.png)
 
 ## Intro
-[Brainstorm](https://tryhackme.com/room/brainstorm) was one of the first buffer overflow boxes I managed to root on a CTF platform after learning the basics. It's not hard if you understand the process, but it's a good  I'll start by scanning the machine and find FTP open with anonymous login. I'll also find a chatserver running on port 9999, and a copy of that executable in the FTP. Then, after doing some offline exploit development, I'll have a working buffer overflow that I can then run against the remote machine to gain Administrator access.
+[Brainstorm](https://tryhackme.com/room/brainstorm) was one of the first buffer overflow boxes I managed to root on a CTF platform after learning the basics. It's not hard if you understand the process, but it's a good challenge nonetheless. I'll start by scanning the machine and find FTP open with anonymous login. I'll also find a chatserver running on port 9999, and a copy of that executable in the FTP. Then, after doing some offline exploit development, I'll have a working buffer overflow that I can then run against the remote machine to gain Administrator access.
 
 ## Recon
 As per usual, we always check what ports are open with **nmap**:
