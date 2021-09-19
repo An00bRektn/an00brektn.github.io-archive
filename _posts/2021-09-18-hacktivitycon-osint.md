@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "H@cktivitycon Writeup: Oh-SINT it's OSINT"
+title: "H@cktivitycon Writeups: Oh-SINT it's OSINT"
 image: ''
 date:   2021-09-18 12:00:00
 tags:

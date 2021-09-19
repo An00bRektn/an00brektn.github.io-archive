@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "H@cktivitycon Writeup: The Quick Ones"
+title: "H@cktivitycon Writeups: The Quick Ones"
 image: ''
 date:   2021-09-18 12:00:00
 tags:
@@ -165,7 +165,7 @@ Escalate your privileges and retrieve the flag out of root's home directory.`
 
 ### Solution
 This was probably the hardest of these "quicker" challenges I solved. I'll start by SSH-ing into the box, and doing some initial enumeration.
-```
+```bash
 user@redlike-32b0e986515748de-bd7ff4dff-2pgnp:~$ sudo -l
 -bash: sudo: command not found
 user@redlike-32b0e986515748de-bd7ff4dff-2pgnp:~$ find / -perm -4000 -type f 2>/dev/null
