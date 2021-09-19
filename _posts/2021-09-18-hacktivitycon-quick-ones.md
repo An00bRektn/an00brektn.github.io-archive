@@ -2,7 +2,7 @@
 layout: post
 title: "H@cktivitycon Writeup: The Quick Ones"
 image: ''
-date:   2021-20-09 12:00:00
+date:   2021-18-09 12:00:00
 tags:
 description: ''
 categories:
