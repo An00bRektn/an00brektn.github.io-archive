@@ -13,7 +13,7 @@ published: True
 comments: false
 ---
 
-![logo](https://an00brektn.github.io/img/Pasted image 20210918213805.png)
+![logo](https://an00brektn.github.io/img/Pasted image 20210918214829.png)
 
 ## Intro
 I have devoted the past 48 hours to the **H@cktivitycon CTF**, run by [John Hammond](https://www.youtube.com/channel/UCVeW9qkBjo3zosnqUbG7CFw), [congon4tor](https://twitter.com/congon4tor?lang=en), [M_alpha](https://twitter.com/M_alphaaa), [fumenoid](https://twitter.com/fumenoid?lang=en), [NightWolf](https://twitter.com/nightwolf780), [Blacknote](https://twitter.com/BlacknoteSec), and [CalebStewart](https://twitter.com/calebjstewart), and boy howdy was it a great experience.
