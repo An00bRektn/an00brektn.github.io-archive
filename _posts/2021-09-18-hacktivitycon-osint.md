@@ -44,7 +44,7 @@ All my homies hate steganography I guess. If you did go ahead and try and decode
 `So this is a weird one. We've been having trouble tracking down Don because of the name conflict between some baseball player or something? All we know is that he likes elephants. Like, he reaalllyy likes elephants.`
 
 ### The Search
-This one was not easy, and had some people searching for hours. In the discord chat, people were ending in rabbit holes with an unethical "ethical" elephant safari in Bali, achievement on a particular "-hub", and a very Republican anti-vaxxer\*.
+This one was not easy, and had some people searching for hours. In the discord chat, people were ending in rabbit holes with an unethical "ethical" elephant safari in Bali, achievements on a particular "-hub", and a very Republican anti-vaxxer\*.
 <sub>\* do not go out and dox or harass people</sub>
 
 I will not be going into those rabbit holes because I want to keep this blog friendly for all. My approach to this made use of the tool [sherlock](https://github.com/sherlock-project/sherlock), which attempts to scour the internet based on the usernames you supply. I generated a list of possible usernames (I keep promising myself I'll automate it but I haven't done that yet):
