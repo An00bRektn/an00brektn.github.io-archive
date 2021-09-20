@@ -6,7 +6,7 @@ date:   2021-09-20 12:00:00
 tags:
 - ctf
 - programming
-- h@cktivitycon-2021
+- h@cktivitycon
 - opencv
 - python
 description: ''
