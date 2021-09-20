@@ -6,10 +6,10 @@ date:   2021-09-17 12:00:00
 tags:
 - buffer-overflow
 - windows
+- exploit-dev
+- tryhackme
 description: ''
 categories:
-- TryHackMe
-- Red Team
 published: true
 comments: false
 ---

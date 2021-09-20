@@ -6,10 +6,11 @@ date:   2021-09-24 12:00:00
 tags:
 - beginner
 - windows
+- hackthebox
+- red-team
+- ms17-010
 description: ''
 categories:
-- HTB
-- Red Team
 published: false
 comments: false
 ---

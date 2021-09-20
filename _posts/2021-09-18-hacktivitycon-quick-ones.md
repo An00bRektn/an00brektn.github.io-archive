@@ -8,6 +8,9 @@ description: ''
 categories:
 - ctf
 - h@cktivitycon
+- redis
+- web-vulnerabilities
+- mobile
 published: True
 comments: false
 ---

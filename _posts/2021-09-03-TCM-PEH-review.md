@@ -6,10 +6,12 @@ date:   2021-09-03 12:00:00
 tags:
 - beginner
 - red
-- TCM
+- thecybermentor
+- active-directory
+- web-vulnerabilities
+- exploit-dev
 description: ''
 categories:
-- Red Team
 published: true
 comments: false
 ---

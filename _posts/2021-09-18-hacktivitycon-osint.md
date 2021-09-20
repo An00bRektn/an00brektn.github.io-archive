@@ -4,11 +4,11 @@ title: "H@cktivitycon Writeups: Oh-SINT it's OSINT"
 image: ''
 date:   2021-09-18 12:00:00
 tags:
-description: ''
-categories:
 - ctf
 - osint
 - h@cktivitycon
+description: ''
+categories:
 published: True
 comments: false
 ---

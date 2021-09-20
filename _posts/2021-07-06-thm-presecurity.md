@@ -6,9 +6,9 @@ date: 2021-07-06
 tags:
 - tryhackme
 - beginner
+- tryhackme
 description: ''
 categories:
-- TryHackMe
 published: true
 comments: false
 ---

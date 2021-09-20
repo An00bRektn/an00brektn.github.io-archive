@@ -7,10 +7,10 @@ tags:
 - beginner
 - active-directory
 - windows
+- hackthebox
+- red-team
 description: ''
 categories:
-- HTB
-- Red Team
 published: true
 comments: false
 ---

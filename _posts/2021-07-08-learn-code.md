@@ -8,7 +8,6 @@ tags:
 - programming
 description: ''
 categories:
-- Programming
 published: true
 comments: true
 ---
