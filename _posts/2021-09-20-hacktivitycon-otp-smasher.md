@@ -219,6 +219,7 @@ if __name__ == "__main__":
 I stuck my driver code into a `while True` loop because I had no idea how many iterations were necessary. However, as I stepped away from my laptop for a little bit after letting it run, I noticed some inconsistencies. My output would look something like this.
 ```bash
 remnux@remnux:~/ctf/hacktivitycon/otp$ python3 script.py
+[trimmed for brevity]
 18610965
 14
 87940042
@@ -254,8 +255,6 @@ import requests
 import numpy as np
 import pytesseract
 import re
-
-# flag{f994cd9c756675b743b10c44b32e36b6}
 
 url = "http://challenge.ctf.games:30495/"
 
