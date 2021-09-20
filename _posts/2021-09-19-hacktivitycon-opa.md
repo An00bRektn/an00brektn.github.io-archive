@@ -4,12 +4,12 @@ title: "H@cktivitycon Writeups: OPA Secrets"
 image: ''
 date:   2021-09-19 12:00:00
 tags:
-description: ''
-categories:
 - ctf
 - h@cktivitycon
 - web-vulnerabilities
 - code-review
+description: ''
+categories:
 published: True
 comments: false
 ---

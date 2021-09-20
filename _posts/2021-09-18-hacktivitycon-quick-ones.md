@@ -4,13 +4,13 @@ title: "H@cktivitycon Writeups: The Quick Ones"
 image: ''
 date:   2021-09-18 12:00:00
 tags:
-description: ''
-categories:
 - ctf
 - h@cktivitycon
 - redis
 - web-vulnerabilities
 - mobile
+description: ''
+categories:
 published: True
 comments: false
 ---
