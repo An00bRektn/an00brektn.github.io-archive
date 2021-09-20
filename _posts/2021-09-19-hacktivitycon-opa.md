@@ -228,6 +228,8 @@ If you decode the data in the request, you'll see that we're mimicking what we s
 
 ![asdf](https://an00brektn.github.io/img/Pasted image 20210919204242.png)
 
+Thank you congon4tor for putting out the "correct" solution even though half of us skipped it :)
+
 ## Beyond the Flag
 When I was originally solving this challenge, I did not use the SSRF at all, although I did notice it could be used. The first unintended solution we'll explore is a case of Broken Access Control with requests to the OPA. The second unintended solution has to do with the curl request that's being directly called from the machine, which has insufficient filtering.
 
