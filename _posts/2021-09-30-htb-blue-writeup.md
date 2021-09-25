@@ -501,4 +501,4 @@ I would try to dig deeper into each line so that we're not trying to work off of
 
 The Python script that I uses the exploit to upload and trigger a payload as SYSTEM. Since it's trying to execute a command over the connection rather than abuse the connection itself, I can only assume this is the reason Metasploit doesn't pop as consistently (assuming it's not an installation issue).
 
-This is definitely a step up from doing simple stack-based buffer overflows, but, even if I may or may not have found the reason, taking a deeper dive into the code makes me appreciate the exploit more than I did as compared to when I would just aim, point, shoot.
+This is definitely a step up from doing simple stack-based buffer overflows, but, even if I may or may not have found the reason, taking a deeper dive into the code makes me appreciate the exploit more than I did as opposed to when I would just aim, point, shoot.

