@@ -14,7 +14,7 @@ published: true
 comments: false
 ---
 
-![intro](https://an00brektn.github.io/img/Pasted image 20210904173235.png)
+![intro](https://an00brektn.github.io/img/thm-brainstorm/Pasted image 20210904173235.png)
 
 ## Intro
 [Brainstorm](https://tryhackme.com/room/brainstorm) was one of the first buffer overflow boxes I managed to root on a CTF platform after learning the basics. It's not hard if you understand the process, but it's a good challenge nonetheless. I'll start by scanning the machine and find FTP open with anonymous login. I'll also find a chatserver running on port 9999, and a copy of that executable in the FTP. Then, after doing some offline exploit development, I'll have a working buffer overflow that I can then run against the remote machine to gain Administrator access.
@@ -240,11 +240,11 @@ except:
 
 I'm going to put the generated pattern into the exploit and see what Immunity Debugger has to say about it.
 
-![asdf](https://an00brektn.github.io/img/Pasted image 20210904163639.png)
+![asdf](https://an00brektn.github.io/img/thm-brainstorm/Pasted image 20210904163639.png)
 
 As you can see, the pointers in the program are completely overwritten, meaning that the program has no idea where to point next. Using this data, we can use a plugin called Mona to show us the offset. Entering `!mona findmsp -distance 3000` will show us the following:
 
-![asdf](https://an00brektn.github.io/img/Pasted image 20210904164043.png)
+![asdf](https://an00brektn.github.io/img/thm-brainstorm/Pasted image 20210904164043.png)
 
 We find that the EIP is offset by 2012 bytes, which we can add to our exploit.
 
@@ -285,18 +285,18 @@ except:
 Sometimes, programs interpret specific characters to serve a specific function, so we cannot use these in our shell code. Before jumping to grabbing the JMP ESP instuction and inserting shellcode, we need to find these bad characters. I'll steal a list of hex characters from [here](https://github.com/cytopia/badchars) and stick it in my code after the `retn` variable.
 I'm also going to ask `mona` to do the same using `!mona bytearray -cpb "\x00"`, so I can have `mona` check the bad characters for me. I'll run the exploit again, and check for what bad characters might be using `!mona -f C:\Share\bytearray.bin -a 00DCEEA8`
 
-![jekyll_annoying](https://an00brektn.github.io/img/Pasted image 20210904165201.png)
+![jekyll_annoying](https://an00brektn.github.io/img/thm-brainstorm/Pasted image 20210904165201.png)
 
 Here, we see that there are no bad characters, so all we have to do is find the right module and the correct instruction pointer.
 
 ### Getting the Rest
 I see this module step skipped a lot in other tutorials and writeups because it isn't *that* important, but I still think it's worth the check. If a binary/executable is statically compiled, feel free to skip this. But, since our executable pull from a dll (and other programs could pull from multiple), we might want to double check exactly where in memory we can attack. I can look at the different libraries using `!mona modules`.
 
-![asdf](https://an00brektn.github.io/img/Pasted image 20210904165754.png)
+![asdf](https://an00brektn.github.io/img/thm-brainstorm/Pasted image 20210904165754.png)
 
 Here, we're looking for a module that has all memory protections set to false, which `essfunc.dll` does. Our next step is to find the JMP ESP pointer that we can use to point back to our shell code, so we can get a shell. We can list instructions that are in `essfunc.dll` using the following command: `!mona find -s "\xff\xe4" -m essfunc.dll` (FF E4 is the JMP ESP instruction in hex).
 
-![asdf](https://an00brektn.github.io/img/Pasted image 20210904170130.png)
+![asdf](https://an00brektn.github.io/img/thm-brainstorm/Pasted image 20210904170130.png)
 
 If we had bad characters, we'd want to find a pointer that did not contain a bad character. However, since that isn't a problem we can grab the first address `0x625014df`, and put it in our exploit. Since Windows is little endian (which is some CS stuff that's outside of the scope of this writeup), we need to provide this in reverse order. Our exploit should now look like this:
 

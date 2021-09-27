@@ -14,7 +14,7 @@ published: True
 comments: false
 ---
 
-![logo](https://an00brektn.github.io/img/Pasted image 20210918214829.png)
+![logo](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918214829.png)
 
 ## Intro
 I have devoted the past 48 hours to the **H@cktivitycon CTF**, run by [John Hammond](https://www.youtube.com/channel/UCVeW9qkBjo3zosnqUbG7CFw), [congon4tor](https://twitter.com/congon4tor?lang=en), [M_alpha](https://twitter.com/M_alphaaa), [fumenoid](https://twitter.com/fumenoid?lang=en), [NightWolf](https://twitter.com/nightwolf780), [Blacknote](https://twitter.com/BlacknoteSec), and [CalebStewart](https://twitter.com/calebjstewart), and boy howdy was it a great experience.
@@ -29,29 +29,29 @@ There is no downloadable content, so I'll deploy the website and be greeted with
 
 Although I considered immediately going for a SQL injection, we are given the option to sign up, so I'll walkthrough the application as a normal user before I try and go for anything. Once we sign in, we see the main app.
 
-![asdf](https://an00brektn.github.io/img/Pasted image 20210919202429.png)
+![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210919202429.png)
 
 ### Main Page
 
-![asdf](https://an00brektn.github.io/img/Pasted image 20210919202618.png)
+![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210919202618.png)
 
 After messing around on the landing page for a bit, we get a feeling for what the web app is doing. Users can create secret messages and share those with other users on the website.
 
-![asdf](https://an00brektn.github.io/img/Pasted image 20210919202743.png)
+![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210919202743.png)
 
 Based on this, we find 3 users, `congon4tor`, `jellytalk`, and `pinkykoala`. I'll note these down in case they're necessary. It is at this point the idea of XSS entered my mind, possibly opening up a way to steal session cookies, but I found no indication that these users were interacting with the site at all, so I tabled that idea.
 
 ### User Settings
 The user settings page was an interesting one. We're given the option to change our profile picture using the url of an image.
 
-![adsf](https://an00brektn.github.io/img/Pasted image 20210919202821.png)
+![adsf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210919202821.png)
 
 My first instinct was to see if this was potentially open to SSRF, so I tried to input some URLs to see if I could send requests to the server itself. As I'm writing this blog post a day later, the limited resources were making it harder to show these tests, but I was inclined to believe there was some kind of SSRF. However, without a real target to go after, I continued to explore the application, to possibly discover internal services (e.g. mySQL, Docker registry, etc.)
 
 ### Security Page
 The security tab was the most straightforward of the pages. It has an announcement saying the webapp's code is public on GitHub.
 
-![adsf](https://an00brektn.github.io/img/Pasted image 20210919203254.png)
+![adsf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210919203254.png)
 
 No "Security through Obscurity"? In my CTF? That's crazy. Let's see what the source code has in store for us.
 
@@ -202,7 +202,7 @@ def updateSettings():
 
 Seems like we're just running a curl command on the system, and there's nothing stopping us from querying the endpoint. Let's test that to make sure.
 
-![adsf](https://an00brektn.github.io/img/Pasted image 20210919203820.png)
+![adsf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210919203820.png)
 
 Very cool. Now, I'll inject my own curl request into the request so I canmake the same request the app would normally use to change permissions, using my own user id which I can find by using Inspect. I'm using Burp's Repeater feature for ease of sending multiple requests.
 
@@ -226,7 +226,7 @@ url=--request+POST+http%3A%2F%2Flocalhost%3A8181%2Fv1%2Fdata%2Faccess%2Fwrite+--
 
 If you decode the data in the request, you'll see that we're mimicking what we saw in the code to allow our own user to get write permissions. After this, I can directly request the flag, using the same request we used when viewing the secret we created earlier.
 
-![asdf](https://an00brektn.github.io/img/Pasted image 20210919204242.png)
+![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210919204242.png)
 
 Thank you congon4tor for putting out the "correct" solution even though half of us skipped it :)
 

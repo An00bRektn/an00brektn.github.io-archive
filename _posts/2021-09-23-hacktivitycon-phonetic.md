@@ -15,7 +15,7 @@ published: True
 comments: false
 ---
 
-![logo](https://an00brektn.github.io/img/Pasted image 20210918214829.png)
+![logo](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918214829.png)
 
 ## Intro
 I have devoted the past 48 hours to the **H@cktivitycon CTF**, run by [John Hammond](https://www.youtube.com/channel/UCVeW9qkBjo3zosnqUbG7CFw), [congon4tor](https://twitter.com/congon4tor?lang=en), [M_alpha](https://twitter.com/M_alphaaa), [fumenoid](https://twitter.com/fumenoid?lang=en), [NightWolf](https://twitter.com/nightwolf780), [Blacknote](https://twitter.com/BlacknoteSec), and [CalebStewart](https://twitter.com/calebjstewart), and boy howdy was it a great experience. 
@@ -257,7 +257,7 @@ close(STDERR)
 
 Now clearly, this is a reverse shell script. But, what's weird is that `uuencode.uu` string in the middle of it. A little bit of googling later, and we find that this is just some way to encode and decode files, called "uuencode" because it was originally used between unix users (UNIX to UNIX). That said, we can search for a decoder online, notice that `dcode.fr` once again has everything a CTF player could need, and grab the flag.
 
-![asdf](https://an00brektn.github.io/img/Pasted image 20210923133935.png)
+![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210923133935.png)
 
 ## Final Payload
 This was cleaned up to the best of my ability with find and replace, but there were A LOT of characters to be escaped.

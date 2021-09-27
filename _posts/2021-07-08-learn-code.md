@@ -46,7 +46,7 @@ This is where things get a little trickier, because everybody learns a little bi
 
 Ask yourself what you want to program for. This [FAQ](https://www.reddit.com/r/learnprogramming/wiki/faq#wiki_getting_started) from r/learnprogramming does a very good job of clarifiying some of the questions people have about programming. I think one of the most important parts for me was seeing this table:
 
-![codetable.png](https://an00brektn.github.io/img/codetable.png)
+![codetable.png](https://an00brektn.github.io/img/thm-presecurity/codetable.png)
 
 This table is obviously not all encompassing, but it's a good way to get an understanding of what you're working towards. If you're really ambivalent of what language you want to choose, I **HIGHLY** recommend Python, because of how versatile it is.  
 

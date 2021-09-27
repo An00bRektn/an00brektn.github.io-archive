@@ -15,7 +15,7 @@ published: True
 comments: false
 ---
 
-![logo](https://an00brektn.github.io/img/Pasted image 20210918214829.png)
+![logo](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918214829.png)
 
 ## Intro
 I have devoted the past 48 hours to the **H@cktivitycon CTF**, run by [John Hammond](https://www.youtube.com/channel/UCVeW9qkBjo3zosnqUbG7CFw), [congon4tor](https://twitter.com/congon4tor?lang=en), [M_alpha](https://twitter.com/M_alphaaa), [fumenoid](https://twitter.com/fumenoid?lang=en), [NightWolf](https://twitter.com/nightwolf780), [Blacknote](https://twitter.com/BlacknoteSec), and [CalebStewart](https://twitter.com/calebjstewart), and boy howdy was it a great experience. 
@@ -28,7 +28,7 @@ This post, specifically, is dedicated to the scripting challenge, OTP Smasher. I
 ## Initial Recon
 This scripting challenge involves a web page, so it's important that we get a good understanding what we're trying to do first.
 
-![asdf](https://an00brektn.github.io/img/Pasted image 20210919212524.png)
+![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210919212524.png)
 
 We have a number in the top left (presumably a counter), a picture with some numbers in it, and a text box. I think it's pretty clear what's supposed to happen here.
 After trying to input the numbers shown on screen, in a vain attempt to increase the counter, nothing happens.
@@ -94,7 +94,7 @@ With all of the things we've observed with the website, the high level overview 
 
 Steps 2 and 3 seemed pretty easy, all you have to do is use a library like `requests` in Python. However, I had to take to Google to find ways to extract text from images. Luckily, the search did not take me too long.
 
-![asdf](https://an00brektn.github.io/img/Pasted image 20210919213413.png)
+![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210919213413.png)
 
 That's awfully convenient. A quick read through of the article informs us of two key libraries/modules: [`OpenCV`](https://opencv.org/) and [`pytesseract`](https://pypi.org/project/pytesseract/). `OpenCV` is a library that basically anyone who's ever touched ML knows about. It's a library that powers those viral YouTube videos about computers seeing stuff, and provides a pretty simple framework for reading and manipulating images, rather than going through byte by byte. `pytesseract` complements `OpenCV` because it's main focus is to server as an OCR, or an Optical Character Recognition tool, which essentially means it reads text from images. After installing both of these, we can begin development.
 
@@ -149,7 +149,7 @@ print(text)
 
 The article was not lying when it said it can do this in one line of code. One problem, this script uses a local image, and while I could download 100+ images, we start introducing the issue of greater network latency and download speed. As any good programmer would do, I took to the internet again, and stumbled across [this](https://stackoverflow.com/questions/21061814/how-can-i-read-an-image-from-an-internet-url-in-python-cv2-scikit-image-and-mah) StackOverflow thread.
 
-![asdf](https://an00brektn.github.io/img/Pasted image 20210919220346.png)
+![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210919220346.png)
 
 A solution was present, and used this bit of code.
 
@@ -303,4 +303,4 @@ if __name__ == "__main__":
 
 My original script did not have the flag printed out, and instead just downloaded the flag image. But, regardless, here is the flag.
 
-![asdf](https://an00brektn.github.io/img/Pasted image 20210919224044.png)
+![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210919224044.png)

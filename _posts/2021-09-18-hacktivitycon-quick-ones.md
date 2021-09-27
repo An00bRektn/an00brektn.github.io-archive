@@ -15,7 +15,7 @@ published: True
 comments: false
 ---
 
-![logo](https://an00brektn.github.io/img/Pasted image 20210918214829.png)
+![logo](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918214829.png)
 
 ## Intro
 I have devoted the past 48 hours to the **H@cktivitycon CTF**, run by [John Hammond](https://www.youtube.com/channel/UCVeW9qkBjo3zosnqUbG7CFw), [congon4tor](https://twitter.com/congon4tor?lang=en), [M_alpha](https://twitter.com/M_alphaaa), [fumenoid](https://twitter.com/fumenoid?lang=en), [NightWolf](https://twitter.com/nightwolf780), [Blacknote](https://twitter.com/BlacknoteSec), and [CalebStewart](https://twitter.com/calebjstewart), and boy howdy was it a great experience.  My team placed 128th out of ~1700 teams that actually scored, so we did not do that bad. The next few posts will be writeups associated with specific challenges/categories that I completed. This post, specifically, is dedicated to the challenges that were too short to be given their own post.
@@ -26,7 +26,7 @@ I have devoted the past 48 hours to the **H@cktivitycon CTF**, run by [John Hamm
 
 ### Solution
 Very difficult, I know. Here's the rules page.
-![asdf](https://an00brektn.github.io/img/Pasted image 20210918183345.png)
+![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918183345.png)
 
 Hmm... no flag. Let's try looking at the source code with `CTRL+U`.
 ```html
@@ -150,16 +150,16 @@ Well, at least they're trying.
 
 ### Solution
 This is a web application, no downloadable source, but there is a deployable instance. Here's the main page.
-![adsf](https://an00brektn.github.io/img/Pasted image 20210918184049.png)
+![adsf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918184049.png)
 
 Let's just try their example.
-![asdf](https://an00brektn.github.io/img/Pasted image 20210918184130.png)
+![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918184130.png)
 
 That looks like it literally came from `stdout` on the command line. Can we just construct a one-liner using a character like `;` or `&&`?
-![asdf](https://an00brektn.github.io/img/Pasted image 20210918184244.png)
+![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918184244.png)
 
 Yup. It's an easy challenge. We can read the flag using `/etc/hosts; cat flag.txt`.
-![asdf](https://an00brektn.github.io/img/Pasted image 20210918184345.png)
+![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918184345.png)
 
 ## Misc: Redlike
 ### Description

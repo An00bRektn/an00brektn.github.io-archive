@@ -13,7 +13,7 @@ published: True
 comments: false
 ---
 
-![logo](https://an00brektn.github.io/img/Pasted image 20210918214829.png)
+![logo](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918214829.png)
 
 ## Intro
 I have devoted the past 48 hours to the **H@cktivitycon CTF**, run by [John Hammond](https://www.youtube.com/channel/UCVeW9qkBjo3zosnqUbG7CFw), [congon4tor](https://twitter.com/congon4tor?lang=en), [M_alpha](https://twitter.com/M_alphaaa), [fumenoid](https://twitter.com/fumenoid?lang=en), [NightWolf](https://twitter.com/nightwolf780), [Blacknote](https://twitter.com/BlacknoteSec), and [CalebStewart](https://twitter.com/calebjstewart), and boy howdy was it a great experience.
@@ -26,18 +26,18 @@ This post, specifically, is dedicated to the OSINT category's challenges. You'd 
 
 ### The Search
 Jed Sheeran, as I said in the introduction, was the easiest target. A simple google search yields the following:
-![image](https://an00brektn.github.io/img/Pasted image 20210918184736.png)
+![image](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918184736.png)
 
 The description mentioned something about his music, Soundcloud is probably a good place to check.
-![image](https://an00brektn.github.io/img/Pasted image 20210918184900.png)
+![image](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918184900.png)
 
 Based on the "bread sheeran" banner and the single song release, this is probably the guy. If we take a listen to his song, we hear a lot of garbled beeps and boops. If you've ever done any steganography, you'll know that this is probably going to call for a spectogram. *HOWEVER*, by the time I got around to doing this challenge, John Hammond nerfed it because people were complaining too much, and you can find the flag by looking in the description of the song.
 
-![imgage](https://an00brektn.github.io/img/Pasted image 20210918185148.png)
+![imgage](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918185148.png)
 
 All my homies hate steganography I guess. If you did go ahead and try and decode the stego, you'd find that it was a Slow-Scan Television signal ([SSTV](https://www.sigidwiki.com/wiki/Slow-Scan_Television_(SSTV))), but it was so hard to read the flag they just threw it in the description.
 
-![image](https://an00brektn.github.io/img/Pasted image 20210918210724.png)
+![image](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918210724.png)
 
 ## Target 2: Don T. Mason
 ### Description
@@ -82,10 +82,10 @@ A couple things that unify these findings.
 3. Don T. Mason, as someone pointed out in chat, is an anagram for "mastodon"
 
 If Mr. Don T. Mason wants to show his passion for elephants, he has to be on `mastodon.social`, so I'll try that first. I tried finding his account without making my own, but I finally settled to making a burner account. If I search for "Don Mason", I find this.
-![asdf](https://an00brektn.github.io/img/Pasted image 20210918191115.png)
+![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918191115.png)
 
 This *HAS* to be our guy. Scrolling down, we find our flag.
-![asdf](https://an00brektn.github.io/img/Pasted image 20210918191400.png)
+![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918191400.png)
 
 I do encourage anyone reading to try finding him for yourself, because the filler posts that John Hammond wrote are worth the search.
 
@@ -100,7 +100,7 @@ Excluded are the hours I spent looking at onion-related recipes, but I eventuall
 He's on Pastebin. 
 
 I told Sherlock to look for a bunch of variations on "Mike Shallot", specifically on Pastebin, and I get the url `https://pastebin.com/u/mikeshallot`. There we find the following.
-![img](https://an00brektn.github.io/img/Pasted image 20210918191839.png)
+![img](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918191839.png)
 
 Well that's a little cryptic. If we look at his profile picture, we notice the logo for Tor, the means people take when using the "Dark Web". I am by no means an expert on how the internet is structured, but here are a couple of sources were you can learn more about Tor, and what we'll use to navigate the "Dark Web", [Tails Linux](https://tails.boum.org/)
 
@@ -113,8 +113,8 @@ I will be using Tails Linux to do the search (because I'm terribly paranoid abou
 ### Dark Web
  Once we have our Tails Linux VM set up, we can disable all Javascript and media on websites to prevent any unexpected attacks, and begin the search. I'll start by looking up "Dark Web"-specific browsers, because we specificially want to look for a `.onion` site (otherwise we wouldn't need to use tor). I'll just throw that first long string into the search bar and see what pops up.
 
-![asdf](https://an00brektn.github.io/img/Pasted image 20210918213314.png)
+![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918213314.png)
 
  Interesting. Based on how these first few urls are formatted, I assume the next cryptic string is probably the specific location of the flag on the `strongerw2ise74v3duebgsvug4mehyhlpa7f6kfwnas7zofs3kov7yd.onion.my/pduplowzp/nndw79` site. After navigating to this URL, we find the flag.
  
- ![asdf](https://an00brektn.github.io/img/Pasted image 20210918213616.png)
+ ![asdf](https://an00brektn.github.io/img/h@cktivity2021/Pasted image 20210918213616.png)

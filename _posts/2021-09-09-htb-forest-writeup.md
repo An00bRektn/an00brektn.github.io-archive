@@ -15,7 +15,7 @@ published: true
 comments: false
 ---
 
-![intro](https://an00brektn.github.io/img/Pasted image 20210903122049.png)
+![intro](https://an00brektn.github.io/img/htb-forest/Pasted image 20210903122049.png)
 
 ## Intro
 I'm pretty new to doing Hack The Box, so Forest is one the boxes that I rooted as part of the Take It Easy Dare, which taught me a good amount about approaching Active Directory machines. Forest is a domain controller with two domains, although that part isn't as relevant. I'll begin by enumerating common ports, and find users from RPC. One of the users I find is AS-REP roastable, which will allow me to get user. From there, I'll create a user with DCSync Rights so I can dump the system hashes, and pass the hash my way to domain admin.
@@ -385,7 +385,7 @@ After that's taken care of, I'll run the following command on the DC:
 
 This will allow me to collect all of the Active Directory data that this service account has to offer. I'll download the zip file that comes off of it, and drag and drop it right into Bloodhound. After that's unzipped and loaded in, I'll mark `svc-alfresco` as "owned" and look for "Shortest Path to Domain Admins".
 
-![asdf](https://an00brektn.github.io/img/Pasted image 20210903163250.png)
+![asdf](https://an00brektn.github.io/img/htb-forest/Pasted image 20210903163250.png)
 
 *Your path might look different than mine, but these privesc steps are all the same.*
 
@@ -393,7 +393,7 @@ Here we see a fairly large graph. As you'll notice, there are actually two domai
 
 From svc-alfresco, marked with a skull, we see two jumps necessary to get to domain admin. Since svc-alfresco is a part of the Account Operators group, it has the generic all privilege on the Exchange Windows Permissions group. Right clicking the edge to learn more, we find the following abuse info:
 
-![asdf](https://an00brektn.github.io/img/Pasted image 20210903163652.png)
+![asdf](https://an00brektn.github.io/img/htb-forest/Pasted image 20210903163652.png)
 
 Essentially, this means we can give our account, or any account, DCSync Privileges, which can allow us to run secretsdump.py or mimikatz to dump hashes. If this works, we can use the NT hash we get to pass the hash and become administrator.
 
