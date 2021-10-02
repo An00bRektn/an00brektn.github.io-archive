@@ -2,7 +2,7 @@
 layout: post
 title: "HTB: Blue"
 image: ''
-date:   2021-09-30 12:00:00
+date:   2021-10-09 12:00:00
 tags:
 - beginner
 - windows
