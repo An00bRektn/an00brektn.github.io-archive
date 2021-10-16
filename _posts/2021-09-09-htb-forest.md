@@ -8,7 +8,7 @@ tags:
 - active-directory
 - windows
 - hackthebox
-- red-team
+- bloodhound
 description: ''
 categories:
 published: true
