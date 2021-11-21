@@ -24,6 +24,9 @@ So I wasn't able to get Cyberforce writeups done this week, but I was able to pa
 
 GoodGames was an easy rated machine because it tested your ability to apply basic vulnerabilities and use situational awareness to find the next step, as opposed to figuring out some complex chain of commands. I'll begin by walking the application, and finding SQL injection in the login page. From there, I'll extract some password hashes to get the admin's password and move into the admin panel, which is vulnerable to SSTI. We then find ourselves in a container, where one of the home directories on the original box is mounted. We can create a program to give us elevated privileges, then breakout of the container with ssh, and then escalate to root using our program.
 
+* buh
+{:toc}
+
 ## Recon
 ### nmap
 Do I even need to say it at this point? Yes? Ok, **nmap**.
