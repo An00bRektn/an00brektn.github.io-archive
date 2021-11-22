@@ -208,7 +208,7 @@ remnux@remnux:~/ctf/htb_uni/forensics_peel_back_layers$ sudo dive 47f41629f1cf
 ```
 
 This is what `dive` looks like.
-![[Pasted image 20211122102817.png]]
+![asdf](https://an00brektn.github.io/img/uni-ctf/Pasted image 20211122102817.png)
 
 A brief explanation of what you're seeing:
 - The top left window labeled **Layers** shows the layers and stages that make up the image. You can navigate through these using the arrow keys.
@@ -221,7 +221,7 @@ If we look at the second layer, we notice the following entry in "Layer Details"
 ```
 
 This seems to be the only lead at this time. We can locate this file in the "Current Layer Contents".
-![[Pasted image 20211122103617.png]]
+![asdf](https://an00brektn.github.io/img/uni-ctf/Pasted image 20211122103617.png)
 
 We can access the file by entering the image at that layer and going from there, but I find it easiest to go to `/var/lib/docker/overlay2`.
 ```bash
