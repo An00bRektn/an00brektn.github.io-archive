@@ -143,7 +143,11 @@ I'll add this new subdomain to my `/etc/hosts` file and try again.
 We can login with the credentials we found earlier (admin:superadministrator) to get access to the admin panel.
 ![intro](https://an00brektn.github.io/img/uni-ctf/Pasted image 20211121142144.png)
 
-This part of the typical HTB challenge is always difficult because a lot of the functions here are absolutely useless. However, if there's one thing I know about CTF creators and Flask, they love putting in some kind of SSTI. If we go to the "My Profile" section, and test the "Full Name" field for SSTI, we get success.
+This part of the typical HTB challenge is always difficult because a lot of the functions here are absolutely useless. However, if there's one thing I know about CTF creators and Flask, they love putting in some kind of SSTI.
+
+Server-side Template Injection (SSTI for short), is when a user is able to modify some parameter that can control the template engine that is running on the server. This can allow for XSS to RCE. The most common examples I've seen are in Jinja2 from Python and Pugify in Nodejs. There's a nice table to test certain payloads to enumerate the engine, but since we know it's Flask, we can reasonably assume it's Jinja, and can work from there.
+
+If we go to the "My Profile" section, and test the "Full Name" field for SSTI, we get success.
 ![intro](https://an00brektn.github.io/img/uni-ctf/Pasted image 20211121142528.png)
 
 Normally, the process of exploiting SSTI to get code execution involves enumerating for a module that will give you that ability, and then inserting your payload. Luckily, the field we're exploiting allows us to input as much text as we want, so we can use the following payload that I picked up from 0xdf's blog a while ago.
