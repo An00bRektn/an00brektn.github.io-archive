@@ -7,7 +7,8 @@ tags:
 - ctf
 - h@cktivitycon
 - redis
-- web-vulnerabilities
+- web
+- command-injection
 - mobile
 description: ''
 categories:

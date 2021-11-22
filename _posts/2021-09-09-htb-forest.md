@@ -6,6 +6,7 @@ date:   2021-09-09 12:00:00
 tags:
 - beginner
 - active-directory
+- as-rep-roast
 - windows
 - hackthebox
 - bloodhound

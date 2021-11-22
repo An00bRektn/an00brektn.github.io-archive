@@ -4,11 +4,11 @@ title: "H@cktivitycon Writeup: Phonetic"
 image: ''
 date:   2021-09-23 12:00:00
 tags:
-- ctf
 - malware-analysis
 - h@cktivitycon
 - php
 - reverse-engineering
+- python
 description: ''
 categories:
 published: True

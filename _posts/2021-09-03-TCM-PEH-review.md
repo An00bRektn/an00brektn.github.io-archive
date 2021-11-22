@@ -8,7 +8,7 @@ tags:
 - red
 - thecybermentor
 - active-directory
-- web-vulnerabilities
+- web
 - exploit-dev
 description: ''
 categories:
