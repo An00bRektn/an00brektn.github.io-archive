@@ -10,6 +10,7 @@ tags:
 - dfir
 - docker
 - office-macros
+- beginner
 description: ''
 categories:
 published: false
@@ -23,7 +24,7 @@ Surprisingly, this year's HackTheBox University CTF had a few challenges that I 
 
 For "Upgrades", we're given a .pptm file, which is just a macro-enabled powerpoint file. We use olevba from the oletools toolkit to extract the code for the macros, and, to be thorough, recreate the script in Python to see what strings are in the file.
 
-For "Peel Back The Layers", we're given the name of a Docker registry, and asked to find some new file that was inserted into it. We'll pull down the image and load it into dive, a super useful tool for docker reverse engineering. Looking though the layers, we find a shared object file added to the image, which we can extract and find the hardcoded flag.
+For "Peel Back The Layers", we're given the name of a Docker repository, and asked to find some new file that was inserted into it. We'll pull down the image and load it into dive, a super useful tool for docker reverse engineering. Looking though the layers, we find a shared object file added to the image, which we can extract and find the hardcoded flag.
 
 * buh
 {:toc}
@@ -179,4 +180,90 @@ After reading through a lot of the discussion in the discord, it seems like peop
 
 Dive is a neat tool that lets you see all of the changes made to an image layer by layer. This can help expedite the process of reversing because you get a list of things that were done to the image, and are able to view those changes in the file system of the image. You still have to navigate to the overlay directory on your machine to get the file, but this has saved me a lot of time during CTFs in the past.
 
-I'll switch over to my Remnux machine to show exactly how it's done.
+I'll switch over to my Remnux machine to show exactly how it's done. We're already given the name of the image, so we can just load that onto our machine.
+```bash
+remnux@remnux:~/ctf/htb_uni/forensics_peel_back_layers$ docker pull steammaintainer/gearrepairimage
+Using default tag: latest
+latest: Pulling from steammaintainer/gearrepairimage
+7b1a6ab2e44d: Pull complete 
+858929a69ddb: Pull complete 
+97239c492e4d: Pull complete 
+Digest: sha256:10d7e659f8d2bc2abcc4ef52d6d7caf026d0881efcffe016e120a65b26a87e7b
+Status: Downloaded newer image for steammaintainer/gearrepairimage:latest
+docker.io/steammaintainer/gearrepairimage:latest
+```
+
+For people that don't understand, the `steammaintainer/gearrepairimage` refers to the name of a docker repository, which is similar to a git repository in many ways. Simply put, docker repository are supposed to store and provide docker images, along with elements of version control with those images. The `docker pull` command is, in a sense, similar to the `git clone` command.
+
+We can now check the status of our image with `docker images`.
+```bash
+remnux@remnux:~/ctf/htb_uni/forensics_peel_back_layers$ docker images
+REPOSITORY                        TAG       IMAGE ID       CREATED      SIZE
+steammaintainer/gearrepairimage   latest    47f41629f1cf   9 days ago   72.8MB
+```
+
+Now that the image is up, we can load it into dive by using the image ID, and start using the tool.
+```bash
+remnux@remnux:~/ctf/htb_uni/forensics_peel_back_layers$ sudo dive 47f41629f1cf
+```
+
+This is what `dive` looks like.
+![[Pasted image 20211122102817.png]]
+
+A brief explanation of what you're seeing:
+- The top left window labeled **Layers** shows the layers and stages that make up the image. You can navigate through these using the arrow keys.
+- The window to the right labeled **Current Layer Contents** shows you exactly what the file system looks like at that layer. `dive` also tries to color code what files have changed or were added.
+- The window to the left called **Layer Details** tells you exactly what commands were executed in the Dockerfile, a file that sets up the image on launch, for that layer
+
+If we look at the second layer, we notice the following entry in "Layer Details".
+```d
+#(nop) COPY file:0b1afae23b8f468ed1b0570b72d4855f0a24f2a63388c5c077938dbfdeda945c in /usr/share/lib/librs.so
+```
+
+This seems to be the only lead at this time. We can locate this file in the "Current Layer Contents".
+![[Pasted image 20211122103617.png]]
+
+We can access the file by entering the image at that layer and going from there, but I find it easiest to go to `/var/lib/docker/overlay2`.
+```bash
+root@remnux:/var/lib/docker/overlay2# ls -la
+total 24
+drwx--x---  6 root root 4096 Nov 22 11:20 .
+drwx--x--- 13 root root 4096 Nov 22 11:20 ..
+drwx--x---  3 root root 4096 Nov 22 11:20 2d4dd1a91c123d2099cb70cba5b4312c92b724babdf35dcdb864beee914e0ca0
+drwx--x---  4 root root 4096 Nov 22 11:26 45e6bf07a22d7ce25c287cf9828868893e36983898de96d800c412463964c869
+drwx--x---  4 root root 4096 Nov 22 11:26 c9272024e3fffe4dc145973237870c8a8aecf8689392daf21b6719ad24ca7401
+drwx------  2 root root 4096 Nov 22 11:20 l
+```
+
+We've already done the work of finding the file that looks out of place, so we just have to navigate the relevant layer folder and grab the file (alternatively, run a quick find command and work from there). I'll copy this shared object file to my working directory from earlier, and do my go-to move of running `strings` on the file. We find the flag almost immediately, just have to do some cleaning up.
+```bash
+remnux@remnux:~/ctf/htb_uni/forensics_peel_back_layers$ strings librs.so 
+__gmon_start__
+_ITM_deregisterTMCloneTable
+_ITM_registerTMCloneTable
+__cxa_finalize
+fork
+getenv
+atoi
+inet_addr
+htons
+socket
+connect
+write
+dup2
+execve
+libc.so.6
+GLIBC_2.2.5
+u/UH
+HTB{1_r3H
+4lly_l1kH
+3_st34mpH
+unk_r0b0H
+ts!!!}
+...[trim]...
+```
+
+**FLAG:** `HTB{1_r34lly_l1k3_st34mpunk_r0b0ts!!!}`
+
+Some further analysis in ghidra shows us that the flag was hard coded in hex across 4 lines, so that's why it looks the way it does. Although we've already found the flag, we probably don't want a random image still running on our system, so we can run `docker image rm IMAGE_ID`, after exiting `dive`, to remove the image.
+
