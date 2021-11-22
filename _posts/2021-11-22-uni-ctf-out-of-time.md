@@ -2,7 +2,7 @@
 layout: post
 title: "HTB University CTF Writeups: Out of Time"
 image: ''
-date:   2021-11-22 12:00:00
+date:   2021-11-22 00:00:00
 tags:
 - hackthebox
 - htb-uni-ctf
@@ -11,7 +11,7 @@ tags:
 - python
 description: ''
 categories:
-published: false
+published: true
 comments: false
 ---
 
@@ -280,7 +280,7 @@ if __name__ == "__main__":
 So what's going on? The attack goes as follows:
 - I go through each ASCII character in the range of 33 to 125 checking how the power trace responds
 - I take the difference between this power trace, and the trace of when I just send a null byte at the end, and add up the absolute values of the entries in the resulting array
-- If this value is above a predetermined threshold (I concluded mine to be 100 empirically), we add this to our guessed password and repeat
+- If this value is above a predetermined threshold (I concluded mine to be 100 empirically), we add this to our guessed password and repeat. We know this is the correct character because the correct character will always show up as an outlier compared to the rest of the possible options.
 
 The character that is correct will always cause a spike in the power trace, that is how we distinguish the right from the wrong. I have my loop run forever because I didn't know how long the password was.
 
