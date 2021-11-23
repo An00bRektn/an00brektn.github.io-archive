@@ -103,7 +103,7 @@ End Sub
 
 This doesn't really look that "bad", but it is a CTF, so of course it wouldn't be live malware. I can take the code that `olevba` identified and format it to be more readable.
 
-```vbscript
+```powershell
 Private Function q(g) As String
 	q = ""
 	For Each I In g
