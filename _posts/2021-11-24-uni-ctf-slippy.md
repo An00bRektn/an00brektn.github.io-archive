@@ -136,7 +136,7 @@ This looks good, but now only two problems:
 To solve problem 1, I found entries in [Hacktricks](https://book.hacktricks.xyz/pentesting-web/file-upload#decompress-in-different-folders) and [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Upload%20Insecure%20Files/Zip%20Slip/README.md) (they just have everything don't they?). These link me to `evilarc.py` a script by [ptoomey3](https://github.com/ptoomey3/evilarc).
 
 ## Grabbing the Flag
-The next problem that needed to be solved was finding what file to overwrite, and with what. At this time, I found a CTF writeup for [another challenge](https://www.secjuice.com/247ctf-slippery-upload-write-up/) that was very close to being the same challenge. I'll summarize how it works here.
+The next problem that needed to be solved was finding what file to overwrite, and with what. At this time, I found a CTF writeup for [another challenge](https://www.secjuice.com/247ctf-slippery-upload-write-up/) that was very close to being, if not exactly, the same challenge. I'll summarize how it works here.
 
 Recall from earlier how the debug mode was on. This means, after certain changes are made in certain files, the backend will reload. At first, I tried crafting a modified version of `util.py`, but this crashed the web app. However, I then tried to modify `routes.py` to get a backdoor that has SSTI like so:
 

@@ -2,7 +2,7 @@
 layout: post
 title: "HTB University CTF Writeups: Upgrades & Peel Back The Layers"
 image: ''
-date:   2021-11-23 12:00:00
+date:   2021-11-23 00:00:00
 tags:
 - hackthebox
 - htb-uni-ctf
@@ -13,11 +13,11 @@ tags:
 - beginner
 description: ''
 categories:
-published: false
+published: true
 comments: false
 ---
 
-![intro](https://an00brektn.github.io/img/uni-ctf/Pasted image 20211121130152.png)
+![intro](https://an00brektn.github.io/img/uni-ctf/Pasted%20image%2020211121130152.png)
 
 ## Intro
 Surprisingly, this year's HackTheBox University CTF had a few challenges that I knocked out in under 20 minutes. "Upgrades" was the easy-rated reversing challenge, and "Peel Back The Layers" was the easy-rated forensics challenge, and both simply required you look in the right spot. I'll walk through both in this post since neither was that long.
@@ -208,7 +208,7 @@ remnux@remnux:~/ctf/htb_uni/forensics_peel_back_layers$ sudo dive 47f41629f1cf
 ```
 
 This is what `dive` looks like.
-![asdf](https://an00brektn.github.io/img/uni-ctf/Pasted image 20211122102817.png)
+![asdf](https://an00brektn.github.io/img/uni-ctf/Pasted%20image%2020211122102817.png)
 
 A brief explanation of what you're seeing:
 - The top left window labeled **Layers** shows the layers and stages that make up the image. You can navigate through these using the arrow keys.
@@ -221,7 +221,7 @@ If we look at the second layer, we notice the following entry in "Layer Details"
 ```
 
 This seems to be the only lead at this time. We can locate this file in the "Current Layer Contents".
-![asdf](https://an00brektn.github.io/img/uni-ctf/Pasted image 20211122103617.png)
+![asdf](https://an00brektn.github.io/img/uni-ctf/Pasted%20image%2020211122103617.png)
 
 We can access the file by entering the image at that layer and going from there, but I find it easiest to go to `/var/lib/docker/overlay2`.
 ```bash
