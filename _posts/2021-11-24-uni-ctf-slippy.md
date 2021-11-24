@@ -2,7 +2,7 @@
 layout: post
 title: "HTB University CTF Writeups: Slippy"
 image: ''
-date:   2021-11-24 12:00:00
+date:   2021-11-24 00:00:00
 tags:
 - hackthebox
 - htb-uni-ctf
@@ -13,14 +13,14 @@ tags:
 - tar
 description: ''
 categories:
-published: false
+published: true
 comments: false
 ---
 
 ![intro](https://an00brektn.github.io/img/uni-ctf/Pasted image 20211121130152.png)
 
 ## Intro
-Slippy was the easy-rated web challenge for this year's Hack The Box University CTF. I was really struggling with this one until the last day (the high solve count did not help), not because it was technically challenging, but because it required a couple of moving parts to be true. After an initial code review, we'll take the name as a clue and do some research into the "Zip Slip" archetype of vulnerability. Knowing that the Flask app is in debug mode, we can leverage the "zip slip" vulnerability to overwrite `routes.py` to include our SSTI vulnerability, which we can use to get RCE and grab the flag.
+For our final writeup for this event, we have Slippy, the easy-rated web challenge. I was really struggling with this one until the last day (the high solve count did not help), not because it was technically challenging, but because it required a couple of moving parts to be true. After an initial code review, we'll take the name as a clue and do some research into the "Zip Slip" archetype of vulnerability. Knowing that the Flask app is in debug mode, we can leverage the "zip slip" vulnerability to overwrite `routes.py` to include our SSTI vulnerability, which we can use to get RCE and grab the flag.
 
 * buh
 {:toc}
