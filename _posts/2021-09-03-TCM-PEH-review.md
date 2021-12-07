@@ -5,11 +5,11 @@ image: ''
 date:   2021-09-03 12:00:00
 tags:
 - beginner
-- red
 - thecybermentor
 - active-directory
 - web
-- exploit-dev
+- binary-exploitation
+- info
 description: ''
 categories:
 published: true

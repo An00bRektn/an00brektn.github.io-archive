@@ -6,6 +6,7 @@ date:   2021-07-08 12:00:00
 tags:
 - beginner
 - programming
+- info
 description: ''
 categories:
 published: true

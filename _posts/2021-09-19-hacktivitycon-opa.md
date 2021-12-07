@@ -4,7 +4,6 @@ title: "H@cktivitycon Writeups: OPA Secrets"
 image: ''
 date:   2021-09-19 12:00:00
 tags:
-- ctf
 - h@cktivitycon
 - web
 - ssrf

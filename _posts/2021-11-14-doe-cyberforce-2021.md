@@ -8,6 +8,7 @@ tags:
 - cyberforce
 - dfir
 - hardening
+- review
 description: ''
 categories:
 published: true

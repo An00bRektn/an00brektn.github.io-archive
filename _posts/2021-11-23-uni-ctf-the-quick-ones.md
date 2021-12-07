@@ -10,6 +10,7 @@ tags:
 - dfir
 - docker
 - office-macros
+- malware-analysis
 - beginner
 description: ''
 categories:

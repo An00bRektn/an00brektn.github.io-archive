@@ -4,7 +4,6 @@ title: "H@cktivitycon Writeups: The Quick Ones"
 image: ''
 date:   2021-09-18 12:00:00
 tags:
-- ctf
 - h@cktivitycon
 - redis
 - web

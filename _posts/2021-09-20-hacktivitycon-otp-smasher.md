@@ -4,7 +4,6 @@ title: "H@cktivitycon Writeup: OTP Smasher"
 image: ''
 date:   2021-09-20 12:00:00
 tags:
-- ctf
 - programming
 - h@cktivitycon
 - opencv

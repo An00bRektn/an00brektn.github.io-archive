@@ -4,7 +4,7 @@ title: "H@cktivitycon Writeups: Oh-SINT it's OSINT"
 image: ''
 date:   2021-09-18 12:00:00
 tags:
-- ctf
+- dark-web
 - osint
 - h@cktivitycon
 description: ''

@@ -6,7 +6,7 @@ date:   2021-09-17 12:00:00
 tags:
 - buffer-overflow
 - windows
-- exploit-dev
+- binary-exploitation
 - tryhackme
 description: ''
 categories:

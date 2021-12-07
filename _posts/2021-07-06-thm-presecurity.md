@@ -5,7 +5,7 @@ image: 'https://an00brektn.github.io/img/presecurity-header.png'
 date: 2021-07-06
 tags:
 - tryhackme
-- beginner
+- review
 description: ''
 categories:
 published: true
