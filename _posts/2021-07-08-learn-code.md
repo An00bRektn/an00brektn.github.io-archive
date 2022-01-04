@@ -86,7 +86,7 @@ If none of that made sense to you, that's okay! This is just a list of what I th
 - [This Random Reddit Thread](https://www.reddit.com/r/learnprogramming/comments/j9napy/im_deleting_my_account_here_is_a_list_of/g8limoh/?utm_source=share&utm_medium=ios_app&utm_name=iossmf&context=3) - Mostly Python
 - [Many, Many More YouTube Channels](https://github.com/JoseDeFreitas/awesome-youtubers) - A lot.
 
-You're also going to need to install an Integrated Development Environment (IDE) or a nicer text editor to write code, along with your respective language itself. For a program to write code, I personally recommend [Visual Studio Code](https://code.visualstudio.com/), unless you're trying to write applications for phones, in which case you may or may not want something a bit more specialized like [Android Studio](https://developer.android.com/studio). If that's too much, there are also IDEs in-browser that you can use while starting out:
+You're also going to need to install an Integrated Development Environment (IDE) or a nicer text editor to write code, along with your respective language itself. For a program to write code, I personally recommend [Visual Studio Code](https://code.visualstudio.com/) (even though it's not really an IDE), unless you're trying to write applications for phones, in which case you may or may not want something a bit more specialized like [Android Studio](https://developer.android.com/studio). If that's too much, there are also IDEs in-browser that you can use while starting out:
 
 - [repl.it](https://repl.it/)  
 - [codepen.io](https://codepen.io/)  
@@ -102,7 +102,7 @@ Language Installs:
 - [Python](https://www.python.org/downloads/) - Install Python3, Python2 has been discontinued
 - [Java](https://java.com/en/download/help/download_options.html) - VS Code has an alternative way to do this
 - [Swift](https://swift.org/download/#releases)
-- C# - recommend installing [Visual Studio](https://visualstudio.microsoft.com/) assuming you're on Windows, not as sure if you're on Mac
+- C# - recommend installing [Visual Studio](https://visualstudio.microsoft.com/) and work out of that
 - [Go](https://golang.org/doc/install)
 - [C++/C](https://www.guru99.com/c-gcc-install.html) - If you use Linux, `apt install gcc` and `apt install g++` should have you covered with compiling these languages (Mac should also be able to do something similar with xcode)
 - [Ruby](https://www.ruby-lang.org/en/downloads/)
