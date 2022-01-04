@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reviewing TCMS Practical Malware Analysis and Triage
+title: Reviewing Practical Malware Analysis and Triage
 image: ''
 date:   2022-01-03 12:00:00
 tags:
