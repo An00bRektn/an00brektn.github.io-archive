@@ -2,7 +2,7 @@
 layout: post
 title: Reviewing TCMS Practical Malware Analysis and Triage
 image: ''
-date:   2021-01-03 12:00:00
+date:   2022-01-03 12:00:00
 tags:
 - beginner
 - tcms
