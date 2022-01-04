@@ -18,7 +18,7 @@ comments: false
 ![asdf](https://an00brektn.github.io/img/pmat/Pasted image 20220103231305.png)
 
 ## Intro
-Hello! It's been a hot minute. I guess you could said haven't said anything here since \**last year*\*...
+Hello! It's been a hot minute. I guess you could said haven't said anything here since *last year*..
 
 \*Cue Seinfeld [music](https://www.youtube.com/watch?v=_V2sBURgUBI)\*
 
@@ -42,7 +42,7 @@ Looking at myself before the course and after, I can say, up front, that I've le
 So clearly, I was doing a lot of praying. I had a Windows machine from doing buffer overflows and trying to do Active Directory in a local lab, but even if I ran malware on that, I probably wouldn't know where to look for anything. My malware analysis knowledge was pretty much just the top two John Hammond videos on this [playlist](https://www.youtube.com/playlist?list=PL1H1sBF1VAKWMn_3QPddayIypbbITTGZv) (I should probably watch more), and it shows.
 
 ## Course Details
-![husky](https://an00brektn.github.io/img/pmat/Pasted image 20220103192608.png)
+![asdf](https://an00brektn.github.io/img/pmat/Pasted image 20220104000134.png)
 Enter [Practical Malware Analysis and Triage](https://academy.tcm-sec.com/p/practical-malware-analysis-triage), taught by [HuskyHacks](https://huskyhacks.dev/) (pictured above). Since its announcement and release around October 2021, I had been planning to pick it up at some point, but I was lucky enough to actually win it in a giveaway. So I guess **DISCLAIMER: I didn't pay for the course (but I was going to buy it anyway)**. Some additional notes:
 - **Price**: $30, but TCM Academy frequently has sales for 25-50% off.
 - **Length**: 9 Hours (obviously depends from person to person)
