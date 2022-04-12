@@ -36,15 +36,15 @@ links:
     - title: my posts
       url: /posts
       key_trigger: 2
-    - title: series
-      url: /series
-      key_trigger: 3
+    #- title: series
+    #  url: /series
+    #  key_trigger: 3
     - title: tags
       url: /tags
-      key_trigger: 4
+      key_trigger: 3
     - title: about me
       url: /about
-      key_trigger: 5
+      key_trigger: 4
   section_2:
     - title: github
       url: https://www.github.com/An00bRektn
@@ -61,8 +61,10 @@ links:
 projects:
   - name: John The Child
     url: https://github.com/An00bRektn/john-the-child
-  - name: Network-Related Data Science Research [In-Progress]
-    url: https://github.com/An00bRektn
+  - name: Flyer CTF
+    url: https://github.com/An00bRektn/flyer-ctf
+  - name: Malware Analysis Reports
+    url: https://github.com/An00bRektn/malware-analysis-reports
  
 
 # exclude my node related stuff
