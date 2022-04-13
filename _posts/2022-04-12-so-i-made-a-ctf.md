@@ -74,7 +74,7 @@ Thankfully, I did not have to develop an entire CTF website. The largest, open s
 
 For any challenges that don't have a deployed instance, the set up is pretty easy from there, as the web front-end takes care of literally everything for you. You can upload challenge files, change the appearance of the page, manage point calculations, and literally anything else you could ever want.
 
-![[Pasted image 20220412173623.png]]
+![Pasted image 20220412173623.png](https://an00brektn.github.io/img/flyer-ctf/Pasted image 20220412173623.png)
 <sup>It isn't pwn if there isn't some roleplaying...</sup>
 
 For the deployed challenges (i.e. Web and Pwn), you'll need to do a little more work. CTFd doesn't have "deploy" buttons in their free version, so you'll have to do it yourself, unless you want to pay them (but I lack money). Now, if you're smart, you'll use Kubernetes and Docker to make a cluster that anyone can access and blah blah container container cloud blah blah.

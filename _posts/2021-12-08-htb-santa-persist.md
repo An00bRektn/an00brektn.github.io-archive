@@ -8,7 +8,7 @@ tags:
 - htb-cyber-santa
 - dfir
 - volatility
-- AutoRun
+- autorun
 description: ''
 categories:
 published: true
