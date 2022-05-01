@@ -22,7 +22,10 @@ comments: false
 ## Intro
 Welcome back to another round of CTF writeup dumps! This time, we're taking a look at [Nahamcon 2022](https://www.nahamcon.com/) run by the cool people over at [Just Hacking](https://justhacking.com/). Unlike my [H@cktivitycon](https://an00brektn.github.io/tags/#h-cktivitycon) writeups, I'm not going to give a solution for every single challenge I solved (many of them were 1 step solutions that aren't really worth dedicating a post to), but I will be going over some that fill in some holes of content that I hadn't touched on here yet. 
 
-The one "hard" web challenge I solved was Hacker Ts, which was a simple web application where you could insert text to be put on an image of a t-shirt. We also quickly find a `/admin` endpoint that is only accessible from the localhost, meaning we need to find some kind of request forgery. After some playing around, we find the engine used to convert our text into the image is wkhtmltoimage, which can then be exploited using HTML injection.
+The one hard-rated web challenge I solved was Hacker Ts, which was a simple web application where you could insert text to be put on an image of a t-shirt. We also quickly find a `/admin` endpoint that is only accessible from the localhost, meaning we need to find some kind of request forgery. After some playing around, we find the engine used to convert our text into the image is wkhtmltoimage, which can then be exploited using HTML injection.
+
+* buh
+{:toc}
 
 ### Description
 Author: [@congon4tor](https://twitter.com/congon4tor)  
