@@ -55,7 +55,7 @@ The `fetch()` method in JavaScript can be used to make a GET request, which will
 
 ![asdf](https://an00brektn.github.io/img/nahamcon-2022/Pasted image 20220430223019.png)
 
-It seems error messages were not properly handled and the program converting the text to the image was leaked, and we now know we're working with [`wkhtmltoimage`](https://wkhtmltopdf.org/). Doing some research, it is specifically a tool to render HTML into a PDF/image. The error also suggests that we can probably still run arbitrary JS code, we might just need to change up how we're making that request. `fetch()` doesn't return text, which might be causing the tool to bug out.
+It seems error messages were not properly handled and the program converting the text to the image was leaked, and we now know we're working with [`wkhtmltoimage`](https://wkhtmltopdf.org/). Doing some research, it is specifically a tool to render HTML into a PDF/image using the Qt WebKit rendering engine, which confirms what we observed earlier. The error also suggests that we can probably still run arbitrary JS code, we might just need to change up how we're making that request. `fetch()` doesn't return text, which might be causing the tool to bug out.
 
 With all the pieces in place, we can now craft a payload.
 
