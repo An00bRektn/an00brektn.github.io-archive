@@ -4,7 +4,6 @@ title: "Looking Back on Cyberforce 2021"
 image: ''
 date:   2021-11-14 12:00:00
 tags:
-- blue
 - cyberforce
 - dfir
 - hardening

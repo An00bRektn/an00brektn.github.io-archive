@@ -4,8 +4,9 @@ title: "HTB Cyber Apocalypse CTF: Precious Guidance & Reflection"
 image: ''
 date:   2022-05-19 00:00:00
 tags:
-- htb-cyber-apocalypse-2022
+- htb-cyber-apocalypse
 - forensics
+- memory-analysis
 - volatility
 - dfir
 - malware-analysis
@@ -602,6 +603,21 @@ Unfortunately, it doesn't. Ghidra doesn't like the fact that there are so many n
 ### The Search Ends - Grabbing The Flag
 After consulting some people afterward, I found that, because of the paging at play here, I should have been using the `vaddump` plugin to investigate the Powershell process. I won't explain everything about it because this has already been dragged on long enough, but I'll link you to [this Andrea Fortuna](https://andreafortuna.org/2017/07/10/volatility-my-own-cheatsheet-part-3-process-memory/) cheatsheet highlighting some basic usage, and [this blog](https://resources.infosecinstitute.com/topic/finding-enumerating-processes-within-memory-part-2/) explaining what VAD is. To keep it very, very simple, `vaddump` will show up cleaner because it specifically looks at the VAD tree, which is a data structure that keeps track of various pages in memory. I'm checking Powershell not only because Goomba/st4ckh0und on the HTB discord said so, but because it makes more sense to check Powershell as that is the thing injecting the DLL, and is more likely to contain all of the bytes, properly.
 
+#### Update - 5/20/22
+So apparently I've gotten a few things wrong with my explanation, and even the author of the challenge also had a misconception that Goomba/st4ckh0und explained this morning/last night, and I thought it was worth interrupting this explanation to clarify some things up to this point.
+- (1) So, the memory dump approach actually does work if you use something like IDA. The reason `vaddump` works more nicely is because we're dumping the virtual pages (which are aligned on a page boundary). When a PE file is loaded from disk, the in-file sections are written to these virtual pages, which is why the `vaddump` requires much less cleanup work.
+	- When you dump it from memory like we were doing, we're getting the raw binary data, as opposed to the desired PE file in it's regular structure.
+	- In conclusion, `memdump` still works, but you're not actually dumping the DLL, you're getting raw binary data as opposed to the full file. Hence, we see all of the null bytes in the middle that wouldn't normally be there.
+	- According to the author (thewildspirit), using `dlldump` with the `--force` option would have retrieved it despite the DLL not being present in the PEB list (due to how it was loaded, but I haven't tested it, nor do I really plan to because it's already taken me long enough to do this once :)
+- (2) `Invoke-ReflectivePEInjection`, the Powershell Script that injected the DLL, doesn't *actually* do reflective DLL injection. I'll let the screenshot explain.
+
+![asdf](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted image 20220520153249.png)
+
+It might seem overkill to draw that line, but obviously each method has different symptoms that will change exactly what you need to hunt for. This distinction is likely the reason it wasn't easily discoverable by the `malfind` (or similar) plugin, as it wasn't *actually* reflective, as many of the examples I was looking at online were able to use `malfind`/`malfinddeep`/etc. to locate the exact location.
+
+Hopefully by this point, I've covered all of my bases and I'm more correct about stuff than I was before. If not, feel free to reach out and clarify. Back to your normally scheduled programming.
+
+### Back to the Lab Again
 I'll start by hunting down which of my vaddumps have the DLL inside it by running a quick one-liner.
 ```shell
 remnux@remnux:~/ctf/cyber-apocalypse/forensics_reflection/autoVolatility/main/vaddump/pwsh$ find . | while read line; do echo $line"--------------------------------------------------------------------------"; strings -a -t x $line | grep winmgr_x86.dll; done

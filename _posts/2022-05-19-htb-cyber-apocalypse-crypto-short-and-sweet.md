@@ -4,7 +4,7 @@ title: "HTB Cyber Apocalypse CTF: Android-in-the-Middle, Jenny From the Block, a
 image: ''
 date:   2022-05-19 00:00:00
 tags:
-- htb-cyber-apocalypse-2022
+- htb-cyber-apocalypse
 - crypto
 - columnar
 - classical

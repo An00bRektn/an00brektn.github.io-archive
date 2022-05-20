@@ -4,10 +4,11 @@ title: "HTB Cyber Apocalypse CTF: The Three-Eyed Oracle"
 image: ''
 date:   2022-05-19 00:00:00
 tags:
-- htb-cyber-apocalypse-2022
+- htb-cyber-apocalypse
 - crypto
 - aes
 - ecb
+- beginner
 - block-cipher
 description: ''
 categories:

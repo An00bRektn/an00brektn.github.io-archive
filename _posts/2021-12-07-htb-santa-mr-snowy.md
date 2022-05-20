@@ -6,7 +6,7 @@ date:   2021-12-07 00:00:00
 tags:
 - hackthebox
 - htb-cyber-santa
-- exploit-dev
+- binary-exploitation
 - buffer-overflow
 - pwntools
 - radare2

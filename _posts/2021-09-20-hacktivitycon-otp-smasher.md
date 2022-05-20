@@ -7,6 +7,8 @@ tags:
 - programming
 - h@cktivitycon
 - opencv
+- pytesseract
+- image-filetering
 - python
 description: ''
 categories:

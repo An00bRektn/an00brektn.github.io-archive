@@ -8,6 +8,7 @@ tags:
 - h@cktivitycon
 - php
 - reverse-engineering
+- perl
 - python
 description: ''
 categories:

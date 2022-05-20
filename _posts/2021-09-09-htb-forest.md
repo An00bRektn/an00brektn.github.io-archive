@@ -10,6 +10,7 @@ tags:
 - windows
 - hackthebox
 - bloodhound
+- dcsync
 description: ''
 categories:
 published: true

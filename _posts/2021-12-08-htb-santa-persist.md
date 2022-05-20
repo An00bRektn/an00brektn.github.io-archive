@@ -8,6 +8,7 @@ tags:
 - htb-cyber-santa
 - dfir
 - volatility
+- memory-analysis
 - autorun
 description: ''
 categories:

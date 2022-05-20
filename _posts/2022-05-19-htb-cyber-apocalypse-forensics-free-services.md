@@ -4,11 +4,11 @@ title: "HTB Cyber Apocalypse CTF: Free Services"
 image: ''
 date:   2022-05-19 00:00:00
 tags:
-- htb-cyber-apocalypse-2022
+- htb-cyber-apocalypse
 - malware-analysis
 - forensics
+- shellcode
 - excel
-- office-macros
 - maldocs
 description: ''
 categories:

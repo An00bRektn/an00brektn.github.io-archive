@@ -9,7 +9,7 @@ tags:
 - reverse-engineering
 - dfir
 - docker
-- office-macros
+- maldocs
 - malware-analysis
 - beginner
 description: ''
