@@ -14,7 +14,7 @@ tags:
 - dnspy
 description: ''
 categories:
-published: false
+published: true
 comments: false
 ---
 
