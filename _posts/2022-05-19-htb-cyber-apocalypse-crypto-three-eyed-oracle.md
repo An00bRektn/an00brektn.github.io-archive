@@ -97,7 +97,7 @@ Aside from all of the socket programming stuff, the program is pretty simple. Th
 - Concatenate a prefix of a random 12 bytes, our message (converted from hex), and the flag
 - Return the encrypted value
 
- For people unfamiliar with cryptography as a whole, this might seem like a near impossible task. AES is the NIST standard for symmetric encryption and has only been shown to have breaks in very specific scenarios, and bruteforcing a 16 byte key will mean there are $2^{128}$ different keys that could exist. Luckily, we don't need to worry about AES at all, because of the poor choice of encryption mode.
+ For people unfamiliar with cryptography as a whole, this might seem like a near impossible task. AES is the NIST standard for symmetric encryption and has only been shown to have breaks in very specific scenarios, and bruteforcing a 16 byte key will mean there are 2^128 different keys that could exist. Luckily, we don't need to worry about AES at all, because of the poor choice of encryption mode.
 
 ## Background: Block Ciphers and Modes of Operation
 ### Block Ciphers

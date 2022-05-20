@@ -79,7 +79,7 @@ Ah, classic ransomware operators... :)
 
 There wasn't much on the opening sheet aside from the image, as many times things can be hidden in the cells behind an image. But, notice that there's an additional sheet here called 'Macro1'. Seems interesting.
 
-![asdf](https://an00brektn.github.io/img/htb-cyber-apocalypse/Pasted image 20220519013115.png)
+![asdf](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted image 20220519013115.png)
 It is *very* interesting.
 
 Investigating this sheet, we find that there are two major components:
