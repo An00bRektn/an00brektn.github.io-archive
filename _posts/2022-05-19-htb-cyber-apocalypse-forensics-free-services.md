@@ -8,6 +8,7 @@ tags:
 - malware-analysis
 - forensics
 - excel
+- office-macros
 - maldocs
 description: ''
 categories:

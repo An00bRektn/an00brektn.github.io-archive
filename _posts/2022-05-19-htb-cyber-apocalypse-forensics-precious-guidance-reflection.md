@@ -31,10 +31,13 @@ Reflection involved some serious Volatility work in analyzing a memory dump from
 {:toc}
 
 ## Precious Guidance
+### Description
+`Miyuki has come across what seems to be a suspicious process running on one of her spaceship's navigation systems. After investigating the origin of this process, it seems to have been initiated by a script called "SatelliteGuidance.vbs". Eventually, one of your engineers informs her that she found this file in the spaceship's Intergalactic Inbox and thought it was an interactive guide for the ship's satellite operations. She tried to run the file but nothing happened. You and Miyuki start analysing it and notice you don't understand its code... it is obfuscated! What could it be and who could be behind its creation? Use your skills to uncover the truth behind the obfuscation layers.`
+
 ### Initial Analysis
 We can open up the zip file and see a single `SatelliteGuidance.vbs` file. I'll open it up with VS Code for some syntax highlighting, and we see the beast that we're going to deal with.
 
-![asdf](https://an00brektn.github.io/img/cyber-apocalypse-22/Pasted image 20220519132129.png)
+![asdf](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted image 20220519132129.png)
 
 This is ~700 lines long.
 
@@ -42,7 +45,7 @@ One of the major downsides to doing written solutions is that it's really hard t
 
 With that out of the way, the first thing I notice as I walkthrough this file is the repeated use of `execute(polymerase(ARRAY));`
 
-```vbscript
+```vb
 REM malnourished Collins mutate. earthen Punjabi typography sweetie spunky bisexual thyroid husbandmen spheroidal immortal, Schumacher wade upshot escarpment wither anorthic 
 
 yCuXgtwQE=Array(n501,mM,v884,"...trim...",w,v884,Cc)
@@ -60,7 +63,7 @@ const SQ = 141
 
 The `execute()` function seems to be native to VBScript, but `polymerase()` is defined somewhere in the middle of the file. When I first looked at this, I completely forgot to scruntinize the `polymerase()` because I immediately jumped to printing out the output of the function, as opposed to trying to analyze it. 
 
-```vbscript
+```vb
 Function polymerase(Iztv)
 eHF201=1:GcoZG=9
 ' Stokes130 gunsling savant Cobb shag maze impassion strap fag131 apply procreate Gemini diocesan slog supposable698 hasten,
@@ -89,7 +92,7 @@ Coming back to the main point, the `polymerase` function, from a cursory glance,
 ### Discovering Stage 2
 Rather than execute the script, we can attempt to dump out the objects that are being made with `polymerase` and passed to `execute` by replacing all `execute` calls with `wscript.echo`, which is basically a print statement in VBScript. I can use Find and Replace to do this for me. Once we do that, we can run the script again and discover a second stage. 
 
-```vbscript
+```vb
 C:\Users\sreisz\Desktop\precious_guidance
 λ cscript SatelliteGuidance.vbs
 Microsoft (R) Windows Script Host Version 5.812
@@ -153,7 +156,7 @@ I got caught in limbo here, struggling to really unpack everything that was goin
 - `serenade` - Runs the `textual.m3u` (definitely a dll) with `rundll32`. There's something else with `calc.exe` in a conditional statment, but it might be more anti-analysis
 
 A `coherent` function was also called by many of these to try and delete the file.
-```vbscript
+```vb
 Function coherent()
 Dim tercel: Set tercel = WScript.CreateObject("Scripting.FileSystemObject")
 tercel.DeleteFile WScript.ScriptFullName, True
@@ -161,14 +164,14 @@ End Function
 ```
 
 There was also a `SECRET` that used the `polymerase` function, but my attempts to get it to work as is only resulted in errors for a while.
-```vbscript
+```vb
 SECRET=Array(Cc,y334,Wl,"...trim...")
 .WriteText polymerase(SECRET)
 ```
 
 ### Understanding polymerase()
 So clearly, there's a lot of anti-analysis going on, which is very typical of a threat actor who has higher skill TTPs. However, since this malware is scripted, it's a lot easier to choose what we want to execute. Now that we have a much better understanding of what these functions are doing, I really want to get to the bottom of this `polymerase()` function. I'll copy the SECRET stuff and `polymerase` out to another file and see what I get back when I `echo`.
-```vbscript
+```vb
 Function polymerase(Iztv)
 eHF201=1:GcoZG=9
 ' Stokes130 gunsling savant Cobb shag maze impassion strap fag131 apply procreate Gemini diocesan slog supposable698 hasten, 
@@ -204,7 +207,7 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 ```
 
 However, if I append this to the end of the original script, we get some lore.
-```vbscript
+```vb
 '...trim...
 'femoral
 'Kim
@@ -238,7 +241,7 @@ Your Parents and Guardians.
 ### Grabbing the Flag
 The functions that we discussed earlier simply do a bunch of anti-analysis techniques and then run a DLL that is written to disk (and removed) using the `polymerase` function. If we can write that DLL to disk, we can maybe analyze it further and understand what the ultimate goal of this malware is. I'm going to modify the `hNZCG` function to write the dll to our current directory, and bypass all of the anti-analysis functions.
 
-```vbscript
+```vb
 Function polymerase(Iztv)
 eHF201=1:GcoZG=9
 ' Stokes130 gunsling savant Cobb shag maze impassion strap fag131 apply procreate Gemini diocesan slog supposable698 hasten, 
