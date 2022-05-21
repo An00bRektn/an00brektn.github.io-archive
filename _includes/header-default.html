@@ -10,11 +10,11 @@
         </h1>
 
         <div class="icons-home">
-            <a aria-label="Send email" title="Send me an e-mail" href="mailto:{{site.email}}">
+            <a aria-label="Send email" title="contact me" href="mailto:{{site.email}}">
                 <svg class="icon icon-email"><use xlink:href="#icon-email"></use></svg>
             </a>
 
-            <a aria-label="My Github" title="Show my projects" target="_blank" href="https://github.com/{{site.github_username}}">
+            <a aria-label="My Github" title="i do stuff sometimes" target="_blank" href="https://github.com/{{site.github_username}}">
                 <svg class="icon icon-github-alt"><use xlink:href="#icon-github-alt"></use></svg>
             </a>
 
@@ -23,7 +23,10 @@
                 <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>
             </a>
 		-->
-            <a aria-label="Use the RSS to get updated" title="Register for my RSS" target="_blank" href="{{ "/feed.xml" | prepend: site.baseurl }}">
+            <a aria-label="My Twitter" title="funny but toxic bird site" target="_blank" href="https://twitter.com/{{site.twitter_username}}">
+                <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+            </a>
+            <a aria-label="Use the RSS to get updated" title="rss because why not" target="_blank" href="{{ "/feed.xml" | prepend: site.baseurl }}">
                 <svg class="icon icon-rss"><use xlink:href="#icon-rss"></use></svg>
             </a>
         </div>
@@ -32,7 +35,7 @@
             <p>Recent posts:</p>
              {% for post in site.posts limit:3%}
                 <li>
-                    <a title="Recent post" href="{{ post.url | prepend: site.baseurl }}">
+                    <a title="CONTENT CONTENT CONTENT" href="{{ post.url | prepend: site.baseurl }}">
                         <h2 class="post-title" itemprop="name">{{ post.title }}</h2>
                     </a>
                 </li>
@@ -43,7 +46,7 @@
             <p>Recent projects:</p>
              {% for project in site.projects limit:3%}
                 <li>
-                    <a title="Show my recent project" href="{{ project.url}}">
+                    <a title="the stuff" href="{{ project.url}}">
                         <h2 class="post-title" itemprop="name">{{ project.name }}</h2>
                     </a>
                 </li>
