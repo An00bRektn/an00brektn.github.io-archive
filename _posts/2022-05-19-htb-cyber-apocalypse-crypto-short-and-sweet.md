@@ -376,9 +376,10 @@ This challenge was a little interesting because of the use of the [columnar ciph
 - Using your key, go to the corresponding column, and read down to get ciphertext
 ![asdf](https://crypto.interactive-maths.com/uploads/1/1/3/4/11345755/5885335.jpg?149)
 <sup>Credit: [link](https://crypto.interactive-maths.com/columnar-transposition-cipher.html)</sup>
+
 In this example, our plaintext is "The tomato is a plant in the nightshade family", and our ciphertext is "TINESAX / EOAHTFX / HTLTHEY / MAIIAIX / TAPNGDL / OSTNHMX" (slashes included to make it easier to understand the breakdown).
 
-For our challenge, we can immediately jump to analyzing the columnar cipher because the PRNG literally does not work. Since $a = p$, the modulus will always return $b$, and since we are given the last key, we know all of the keys before it.
+For our challenge, we can immediately jump to analyzing the columnar cipher because the PRNG literally does not work. Since \$$a = p$$, the modulus will always return \$$b$$, and since we are given the last key, we know all of the keys before it.
 
 What I struggled with for so long was understanding what `twistedColumnarEncrypt()` was doing because of all of the Python one-liners. After deriving a key (the permutation), we break our plaintext into blocks, but then run `transpose()`. If you've ever taken a Linear Algebra class or have worked with matricies before, you'll remember that a transpose operation will basically flip the rows and the columns, which is exactly what the function does. The encrypt function then shifts the matrix around by rows, and spits out a ciphertext. I struggled to understand this via looking at the code, so I had to write it out by hand:
 
