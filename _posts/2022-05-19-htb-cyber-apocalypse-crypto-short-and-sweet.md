@@ -109,7 +109,7 @@ Here, we select a public prime p, and a generator for that mod-p field/group, g.
 This is secure because of what's known as the [Discrete Logarithm Problem](https://en.wikipedia.org/wiki/Discrete_logarithm#Cryptography). The gist of it is that you can't just take the log of the value you get, because the mod p wraps it around such that it's seemingly random.
 
 Now that we understand Diffie-Hellman from a high level, how do we find the secret if Alice never gives us her public key? Well, it's pretty simple. Just say your public key is 1.
-$$K \equiv 1 \equiv 1^x \pmod p$$
+$$\begin{aligned} K \equiv 1 \equiv 1^x \pmod p \end{aligned}$$
 1 to any power is 1, so we can then just use the value of 1 to bootstrap our AES encryption as shown in the challenge.
 
 ### Solution
@@ -379,7 +379,7 @@ This challenge was a little interesting because of the use of the [columnar ciph
 
 In this example, our plaintext is "The tomato is a plant in the nightshade family", and our ciphertext is "TINESAX / EOAHTFX / HTLTHEY / MAIIAIX / TAPNGDL / OSTNHMX" (slashes included to make it easier to understand the breakdown).
 
-For our challenge, we can immediately jump to analyzing the columnar cipher because the PRNG literally does not work. Since \$$a = p$$, the modulus will always return \$$b$$, and since we are given the last key, we know all of the keys before it.
+For our challenge, we can immediately jump to analyzing the columnar cipher because the PRNG literally does not work. Since $$a = p$$, the modulus will always return $$b$$, and since we are given the last key, we know all of the keys before it.
 
 What I struggled with for so long was understanding what `twistedColumnarEncrypt()` was doing because of all of the Python one-liners. After deriving a key (the permutation), we break our plaintext into blocks, but then run `transpose()`. If you've ever taken a Linear Algebra class or have worked with matricies before, you'll remember that a transpose operation will basically flip the rows and the columns, which is exactly what the function does. The encrypt function then shifts the matrix around by rows, and spits out a ciphertext. I struggled to understand this via looking at the code, so I had to write it out by hand:
 
