@@ -109,7 +109,7 @@ Here, we select a public prime p, and a generator for that mod-p field/group, g.
 This is secure because of what's known as the [Discrete Logarithm Problem](https://en.wikipedia.org/wiki/Discrete_logarithm#Cryptography). The gist of it is that you can't just take the log of the value you get, because the mod p wraps it around such that it's seemingly random.
 
 Now that we understand Diffie-Hellman from a high level, how do we find the secret if Alice never gives us her public key? Well, it's pretty simple. Just say your public key is 1.
-$$\begin{aligned} K \equiv 1 \equiv 1^x \pmod p \end{aligned}$$
+$$\begin{aligned} & K \equiv 1 \equiv 1^x \pmod p \end{aligned}$$
 1 to any power is 1, so we can then just use the value of 1 to bootstrap our AES encryption as shown in the challenge.
 
 ### Solution
