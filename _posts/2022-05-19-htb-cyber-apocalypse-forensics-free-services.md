@@ -75,12 +75,12 @@ Error [deobfuscator.py:3195 process_file(**vars(args))]: 'NoneType' object has n
 It seems like there's very little we can poke at from the outside. While I could unzip the file into its parts, it's a little overkill for now, so I'll open it up in LibreOffice Calc and see what's up.
 
 ## Reviewing the Sheet
-![asdf](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted image 20220519012618.png)
+![Pasted_image_20220519012618.png](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted%20image%2020220519012618.png)
 Ah, classic ransomware operators... :)
 
 There wasn't much on the opening sheet aside from the image, as many times things can be hidden in the cells behind an image. But, notice that there's an additional sheet here called 'Macro1'. Seems interesting.
 
-![asdf](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted image 20220519013115.png)
+![Pasted_image_20220519013115.png](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted%20image%2020220519013115.png)
 It is *very* interesting.
 
 Investigating this sheet, we find that there are two major components:

@@ -38,7 +38,7 @@ Reflection involved some serious Volatility work in analyzing a memory dump from
 ### Initial Analysis
 We can open up the zip file and see a single `SatelliteGuidance.vbs` file. I'll open it up with VS Code for some syntax highlighting, and we see the beast that we're going to deal with.
 
-![asdf](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted image 20220519132129.png)
+![Pasted_image_20220519132129.png](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted%20image%2020220519132129.png)
 
 This is ~700 lines long.
 
@@ -297,7 +297,7 @@ textual.m3u.dll: PE32 executable (console) Intel 80386 Mono/.Net assembly, for M
 
 Since the DLL is a .NET assembly, we can use [dnSpy](https://github.com/dnSpyEx/dnSpy) to decompile it, and we find that it is a backdoor. We also find that the file was originally was compiled as `intcomm.dll`.
 
-![asdf](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted image 20220519155934.png)
+![Pasted_image_20220519155934.png](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted%20image%2020220519155934.png)
 Notice that the password is built as what seems to be a hexstring. If we decode it using CyberChef (or your preferred method of unhex-ing data), we get the flag.
 
 ```shell
@@ -596,7 +596,7 @@ output.dll: PE32 executable (DLL) (GUI) Intel 80386, for MS Windows
 
 Unlike the previous challenge, this one is not .NET, meaning it'll probably be harder to recover a full original code. However, we can stick it in ghidra and hope all goes well.
 
-![asdf](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted image 20220520015453.png)
+![Pasted_image_20220520015453.png](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted%20image%2020220520015453.png)
 
 Unfortunately, it doesn't. Ghidra doesn't like the fact that there are so many null bytes so the file just gets treated as a DLL with literally nothing in it. I tried to remove the null bytes too just until it "felt right", but even that wasn't working.
 
@@ -611,7 +611,7 @@ So apparently I've gotten a few things wrong with my explanation, and even the a
 	- According to the author (thewildspirit), using `dlldump` with the `--force` option would have retrieved it despite the DLL not being present in the PEB list (due to how it was loaded, but I haven't tested it, nor do I really plan to because it's already taken me long enough to do this once :)
 - (2) `Invoke-ReflectivePEInjection`, the Powershell Script that injected the DLL, doesn't *actually* do reflective DLL injection. I'll let the screenshot explain.
 
-![asdf](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted image 20220520153249.png)
+![Pasted_image_20220520153249.png](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted%20image%2020220520153249.png)
 
 It might seem overkill to draw that line, but obviously each method has different symptoms that will change exactly what you need to hunt for. This distinction is likely the reason it wasn't easily discoverable by the `malfind` (or similar) plugin, as it wasn't *actually* reflective, as many of the examples I was looking at online were able to use `malfind`/`malfinddeep`/etc. to locate the exact location.
 
@@ -674,11 +674,11 @@ output.dll: PE32 executable (DLL) (GUI) Intel 80386, for MS Windows
 ```
 
 And drum roll for ghidra....
-![asdf](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted image 20220520020923.png)
+![Pasted_image_20220520020923.png](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted%20image%2020220520020923.png)
 
 It worked! We have a clean decompile. Now, if we look at `VoidFunc`, we see many, many single characters/bytes that are eventually concatenated and called by `WinExec`. I'll copy the bytes out into CyberChef, and move them around so that I can decode them to ASCII.
 
-![asdf](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted image 20220520021139.png)
+![Pasted_image_20220520021139.png](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted%20image%2020220520021139.png)
 
 All that work, for a small encoded powershell command? I'll copy the base64 string and decode it on the command line.
 ```shell

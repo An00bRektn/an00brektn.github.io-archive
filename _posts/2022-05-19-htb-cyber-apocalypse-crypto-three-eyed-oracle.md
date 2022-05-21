@@ -115,7 +115,7 @@ When you're dealing with one block, things are pretty easy. Run algorithm, get o
 
 What you have just described there is called ECB mode, or Electronic Codebook mode. It's the naive approach, and while it is hard for a human to pick it out in text, it's clear why it fails when you try and encrypt something more visual.
 
-![asdf](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted image 20220519003602.png)
+![Pasted_image_20220519003602.png](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted%20image%2020220519003602.png)
 <sup>Source: [Wikipedia](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Electronic_codebook_(ECB))</sup>
 The goal of encryption, informally speaking, should be to make that penguin look like random bytes, kind of like the far right picture. But, using ECB mode, we still see the penguin, because the same plaintext block will always encrypt to the same ciphertext block. So, the rule of thumb, **NEVER EVER EVER USE ECB MODE**.
 
