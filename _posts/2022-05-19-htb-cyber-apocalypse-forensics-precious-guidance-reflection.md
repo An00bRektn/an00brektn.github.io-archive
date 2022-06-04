@@ -13,13 +13,13 @@ tags:
 - vbscript
 - dll
 - dnspy
-description: ''
+description: 'Going through VBS malware hell and then promptly jumping into a memory deep dive with Volatility'
 categories:
 published: true
 comments: false
 ---
 
-<img src="https://ctf.hackthebox.com/static/ca/cyber_apocalypse_2022_ca.jpg" style="width:60%;height:60%">
+<img src="https://www.hackthebox.com/images/landingv3/general_event/cyber-2022/CA_2022_CTF_logo2.png" style="width:66%;height:66%">
 
 ## Intro
 Precious Guidance and Reflection were both 3-star rated forensics challenges in the HTB Cyber Apocalypse CTF, and although I didn't solve Reflection before the end of the CTF, I think they both warranted solutions. Neither was particularly long, but they were difficult to fully understand as each had their own kinks thrown into the challenge.

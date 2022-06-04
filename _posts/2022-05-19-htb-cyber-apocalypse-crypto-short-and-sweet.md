@@ -17,12 +17,12 @@ published: true
 comments: false
 ---
 
-<img src="https://ctf.hackthebox.com/static/ca/cyber_apocalypse_2022_ca.jpg" style="width:60%;height:60%">
+<img src="https://www.hackthebox.com/images/landingv3/general_event/cyber-2022/CA_2022_CTF_logo2.png" style="width:66%;height:66%">
 
 ## Intro
 We're going to knock out three in one here as the other 1-star crypto challenges in this CTF weren't incredibly complicated, and I can't really justify 3 separate posts for each of them.
 
-Android in the Middle was a cute little play on the Diffie-Hellman Man-in-the-middle attack where you could submit your own public key in the exchange and then to provide an encrypted string, but you don't have any other information aside from the public key of the server. So, we can use math to submit a public key of 1 so we can bootstrap the encryption ourselves to get the flag.
+Android in the Middle was a cute little play on the Diffie-Hellman Man-in-the-middle attack where you could submit your own public key in the exchange and then need to provide an encrypted string, but you don't have any other information aside from the public key of the server. So, we can use math to submit a public key of 1 so we can bootstrap the encryption ourselves to get the flag.
 
 Jenny from the Block was a super simple custom block cipher that suffered from knowing a plaintext-ciphertext combination, which allows you to bruteforce the initial key, which you can then use to decrypt the following blocks as the encryption algorithm is super easy to reverse.
 

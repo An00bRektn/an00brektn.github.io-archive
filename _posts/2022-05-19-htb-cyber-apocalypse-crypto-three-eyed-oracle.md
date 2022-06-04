@@ -16,7 +16,7 @@ published: true
 comments: false
 ---
 
-<img src="https://ctf.hackthebox.com/static/ca/cyber_apocalypse_2022_ca.jpg" style="width:60%;height:60%">
+<img src="https://www.hackthebox.com/images/landingv3/general_event/cyber-2022/CA_2022_CTF_logo2.png" style="width:66%;height:66%">
 
 ## Intro
 I have spent the last 6 days nonstop playing HackTheBox's Cyber Apocalypse CTF with 7h3B14ckKn1gh75, and it's probably been my best in-event performance to date. The event was great, our team managed to get ~35 challenges solved (13 of which were done by me :D ), and there's a lot of great content to be brough over here.
@@ -117,15 +117,17 @@ What you have just described there is called ECB mode, or Electronic Codebook mo
 
 ![Pasted_image_20220519003602.png](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted%20image%2020220519003602.png)
 <sup>Source: [Wikipedia](https://en.wikipedia.org/wiki/Block_cipher_mode_of_operation#Electronic_codebook_(ECB))</sup>
+
 The goal of encryption, informally speaking, should be to make that penguin look like random bytes, kind of like the far right picture. But, using ECB mode, we still see the penguin, because the same plaintext block will always encrypt to the same ciphertext block. So, the rule of thumb, **NEVER EVER EVER USE ECB MODE**.
 
 I'll briefly cover two other modes here just so you know what good encryption looks like. 
 
-**CBC (Cipher block chaining)** mode will take the previous ciphertext block and XOR it with the next plaintext block to cause each block to have an effect on the next, so it's not as easy to reverse. 
+**CBC (Cipher block chaining)** mode will take the previous ciphertext block and XOR it with the next plaintext block to cause each block to have an effect on the next, so it's not as easy to reverse. You'll notice the inclusion of an "Initialization Vector" (IV) in the diagrams. This is because it would not be in our best interest to let the first block be the same between ciphertexts encrypted with the same key (think about the magic bytes at the top of every file or something similar). The solution, then, is to include a random block known as the IV to be XORed with the plaintext and sent with the message so it's not feasible to glean the same information.
 ![cbcencrypt](https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/CBC_encryption.svg/900px-CBC_encryption.svg.png)
 ![cbcdecrypt](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/CBC_decryption.svg/900px-CBC_decryption.svg.png)
 
-**CTR (Counter)** mode turns a block cipher into a stream cipher (out of scope for this writeup) by encrypting a counter value, then XORing that with the plaintext. It might not seem secure, but it actually is, becuase if the underlying encryption function is secure, XORing it with the plaintext, in a way, is like doing a one-time pad (oversimplification, but go with it).
+**CTR (Counter)** mode turns a block cipher into a stream cipher by encrypting a counter value, then XORing that with the plaintext. It might not seem secure, but it actually is, becuase if the underlying encryption function is secure, XORing it with the plaintext, in a way, is like doing a one-time pad. However, since the keystream is not pure random, it isn't at the level of security that the one time pad is. 
+You'll notice there isn't really an IV here, but a "nonce" instead. A nonce is a "number used once", which is a non-random value that is typically used to bootstrap an IV and should never be reused. Here, we're not using an IV, but the nonce, simply put, is obfuscating what the counter is at.
 
 ![ctrencrypt](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/CTR_encryption_2.svg/902px-CTR_encryption_2.svg.png)
 ![ctrdecrypt](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/CTR_decryption_2.svg/902px-CTR_decryption_2.svg.png)
@@ -380,3 +382,5 @@ kali@transistor:~/ctf/cyber_apocalypse/crypto/crypto_the_three-eyed_oracle$ pyth
 [+] HTB{345y_53cr37_r3c0v3ry}
 [*] Closed connection to 206.189.126.144 port 32676
 ```
+
+Flag: `HTB{345y_53cr37_r3c0v3ry}`
