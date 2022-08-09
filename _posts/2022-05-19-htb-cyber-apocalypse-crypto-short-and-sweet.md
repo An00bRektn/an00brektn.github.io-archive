@@ -105,7 +105,7 @@ This challenge is making use of the [Diffie-Hellman Key Exchange](https://en.wik
 
 ![asdf](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted image 20220519094239.png)
 
-Here, we select a public prime p, and a generator for that mod-p field/group, g. Alice selects a secret value x, and bob selects a secret value y (both are within the field). They both exchange exponentiated values, which are their public keys, and then each raises the other's public key to the power of their own secret. Notice that x and y are never shared across the channel where an eavesdropper could be listening.
+Here, we select a public prime p, and a generator for that mod-p group, g. Alice selects a secret value x, and Bob selects a secret value y (both are within the field). They both exchange exponentiated values, which are their public keys, and then each raises the other's public key to the power of their own secret. Notice that x and y are never shared across the channel where an eavesdropper could be listening.
 This is secure because of what's known as the [Discrete Logarithm Problem](https://en.wikipedia.org/wiki/Discrete_logarithm#Cryptography). The gist of it is that you can't just take the log of the value you get, because the mod p wraps it around such that it's seemingly random.
 
 Now that we understand Diffie-Hellman from a high level, how do we find the secret if Alice never gives us her public key? Well, it's pretty simple. Just say your public key is 1.
