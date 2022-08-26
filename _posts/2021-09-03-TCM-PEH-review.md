@@ -6,9 +6,7 @@ date:   2021-09-03 12:00:00
 tags:
 - beginner
 - tcms
-- active-directory
-- web
-- binary-exploitation
+- info
 - review
 description: ''
 categories:
@@ -18,7 +16,19 @@ comments: false
 
 ![Pasted image 20210902181454.png](https://an00brektn.github.io/img/peh/Pasted image 20210902181454.png)
 
-Over this summer, I had the pleasure of going through The Cyber Mentor's **Practical Ethical Hacking** course found [here](https://academy.tcm-sec.com/p/practical-ethical-hacking-the-complete-course). Full disclosure before I continue: I recieved this course for free through a giveaway that he did a few months ago, and I had gone into this with fairly novice CTF skills. The TL;DR here is that I think the course is phenomenal and that **anyone wanting a straightforward, all-in-one-place introduction to the offensive side of security should go through this**. I will go through the major "arcs", so to speak, of this course, and give my final thoughts at the end.
+~~Over this summer, I had the pleasure of going through The Cyber Mentor's **Practical Ethical Hacking** course found [here](https://academy.tcm-sec.com/p/practical-ethical-hacking-the-complete-course).~~ Full disclosure before I continue: I recieved this course for free through a giveaway that he did a few months ago, and I had gone into this with fairly novice CTF skills. ~~The TL;DR here is that I think the course is phenomenal and that anyone wanting a straightforward, all-in-one-place introduction to the offensive side of security should go through this. I will go through the major "arcs", so to speak, of this course, and give my final thoughts at the end.~~
+
+**Update 2022: Like the presecurity review, I am very prone to just giving nothing but praise, especially when I just don't know enough about the field. You can read the rest of the review because there's no good way to cut this down without rewriting the whole thing, which I don't want to do, but here's the deal, I'll just write I quick reflection here and you can read any better post I have on this website.**
+
+- If you are fully new to the field and want to get a start in offensive security, (1) I encourage you to familiarize yourself with some [basic IT concepts](https://github.com/DFIRmadness/5pillars/blob/master/5-Pillars.md) and (2) if you're going to drop money on any "How to become l33t h4xor" course, don't bother with Udemy, and just stick to this course until you become more aware of the other offerings.
+- Most of the content is on a scale of "meh" to "okay" with the exception of the Active Directory and business-related content
+	- That Active Directory lab is still on my resume
+- Wow that pivoting section sucked. Just `autoroute` on Metasploit? At least talk about chisel or reverse SSH.
+- Capstone is genuinely good for beginners and shouldn't be skipped if you're new
+- This is just a launch pad. It doesn't go into great depth about anything but gives you some fundamentals to work off of, this is just the beginning of the beginning.
+- Originally I though only being "practical" was cool, and now I realize that you only become good at security when you understand how things work, and this course just spreads itself sightly too thin to really get into those things
+	- Example: Your web exploitation skills are only as good as your understanding of web infrastructure itself. Sure, you know what a SQL injection is, but do you know what's really going on and in what ways can it be leveraged? How about patching? What do you tell your client and why does your solution work?
+- I think, especially these days, you can learn most of this stuff without the course fairly reliably, but this is probably the best, affordable setting to learn everything all in one spot instead of bouncing between YouTube videos and blog posts, which isn't always the easiest to learn from sometimes.
 
 ### Table Of Contents
 I did not realize that I was going to type a 3000+ word summary and review of the course but here we are.
@@ -163,12 +173,12 @@ Throughout this summary and review, I have sung my praises, pointed out some fla
 There is so much more to learn outside of the course (AV Evasion, C2 Frameworks, Container Escapes, more Active Directory), and I think the course accepts that, and does try to guide toward those things. All in all, the course sets you up so you can keep going; you cannot just expect that watching a bunch of videos will make you the next big security personality. I do not claim to be  that good; I haven't had a single infosec job yet. But, as a student who wanted to get ahead of a slow curriculum, this was a highly beneficial experience for me.
 
 **Things I might have left out, but are still relevant**
-- Amazing support staff on the TCM Discord. They're sticklers on what they will and won't help with (i.e. if it wasn't used in the course, they won't help), but when they do help, it's pretty great.
-- **The course is only $30**, and discounts bring it to $15 at least once a month, so the value is actually kind of insane.
+- ~~Amazing support staff on the TCM Discord. They're sticklers on what they will and won't help with (i.e. if it wasn't used in the course, they won't help), but when they do help, it's pretty great.~~ Dewalt is my goat but I haven't really hung around in the discord much since this so idk where that's at.
+- **The course is only $30**, ~~and discounts bring it to $15 at least once a month, so the value is actually kind of insane.~~ the discount thing was only because of Udemy which has since been deprecated. They're still incredibly generous, especially with the recent \$1 sale on a bunch of courses and that cannot be overlooked, just crossing out the original text to prevent misinformation.
 - Pretty quick updates to the course when something like PrintNightmare hits
-- Transparency with how much depth each lesson goes into; if Heath knows that he's not an expert in a topic, he'll point you to someone who does it better
+- ~~Transparency with how much depth each lesson goes into; if Heath knows that he's not an expert in a topic, he'll point you to someone who does it better~~ Most of the stuff doesn't go crazy deep to be totally honest, but I think my point here was that I appreciated the upfront "hey I don't do stack overflows very often but we're covering it because it's good to know" because it was much less pressure
 - Practice setting up infrastructure and lab environments is very cool, and giving people machines to work on locally is a nice plus for beginners
-- **I have not taken the PNPT right now, but if I have the time and money after I plan on doing OSCP and/or CRTO, I will**
+- ~~**I have not taken the PNPT right now, but if I have the time and money after I plan on doing OSCP and/or CRTO, I will**~~ Current certification plan is to get Security+ first since I'm almost done with a degree, do PNPT if I want to practice my network exploitation skills, do OSCP if I can't get a penetration testing job without it, and do CRTO once I feel more comfortable with my enumeration and have at least PNPT or OSCP under my belt.
 
 If you've stuck around for this long, thank you for taking the time to read this almost 3000+ word piece from someone who still has a lot to learn. Hopefully, this is a comprehensive enough look at the course to help sway your decision.
 

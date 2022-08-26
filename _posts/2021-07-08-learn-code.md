@@ -102,7 +102,7 @@ Language Installs:
 - [Python](https://www.python.org/downloads/) - Install Python3, Python2 has been discontinued
 - [Java](https://java.com/en/download/help/download_options.html) - VS Code has an alternative way to do this
 - [Swift](https://swift.org/download/#releases)
-- C# - recommend installing [Visual Studio](https://visualstudio.microsoft.com/) and work out of that
+- C# - recommend installing [Visual Studio](https://visualstudio.microsoft.com/) and work out of that. You could also install `mono` on Linux but why would you ever actually do that.
 - [Go](https://golang.org/doc/install)
 - [C++/C](https://www.guru99.com/c-gcc-install.html) - If you use Linux, `apt install gcc` and `apt install g++` should have you covered with compiling these languages (Mac should also be able to do something similar with xcode)
 - [Ruby](https://www.ruby-lang.org/en/downloads/)
