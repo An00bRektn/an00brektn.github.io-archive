@@ -7,7 +7,7 @@ tags:
 - beginner
 - programming
 - info
-description: ''
+description: 'hear about programming from someone who is just okay at programming'
 categories:
 published: true
 comments: true

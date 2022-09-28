@@ -1,8 +1,8 @@
 # Site settings
-title: An00bRektn
+title: root@An00bRektn:~/blog#
 description: "Not Another Infosec/Computer Science/stuff Blog"
 baseurl: "/" # for test: remove string '/space-jekyll-template' to ''
-url: "https://An00bRektn.github.io" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
+url: "https://an00brektn.github.io" # for test: remove string 'http://victorvoid.github.io' to '' but in production: 'https://yourusername.github.io'
 
 # User settings
 username: An00bRektn
