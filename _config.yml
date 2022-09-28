@@ -69,3 +69,6 @@ projects:
 
 # exclude my node related stuff
 exclude: ['package.json', 'src/js', 'src/styl', 'node_modules']
+
+# Google Analytics
+google_analytics: G-0FL142RMXL
