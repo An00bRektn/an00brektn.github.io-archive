@@ -50,9 +50,11 @@ links:
       url: https://www.github.com/An00bRektn
       new_tab: true
       key_trigger: g
+      external: true
     - title: twitter
       url: http://www.twitter.com/An00bRektn
       key_trigger: t
+      external: true
     - title: search
       url: ""
       key_trigger: s #WARNING: search only works with "s"
