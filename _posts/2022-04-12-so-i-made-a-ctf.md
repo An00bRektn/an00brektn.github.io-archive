@@ -16,7 +16,7 @@ published: true
 comments: false
 ---
 
-![asdf](https://an00brektn.github.io/img/flyer-ctf/Pasted image 20220412145842.png)
+![asdf](https://an00brektn.github.io/img/flyer-ctf/Pasted%20image%2020220412145842.png)
 
 ## Intro
 Welcome back to the blog, it's almost been 3 months since I posted last, but I have a good reason for doing so. In the last 3 months, I've done a lot of learning, a lot of developing, ~~a lot of procrastinating~~, but as the title would suggest, yeah, I made my own CTF.
