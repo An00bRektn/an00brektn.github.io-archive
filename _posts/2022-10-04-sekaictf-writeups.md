@@ -32,7 +32,7 @@ In the interim between main blog posts, I'll be doing writeups of three of the c
 {:toc}
 
 ## Time Capsule
-> Crypto, 178 Solves | Author: [sahuang](https://twitter.com/sahuang97)
+> Crypto, 178 Solves \| Author: [sahuang](https://twitter.com/sahuang97)
 
 ### Description
 `I have encrypted a secret message with this super secure algorithm and put it into a Time Capsule. Maybe nobody can reveal my secret without a time machine...`
@@ -250,7 +250,7 @@ SEKAI{T1m3_15_pr3C10u5_s0_Enj0y_ur_L1F5!!!}
 what a nice message after i spent at least 3 hours trying to figure out how to reverse stage one without bruteforcing... 
 
 ## Bottle Poem
-> Web, 146 Solves | Author: bwjy
+> Web, 146 Solves \| Author: bwjy
 
 ### Description
 `Come and read poems in the bottle.`
@@ -527,7 +527,7 @@ And using this will get us the flag. At the time of me writing this, the server 
 **flag:** `SEKAI{W3lcome_To_Our_Bottle}`
 
 ## Perfect Match X-treme
-> Rev (but actually game hacking), 111 Solves | [sahuang](https://twitter.com/sahuang97) & [enscribe](https://enscribe.dev/)
+> Rev (but actually game hacking), 111 Solves \| [sahuang](https://twitter.com/sahuang97) & [enscribe](https://enscribe.dev/)
 
 ### Description
 `Can you qualify Fall Guy’s Perfect Match and get the flag?`
