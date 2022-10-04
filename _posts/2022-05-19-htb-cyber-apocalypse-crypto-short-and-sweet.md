@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HTB Cyber Apocalypse CTF: Android-in-the-Middle, Jenny From the Block, and How the Columns have Turned"
-image: ''
+image: '/img/htb-cyber-apocalypse-22/CA_2022_CTF_logo2.png'
 date:   2022-05-19 00:00:00
 tags:
 - htb-cyber-apocalypse
@@ -17,7 +17,7 @@ published: true
 comments: false
 ---
 
-<img src="https://www.hackthebox.com/images/landingv3/general_event/cyber-2022/CA_2022_CTF_logo2.png" style="width:66%;height:66%">
+<img src="https://an00brektn.github.io/img/htb-cyber-apocalypse-22/CA_2022_CTF_logo2.png" style="width:66%;height:66%">
 
 ## Intro
 We're going to knock out three in one here as the other 1-star crypto challenges in this CTF weren't incredibly complicated, and I can't really justify 3 separate posts for each of them.

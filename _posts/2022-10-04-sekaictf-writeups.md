@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "SekaiCTF 2022 Writeups"
-image: ''
+image: '/img/sekaictf-2022/sekai2_SEKAI_CTF_Wide_Black.svg'
 date:   2022-10-03 00:00:00
 tags:
 description: 'AYAYA AYAYA AYAYA'

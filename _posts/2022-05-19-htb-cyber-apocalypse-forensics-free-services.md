@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HTB Cyber Apocalypse CTF: Free Services"
-image: ''
+image: '/img/htb-cyber-apocalypse-22/CA_2022_CTF_logo2.png'
 date:   2022-05-19 00:00:00
 tags:
 - htb-cyber-apocalypse
@@ -16,7 +16,7 @@ published: true
 comments: false
 ---
 
-<img src="https://www.hackthebox.com/images/landingv3/general_event/cyber-2022/CA_2022_CTF_logo2.png" style="width:66%;height:66%">
+<img src="https://an00brektn.github.io/img/htb-cyber-apocalypse-22/CA_2022_CTF_logo2.png" style="width:66%;height:66%">
 
 ## Intro
 Free Services was a 2-star rated Forenscis challenge that seemed to be like any old maldoc challenge, featuring a `.xlsm`, aka macro-enabled Excel sheet. However, like most HackTheBox malware challenges, some wrenches have been thrown in it to make it not work, subverting dynamic analysis altogether. After observing that the sheet isn't being picked up as OLE, I'll open it in LibreOffice Calc to bypass any macro execution and find that it's a shellcode runner that uses the formulas instead of regular macros. Picking apart the formulas, we can reassemble the shellcode and print out the flag.

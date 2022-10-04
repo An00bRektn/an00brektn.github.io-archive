@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HTB Cyber Apocalypse CTF: The Three-Eyed Oracle"
-image: ''
+image: '/img/htb-cyber-apocalypse-22/CA_2022_CTF_logo2.png'
 date:   2022-05-19 00:00:00
 tags:
 - htb-cyber-apocalypse
@@ -16,7 +16,7 @@ published: true
 comments: false
 ---
 
-<img src="https://www.hackthebox.com/images/landingv3/general_event/cyber-2022/CA_2022_CTF_logo2.png" style="width:66%;height:66%">
+<img src="https://an00brektn.github.io/img/htb-cyber-apocalypse-22/CA_2022_CTF_logo2.png" style="width:66%;height:66%">
 
 ## Intro
 I have spent the last 6 days nonstop playing HackTheBox's Cyber Apocalypse CTF with 7h3B14ckKn1gh75, and it's probably been my best in-event performance to date. The event was great, our team managed to get ~35 challenges solved (13 of which were done by me :D ), and there's a lot of great content to be brough over here.

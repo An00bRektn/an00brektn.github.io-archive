@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "HTB Cyber Apocalypse CTF: Precious Guidance & Reflection"
-image: ''
+image: '/img/htb-cyber-apocalypse-22/CA_2022_CTF_logo2.png'
 date:   2022-05-19 00:00:00
 tags:
 - htb-cyber-apocalypse
@@ -19,7 +19,7 @@ published: true
 comments: false
 ---
 
-<img src="https://www.hackthebox.com/images/landingv3/general_event/cyber-2022/CA_2022_CTF_logo2.png" style="width:66%;height:66%">
+<img src="https://an00brektn.github.io/img/htb-cyber-apocalypse-22/CA_2022_CTF_logo2.png" style="width:66%;height:66%">
 
 ## Intro
 Precious Guidance and Reflection were both 3-star rated forensics challenges in the HTB Cyber Apocalypse CTF, and although I didn't solve Reflection before the end of the CTF, I think they both warranted solutions. Neither was particularly long, but they were difficult to fully understand as each had their own kinks thrown into the challenge.
