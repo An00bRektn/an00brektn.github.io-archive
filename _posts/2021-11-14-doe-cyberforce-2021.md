@@ -14,7 +14,7 @@ published: true
 comments: false
 ---
 
-![Pasted image 20211114121315.png](https://an00brektn.github.io/img/cyberforce2021/Pasted image 20211114121315.png)
+![Pasted image 20211114121315.png](https://an00brektn.github.io/img/cyberforce2021/Pasted%20image%2020211114121315.png)
 
 ## Intro
 Hello! It's definitely been a while. I was trying to keep up with weekly blog posts, but this past month, I've been neck-deep in preparation for this year's **Cyberforce competition**, run by the Department of Energy, mainly Argonne National Labs.
