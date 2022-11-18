@@ -65,7 +65,7 @@ Here was the network that we had because I couldn't find a better place to put i
 ### The Game Plan
 After ~~the most stressful two weeks of my life~~ a busy two weeks, and a (honestly soothing) late night work session, we were ready for the day of. So, how did we approach this?
 
-Short Answer: Poorly.
+Short Answer: Poorly.  
 Long Answer: All of us had fairly good fundamentals when it came to hardening machines, that was not the hard part. Here's some of the tools that we used for scouting out vulnerabilities and misconfigurations:
 
 - [OpenVAS](https://github.com/immauss/openvas) is an open source vulnerability scanner that we used instead of Nessus, mainly because I didn't want to install Nessus and open source is pog.
@@ -140,9 +140,9 @@ Now, I keep saying anomalies are like CTF challenges, but they're not like the "
 ## Part 4: The End
 By the time 6:00 pm rolls around, the team is schmooving. Everyone managed to solve or contribute to at least one anomaly, which was really motivating for the people on the team who weren't as technically skilled. I spent my time hunting for threats until the very last second, at which point it was time to wrap up. And the final scoreboard?
 
-Not here yet! Scoring and report cards are supposed to come out next week, so I'll replace this with the scoreboard once I get it, I just didn't want to sit on this post for too long.
+![scoreboard](https://an00brektn.github.io/img/cyberforce22/Pasted%20image%2020221118114839.png)
 
-Looking back at the screenshots, we actually peaked at 2nd place around 40 minutes before the end of the competition, but I'm okay with 5th. The event used to do regional awards for the highest scoring team from each region, but I guess they stopped doing that. 
+Looking back at the screenshots, we actually peaked at 2nd place around 40 minutes before the end of the competition, but I'm okay with 5th. The event used to do regional awards for the highest scoring team from each region, but I guess they stopped doing that. Also, according to our score breakdown sheet, we apparently had the 3rd best documentation, and the 8th best incident response, which, (a) surprising, and (b) pog.
 
 So what did we learn?
 
