@@ -27,6 +27,8 @@ This post will not necessarily be dedicated to how you put together an implant f
 
 > **Disclaimer**: I'm not a red team operator, I'm just a guy who does this to learn (but I'd still like to be one :3 ). If there are any inaccuracies here, feel free to reach out and tell me I'm dumb. 
 
+If you just want to see the project and don't care to read this (rude, but I understand), you can go visit the project here: [An00bRektn/gopher47](https://github.com/An00bRektn/gopher47)
+
 * buh
 {:toc}
 
