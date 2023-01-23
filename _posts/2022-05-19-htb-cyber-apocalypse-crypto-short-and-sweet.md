@@ -103,7 +103,7 @@ The server will generate a public key for itself using a secure prime and genera
 
 This challenge is making use of the [Diffie-Hellman Key Exchange](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange), which is a public key protocol commonly used to bootstrap symmetric encryption. I won't go into the details here, but I'll steal a quick slide from my Encryption class.
 
-![asdf](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted image 20220519094239.png)
+![asdf](https://an00brektn.github.io/img/htb-cyber-apocalypse-22/Pasted%20image%2020220519094239.png)
 
 Here, we select a public prime p, and a generator for that mod-p group, g. Alice selects a secret value x, and Bob selects a secret value y (both are within the field). They both exchange exponentiated values, which are their public keys, and then each raises the other's public key to the power of their own secret. Notice that x and y are never shared across the channel where an eavesdropper could be listening.
 This is secure because of what's known as the [Discrete Logarithm Problem](https://en.wikipedia.org/wiki/Discrete_logarithm#Cryptography). The gist of it is that you can't just take the log of the value you get, because the mod p wraps it around such that it's seemingly random.
