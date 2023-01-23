@@ -2,7 +2,7 @@
 layout: post
 title: "Causing Havoc with a Gopher"
 image: '/img/havoc-implant/gopher47.png'
-date:   2022-01-23 01:01:01
+date:   2023-01-23 01:01:01
 tags:
 - golang
 - programming
