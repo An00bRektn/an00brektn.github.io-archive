@@ -61,8 +61,8 @@ links:
 
 # projects in header index
 projects:
-  - name: John The Child
-    url: https://github.com/An00bRektn/john-the-child
+  - name: Gopher47
+    url: https://github.com/An00bRektn/gopher47
   - name: Flyer CTF
     url: https://github.com/An00bRektn/flyer-ctf
   - name: Malware Analysis Reports
