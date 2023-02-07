@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using Vim for a Week, Intentionally" 
-image: '' 
+image: '/img/vim-week/exit.png' 
 date:   2023-02-06 00:00:00 
 tags:
 - vim
