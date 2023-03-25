@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Cyber Apocalypse 2023: Elliptic Labryinth"
-image: '/img/htb-cyber-apocalypse-23/ca-logo-2023'
+image: '/img/htb-cyber-apocalypse-23/ca-logo-2023.webp'
 date:   2023-03-24 00:00:00
 tags:
 - crypto
