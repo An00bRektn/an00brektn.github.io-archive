@@ -13,6 +13,7 @@ tags:
 - wireshark
 - c2
 - command-and-control
+- htb-cyber-apocalypse
 description: 'the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never the end is never...'
 categories:
 published: true
