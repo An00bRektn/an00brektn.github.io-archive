@@ -16,7 +16,7 @@ tags:
 - ecdsa
 description: 'crypto means cryptography, not cryptocurrency'
 categories:
-published: false
+published: true
 comments: false
 ---
 
