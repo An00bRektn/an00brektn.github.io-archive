@@ -4,7 +4,6 @@ title: "Cyber Apocalypse 2023: Alien Saboteur"
 image: '/img/htb-cyber-apocalypse-23/ca-logo-2023.webp'
 date:   2023-03-25 00:00:00
 tags:
-- rev
 - reverse-engineering
 - linux
 - ghidra

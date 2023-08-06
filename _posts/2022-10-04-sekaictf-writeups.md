@@ -12,7 +12,7 @@ tags:
 - deserialization
 - lfi
 - directory-traversal
-- rev
+- reverse-engineering
 - game-hacking
 - dnspy
 description: 'AYAYA AYAYA AYAYA'

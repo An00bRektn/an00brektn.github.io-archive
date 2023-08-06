@@ -92,7 +92,7 @@ There is not much left to discuss here, this challenge was rated "easy" for good
 ### Solution
 As mentioned earlier, for part 1, we can directly compute the private key. To calculate it, we need to solve the below congruence for $$d$$:
 
-\\[\begin{align\*} & ed \equiv 1 \pmod{\phi{n}} \end{align\*}\\]
+\\[\begin{align\*} & ed \equiv 1 \pmod{\phi(n)} \end{align\*}\\]
 
 The $$\phi(n)$$ is actually [Euler's Totient Function](https://brilliant.org/wiki/eulers-totient-function/), which computes the number of integers less than $$n$$ that are coprime to $$n$$. If we know that it's a product of two primes, we can simply compute $$\phi(n) = (p-1)(q-1)$$. From there, we can let the Python take over and compute the private key and do the decryption ($$m \equiv c^d\pmod{n}$$).
 
@@ -672,7 +672,7 @@ We've talked about elliptic curves here before, but not necessarily using them t
 This, assuming the curve is secure, is a very secure way of signing messages. However, as with all CTF challenges, there's a fatal flaw with the implementation we have in this challenge. A nonce is a *"Number used once"* is meant to "seed" our algorithm, and can absolutely be made public, but should **only ever be used once**. The server in this case is reusing a nonce, and knowing that, it only takes two valid signatures to completely reverse the private key, which will let us sign arbitrary messages. 
 
 We can find the nonce like so:
-\\[\begin{align\*} s_1 - s_2 &= k^{-1}(h_1 + r_1d) - k^{-1}(h_2 + r_2d) \\\\ s_1 - s_2 &= k^{-1}(h_1 - h_2 + d(r_1 - r_2))\\\\ s_1 - s_2 &= k^-1(h_1 - h_2) \\\\ k &= (h_1 - h_2)(s_1-s_2)^{-1} \end{align\*}\\]
+\\[\begin{align\*} s_1 - s_2 &= k^{-1}(h_1 + r_1d) - k^{-1}(h_2 + r_2d) \\\\ s_1 - s_2 &= k^{-1}(h_1 - h_2 + d(r_1 - r_2))\\\\ s_1 - s_2 &= k^{-1}(h_1 - h_2) \\\\ k &= (h_1 - h_2)(s_1-s_2)^{-1} \end{align\*}\\]
 
 The $$d(r_1-r_2)$$ disappears because we know $$k$$ is constant, so $$R = kG$$ will always be the same thing, making $$r_1 - r_2 = 0$$. Once we know the nonce, we can then find the private key by rearranging the equation for $$s$$ to be equivalent to $$d$$.
 
