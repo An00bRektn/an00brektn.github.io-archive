@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "I didn't win a national cyber competition, here's why"
-image: /img/cyberforce23/newcfclogo.png
-date: 2022-11-05 00:00:00
+image: '/img/cyberforce23/newcfclogo.png'
+date: 2023-11-05 00:00:00
 tags:
   - cyberforce
   - dfir
