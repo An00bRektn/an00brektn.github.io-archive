@@ -19,7 +19,7 @@ comments: false
 ## Intro
 Last year, I attended my first (online) Cyberforce competition, run by the Department of Energy, featuring 100+ different schools across the United States competing to secure infrastructure, write documentation, and complete security challenges. I recounted my experience from that event in [this post](https://notateamserver.xyz/doe-cyberforce-2021/), where I mostly reflected on the experience, where I could improve, where I did well, and where the event itself could improve. That was my very first hands-on red v blue experience, at a point where my hacking skills were fairly novice and my blue teaming skills were non-existent. Long story short, we got 10th, I popped off, and all was good.
 
-But this time, I wanted to win. As opposed to last year's blog post, I'll not only walkthough the overall experience, but I'll dive into some of the technical details that might help other teams going forward (but don't expect me to give away all of my secrets 😉).
+But this time, I wanted to win. As opposed to last year's blog post, I'll not only walkthrough the overall experience, but I'll dive into some of the technical details that might help other teams going forward (but don't expect me to give away all of my secrets 😉).
 
 * buh
 {:toc}
