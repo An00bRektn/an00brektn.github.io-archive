@@ -747,12 +747,14 @@ flag{3m0j1s_L1ght_Up_My_D4y}
 **flag**: `flag{3m0j1s_L1ght_Up_My_D4y}`
 ## WATT's The Story Morning Glory?
 > Anomaly 44 - 47
+
 ### Description
 `You are a seasoned QA Engineer at DER8.9 testing a new system named the 'SmartMeter Workstation for Administration of Telemetric Technologies (WATT) Control and Maintenance Interface' prior to deployment for business customers and residential field technicians. Before this software goes live, it's crucial to ensure that it is not only free from defects but also securely designed and implemented. Thoroughly test the application and identify all functional and security issues, spotting any vulnerabilities and insecure code practices. Retrieve a set of 4 associated flags for each insecure coding practice / vulnerability as a proof of discovery.`
 
 Author: @ANL - Jocelyn
 
 > To any Cyberforce competitor, I sincerely apologize for the existence of this challenge. I am friends with the challenge author outside of this event and I am the one who mentioned Nim when that was hot (before I realized writing C, or even better, PIC shellcode, was God's way).
+
 ### Solution 1: Hardcoded Key
 We're given a file called `smartmeter_management_interface.exe`, some additional information in `Question.md` that just adds some context that isn't necessarily worth mentioning here. If I run the binary, we're immediately hit with roadblock #1.
 
