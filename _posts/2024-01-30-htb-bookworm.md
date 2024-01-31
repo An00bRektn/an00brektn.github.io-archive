@@ -30,6 +30,7 @@ comments: false
 Bookworm was my first Insane-rated machine, and while many think it was closer to a Hard, if you're not a fan of JavaScript, this box put you through the ringer. The box is frontloaded with a lengthy and brutal series of XSS/CSRF attacks to discover a hidden download endpoint. The download, under certain circumstances, is vulnerable to path traversal, so we can use it to leak out source code and eventually get a password on the box. I'll then exploit an internal web app to get file read, but end up pivoting to using another "path traversal"-like vulnerability to write into a symlink and get SSH access as another user. The box ends with a command injection into a PostScript template, which wasn't necessarily hard to do, but moreso obscure.
 
 > Note to self, this writeup has been sitting in the drafts since June 2023, this box has been out for a *while*.
+
 ## Recon
 ### nmap
 Though it may be Insane, we only have two ports, SSH (22/tcp) and HTTP (80/tcp).
