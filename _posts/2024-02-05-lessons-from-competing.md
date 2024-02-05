@@ -37,7 +37,8 @@ Are you defeating the purpose of the event? Sort of. Is this what a lot of peopl
 ## Lesson 1: Knowing Your Attack Surface
 > Good asset inventory should be more than just "OS + IP Address". Try to keep track of services/ports that should be up, what users should be on a box and whether they're an admin or not, subnets, etc.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">forgetting to change web admin credentials during red v blue event and just getting absolutely blasted for 5 hours straight <a href="https://t.co/izG83CCNh7">pic.twitter.com/izG83CCNh7</a></p>&mdash; an00b (@An00bRektn) <a href="https://twitter.com/An00bRektn/status/1627136604086099968?ref_src=twsrc%5Etfw">February 19, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+<blockquote class="twitter-tweet tw-align-center"><p lang="en" dir="ltr">forgetting to change web admin credentials during red v blue event and just getting absolutely blasted for 5 hours straight <a href="https://t.co/izG83CCNh7">pic.twitter.com/izG83CCNh7</a></p>&mdash; an00b (@An00bRektn) <a href="https://twitter.com/An00bRektn/status/1627136604086099968?ref_src=twsrc%5Etfw">February 19, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 This might have been the lowest moment for me in any competition.
 
