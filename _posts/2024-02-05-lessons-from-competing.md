@@ -97,7 +97,7 @@ Tools that might be useful:
 ## Lesson 3: Automate the Boring Stuff
 > If you know you're going to take x, y, and z hardening steps on a machine, don't bother doing it manually, automate it!
 
-During my very first Red v Blue event, the only thing I did was change settings in `/etc/ssh/sshd_config` on one Linux machine, and then spammed the `who` command in my terminal to watch for attackers. <sub><s>now i type `ps aux | grep pts` instead</s></sub>
+During my very first Red v Blue event, the only thing I did was change settings in `/etc/ssh/sshd_config` on one Linux machine, and then spammed the `who` command in my terminal to watch for attackers. <sub><s>now i type ps aux | grep pts instead</s></sub>
 Obviously, there's room for improvement here.
 
 Different competitions operate, well, differently. Some give you the infrastructure days in advance to solely scout out, and then all of the configuration has to happen on the day of. Others let you make the changes ahead of time. This lesson mainly applies to the latter, but in all cases, automation is valuable, and is something you should invest time into.  Instead of manually configuring SSH on competition day, if I know what settings I'm going to change without being in the environment, and I'm allowed to bring my own scripts, why wouldn't I?
@@ -145,7 +145,8 @@ Aside from the preparation, it's important that you're not immediately killing s
 This one doesn't stem from a mistake I made, rather, my #1 pet peeve during the Red Team talkback after most events:
 ```
 Red Teamer: Any questions from the students?
-Person 023: Yeah, we saw red team take down our systems multiple times, so we were wondering if red team had any 0days with them?
+Person 023: Yeah, we saw red team take down our systems multiple times, 
+            so we were wondering if red team had any 0days with them?
 ```
 
 If a volunteer group of hackers for an event had 0days, they would be more likely to report them for bug bounty or even sell them to fishy buyers for profit before spending them on a competition that has zero bearing on the real world.
