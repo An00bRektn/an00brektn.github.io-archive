@@ -3,7 +3,9 @@ layout: post
 title: "I've made mistakes during competitions. Here's what I learned."
 image: ""
 date: 2024-02-05 00:00:00
-tags: 
+tags:
+  - info
+  - event
 description: "Turns out not being in school for a month makes you think about your life decisions a lot more"
 categories: 
 published: true
