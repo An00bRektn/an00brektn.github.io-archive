@@ -24,12 +24,12 @@ While I'm still definitely unemployed, I completed Hack the Box's [CPTS](https:/
 ## CPTS Explanation (any%)
 ### The Course
 A quick rundown of what CPTS is:
-- CPTS is the second certification Hack The Box has developed, and is functionally a competitor to entry-level certifications such as OSCP
+- CPTS is the second certification Hack The Box has developed and is functionally a competitor to entry-level certifications such as OSCP
 - Taking the exam requires 100% completion of the course at any given point in time, which includes 28 different sections on various topics, and interactive exercises within each section.
-- The exam is a 10 day, unproctored assessment where you are to conduct a full penetration test for a small business environment. Successful exam completion includes submitting 12/14 flags in the environment, and a legitimate report that includes an executive summary, findings, remediations, etc.
+- The exam is a 10-day, unproctored assessment where you are to conduct a full penetration test for a small business environment. Successful exam completion includes submitting 12/14 flags in the environment, and a legitimate report that includes an executive summary, findings, remediations, etc.
 - The cost of CPTS (course + exam) will depend on the method you choose to pay for the course. I had a student subscription, which is $8 a month for all of the course material (genuinely a steal). [xre0us](https://xre0us.github.io/posts/cpts-oscp-and-you/#the-cost) says that getting a month of platinum subscription and another month of gold comes out to a course cost of $106 over 2 months. An exam voucher costs $210, but comes with a free retake.
 
-When I first heard about the cert, I had no intention to actually complete the whole thing. I already had beginner to intermediate experience with CTFs, was able to complete easy and sometimes medium boxes consistently, and just felt pretty okay with my overall skill set. The only reason I actually ended up starting with Hack The Box Academy in the first place was completing the [CBBH](https://academy.hackthebox.com/preview/certifications/htb-certified-bug-bounty-hunter) (Certified Bug Bounty Hunter) course, because I felt that web exploitation was a weak point for me (don't tell the employers that, they make faces at me when I'm honest about it). After that, I started working through the Windows Privilege Escalation and Active Directory Enumeration and Attacks modules because I wanted to revise them, and I slowly began working through the CPTS material.
+When I first heard about the cert, I had no intention to actually complete the whole thing. I already had beginner to intermediate experience with CTFs, was able to complete easy and sometimes medium boxes consistently, and just felt pretty okay with my overall skill set. The only reason I ended up starting with Hack The Box Academy in the first place was completing the [CBBH](https://academy.hackthebox.com/preview/certifications/htb-certified-bug-bounty-hunter) (Certified Bug Bounty Hunter) course, because I felt that web exploitation was a weak point for me (don't tell the employers that, they make faces at me when I'm honest about it). After that, I started working through the Windows Privilege Escalation and Active Directory Enumeration and Attacks modules because I wanted to revise them, and I slowly began working through the CPTS material.
 
 I can't say exactly how long it took me to complete the CPTS material because of the overlap in modules between CPTS and CBBH, but my rough estimate is that I took ~1 month on CPTS altogether, given that I already had experience with a majority of the material. **That said**, I still managed to pick up a lot of tricks, solidify my understanding of certain concepts, and have a more holistic understanding of some vulnerability classes and how they may pop up.
 
@@ -38,7 +38,7 @@ When you're ready to take the exam, all you do is buy a voucher, click "Enter Ex
 
 <img src="https://an00brektn.github.io/img/cpts-exam/Pasted%20image%2020240215181822.png" style="width:60%;height:60%">
 
-I think everything that can and needs to be said about the exam has been said already, but I will reiterate that while the environment certain feels more realistic than your run of the mill CTF machine, **everything on the exam is in the modules**, and on top of that, something from **every module** is included on the exam. So when people ask:
+I think everything that can and needs to be said about the exam has been said already, but I will reiterate that while the environment certainly feels more realistic than your run-of-the-mill CTF machine, **everything on the exam is in the modules**, and on top of that, something from **every module** is included on the exam. So when people ask:
 - What boxes should I do to prepare?
 - Will Pro Labs help?
 - What other modules should I check out?
@@ -46,10 +46,10 @@ I think everything that can and needs to be said about the exam has been said al
 Generally speaking, the answer is that everything is in the course, it's a matter of how well you can figure out your own workflow. Speaking of which, it's time to get into what I really wanted to talk about with this post.
 ## Methodology is King
 ### Introspection and Reflection
-As someone who had experience doing one-off boot2root machines before CPTS, the number one takeaway from the course and the exam is finding my own workflow. Prior to preparing for CPTS, my only real experience with attacking a network was TryHackMe's [Wreath](https://tryhackme.com/room/wreath) and [Holo](https://tryhackme.com/room/hololive) networks, whatever informal pentesting I did for collegiate competitions, and doing some port forwarding on single boxes. What I think CPTS does very well is not only give the basics of exploitation, but through how the exercises were designed, forces people into finding a methodology or getting nowhere at all.
+As someone who had experience doing one-off boot2root machines before CPTS, the number one takeaway from the course and the exam is finding my own workflow. Prior to preparing for CPTS, my only real experience with attacking a network was TryHackMe's [Wreath](https://tryhackme.com/room/wreath) and [Holo](https://tryhackme.com/room/hololive) networks, whatever informal pentesting I did for collegiate competitions, and doing some port forwarding on single boxes. What I think CPTS does very well is not only giving the basics of exploitation, but through how the exercises were designed, forces people into finding a methodology or getting nowhere at all.
 
 If you are someone who is new and scared of these exams like the OSCP or CPTS, I want you to pause for a minute and ask yourself the following:
-- How are you choosing to take notes while attacking a network? Does that fit in with when you're testing systems, or does it feel like a chore/obligation to? If you're not taking notes, what's your plan while reporting?
+- How are you choosing to take notes while attacking a network? Does that fit in with when you're testing systems, or does it feel like a chore/obligation? If you're not taking notes, what's your plan while reporting?
 - Can you reproduce your results from your notes, or do you have to figure it out every time? Do you know how your pivoting is working and what limitations exist with your setup?
 - How are you keeping track of what hosts and credentials you find? How are you managing shells you get back from targets?
 - They say attackers think in graphs, but do you even have a graph you're thinking of in the first place? Can you even find an entry point to your graph?
@@ -60,14 +60,14 @@ I completed the CPTS course months before the actual exam, because I did not wan
 
 However, if you need a place to work out the kinks in your workflow and methodology when it comes to researching new things or troubleshooting new tools, working in a new, dedicated lab environment is great. It doesn't even have to be the Pro Labs specifically- practicing on platforms like [VulnLab](https://www.vulnlab.com/) or even making your own homelab (maybe using [GOAD](https://github.com/Orange-Cyberdefense/GOAD)?) give you opportunities to put yourself to the test and identify areas where things aren't clicking as well. Don't complete boxes and networks for the sake of completing them, critically analyze what it is you're doing and think about what things should change so that you figure out solutions quicker.
 
-I spent about 4-5 days working on Dante, and then 9 days working through Zephyr. Dante was a good lab to de-rust with because the network was less about being a network, and more just a bunch of boxes hooked up together, letting you practice pivoting and note taking. Zephyr, while not necessarily giving the most web practice, was an excellently designed lab to practice Active Directory exploitation, and definitely helped me focus on finding the low hanging fruit first and optimizing how I used Bloodhound. Regardless of how I felt about these labs, they helped me figure out a nice way to structure my notes, splitting my screen between box specific notes, the overall topology, and keeping track of the main attack path + commands used to pivot.
+I spent about 4-5 days working on Dante, and then 9 days working through Zephyr. Dante was a good lab to de-rust with because the network was less about being a network, and more just a bunch of boxes hooked up together, letting you practice pivoting and note-taking. Zephyr, while not necessarily giving the most web practice, was an excellently designed lab to practice Active Directory exploitation, and definitely helped me focus on finding the low-hanging fruit first and optimizing how I used Bloodhound. Regardless of how I felt about these labs, they helped me figure out a nice way to structure my notes, splitting my screen between box-specific notes, the overall topology, and keeping track of the main attack path + commands used to pivot.
 
 ![asdf](https://an00brektn.github.io/img/cpts-exam/Pasted%20image%2020240215205233.png)
 
 I also spent some of this preparation time working on a (scuffed) utility tool called [homie](https://github.com/An00bRektn/homie). With it being my first time really doing a project in Rust, the code is a bit all over the place, but the point is that investing time into developing ways to optimize and streamline your process is important. Homie is one of many examples of things I have in my arsenal to automate the boring stuff. I have aliases to automate fuzzing vhosts, do nmap scans, copy the IP out of my `tun0` interface (a lot of this is thanks to [jazzpizazz](https://github.com/jazzpizazz/zsh-aliases)), and these things definitely pay off.
 
 ### ~~Thinking in Graphs~~ literally just thinking in the first place
-The last major point I'll make about methodology is on one's thought process. Everyone starts out a beginner, and beginners will understandably ask questions that may sound silly. However, I think the biggest problem that plagues a lot of beginners is not truly taking the time to understand *things*. Maybe part of this reflects the quality of the material they're reading, maybe this has to do with the way the person chooses to learn.
+The last major point I'll make about methodology is on one's thought process. Everyone starts out as a beginner, and beginners will understandably ask questions that may sound silly. However, I think the biggest problem that plagues a lot of beginners is not truly taking the time to understand *things*. Maybe part of this reflects the quality of the material they're reading, maybe this has to do with the way the person chooses to learn.
 
 Let me put it this way.
 
@@ -85,15 +85,15 @@ When presented with a typical XSS tutorial, many people will simply latch on to 
 ```
 <sup>Courtesy: [PayloadsAllTheThings](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection#vulnerability-details)</sup>
 
-I, like many others who start out, looked at this list and start spraying and praying. Of course, this approach isn't inherently wrong. Eventually, a payload triggers, and you, the beginner, may be left with the question: "Now what?"
+I, like many others who start out, looked at this list and started spraying and praying. Of course, this approach isn't inherently wrong. Eventually, a payload triggers, and you, the beginner, may be left with the question: "Now what?"
 
-It's a classic case of being told what to do without understanding why to do it. Sure, you got the injection to work, but did you ever take the time to understand what the inherent vulnerability or impact of XSS is? What are the mechanics at play? Vocabulary/Jargon words like "stored", "reflected", and "DOM" might help, but vocabulary is arbitrary and only serves to describe things more succinctly or descriptively.
+It's a classic case of being told what to do without understanding why to do it. Sure, you got the injection to work, but did you ever take the time to understand what the inherent vulnerability or impact of XSS is? What are the mechanics at play? Vocabulary/Jargon words like "stored", "reflected", and "DOM" might help, but the vocabulary is arbitrary and only serves to describe things more succinctly or descriptively.
 
 I've had to go through the process of explaining the significance and mechanics of XSS to people who never truly understood what it's about multiple times, and the point of this is not to make fun of those people, but to look at a case study of how to learn something.
 
 What good is "thinking in graphs" when you don't exactly know what to think in the first place?
 
-While writing this, I want to pull out my soapbox and put an end to the "do you need to know to program to work in tech" discourse that circulates every week, but that, of course, is a discussion for another time. The point this section is to say that in order to hack, in the most basic sense, is you have to take the time and understand what it is you're actually hacking. What components are going into it, and how can you take advantage of primitives to make something unintended happen? This idea alone is, what I think, makes hacking beautiful, and is simultaneously one of the things that flies over a lot of people's heads who want to give it a shot but give into instant gratification.
+While writing this, I want to pull out my soapbox and put an end to the "do you need to know to program to work in tech" discourse that circulates every week, but that, of course, is a discussion for another time. The point of this section is to say that in order to hack, in the most basic sense, you have to take the time and understand what it is you're actually hacking. What components are going into it, and how can you take advantage of primitives to make something unintended happen? This idea alone is, what I think, makes hacking beautiful, and is simultaneously one of the things that flies over a lot of people's heads who want to give it a shot but give into instant gratification.
 
 Before deviating too far from the main point of this post, I think this video of [Bennet Foddy talking over a 1 minute speedrun of his game](https://youtu.be/dGU5_UUalPA?feature=shared) is something I often bring up when talking about hacking to other people. I think there's something very similar between the speedrunning community and the hacking community, but I think Foddy describes it best.
 
@@ -102,7 +102,7 @@ Before deviating too far from the main point of this post, I think this video of
 ![asdf](https://media.tenor.com/ycBnpv8fpWMAAAAi/peepog.gif)
 
 ## Okay okay back to the exam
-I know reading a random person's thoughts on methodology (especially one who far from being the best at it) can be a bit of a drag after a little while, so I figure I'd conclude with some final tips for the CPTS exam.
+I know reading a random person's thoughts on methodology (especially one who is far from being the best at it) can be a bit of a drag after a little while, so I figured I'd conclude with some final tips for the CPTS exam.
 
 **Leave no stone unturned**: It's very easy to run out of ideas and just throw random commands and pray they stick. While that can sometimes work, you will be much more efficient if you create a mental checklist of what it is you want to test. Focusing your efforts and knowing when to move on and maybe circle back is what makes the difference between finding a flag in one day versus five. The only time you're allowed to give up is when you've exhausted all options.
 
@@ -121,7 +121,7 @@ As much as I enjoyed the CPTS exam experience and certain parts of the course, t
 
 **Some of the exercises suck**: It's okay for things to suck, that's just a natural part of life. However, some of these questions can feel unnecessarily long (looking at you Password Attacks and Login Brute Forcing) which is more of a headache if anything. If you get stuck on one of these types of questions, perfectly understandable to ask for help, because sometimes the time is more valuable than guessing at what the one parameter you need to change is.
 
-**10 days is a lot**: I'm unemployed, so now was the perfect opportunity to take the exam. However, 10 days is a lot, and even though some people say to "treat it like a 20 day exam with a big gap in between", that's just a *really* long period of time for one exam. I could see someone managing to get through this exam while having a full time job, but you'd have to take more days off than just the weekend if you want it in one attempt.
+**10 days is a lot**: I'm unemployed, so now was the perfect opportunity to take the exam. However, 10 days is a lot, and even though some people say to "treat it like a 20-day exam with a big gap in between", that's just a *really* long period of time for one exam. I could see someone managing to get through this exam while having a full-time job, but you'd have to take more days off than just the weekend if you want it in one attempt.
 
 **Cheating and Integrity**:  As the certification grows, I sincerely hope that HTB is able to manage (1) the quality of the grading process and (2) cracking down on people asking for or selling cheats. With regard to the first point, it took a long time for me, and many others, to get the report graded, and while early reviews of the cert showed detailed feedback even on passing reports, there are some of us who were just told "good job, report is professional". Hopefully, assuming exam volume increases, they can scale up resources to grading.
 With regard to the second point, while I do have faith in HTB's internal processes to crack down on cheating and report selling, I think some of the things I've heard from other CPTS holders has been a little concerning. **To be clear**, I think the number of CPTS holders who have cheated to get the certification is low (saying that the number is zero feels like a wild assumption), but I hope there are more measures taken in the future to really ensure that the integrity of the certification is maintained. 
@@ -132,7 +132,7 @@ With regard to the second point, while I do have faith in HTB's internal process
 Course Quality: 8/10
 Course Difficulty: π/10
 
-How difficult the course is going to depend on how much you know going into it. I've been doing CTFs and learning since 2021, so I knew most of the stuff going in. The growth I experienced from the course was more refining what I knew and filling in holes, and less about any one thing being difficult. This wasn't asked, but here are my favorite and least favorite modules:
+How difficult the course is going to depend on how much you know going into it. I've been doing CTFs and learning since 2021, so I knew most of the stuff going in. The growth I experienced from the course was more about refining what I knew and filling in holes, and less about any one thing being difficult. This wasn't asked, but here are my favorite and least favorite modules:
 
 **Favorite**: Active Directory Enumeration and Attacks; Windows Privilege Escalation; Pivoting, Tunneling, and Port Forwarding; Attacking Enterprise Networks; File Upload Attacks
 
