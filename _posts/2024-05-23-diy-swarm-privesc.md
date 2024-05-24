@@ -2,7 +2,7 @@
 layout: post
 title: "HTB Business CTF: Swarm (but just root)"
 image: ""
-date: 2024-05-29 00:00:00
+date: 2024-05-23 00:00:00
 tags:
   - linux
   - hackthebox
