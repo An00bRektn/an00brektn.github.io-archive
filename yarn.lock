@@ -2004,10 +2004,10 @@ kind-of@^3.0.2:
   dependencies:
     is-buffer "^1.0.2"
 
-kouto-swiss@^0.13.0:
-  version "0.13.1"
-  resolved "https://registry.yarnpkg.com/kouto-swiss/-/kouto-swiss-0.13.1.tgz#2922c51fd7ea9a7911a3e71a2fddc4071ce44f9b"
-  integrity sha1-KSLFH9fqmnkRo+caL93EBxzkT5s=
+kouto-swiss@^0.14.0:
+  version "0.14.0"
+  resolved "https://registry.yarnpkg.com/kouto-swiss/-/kouto-swiss-0.14.0.tgz#feff73b66bad32d8257ff463bd18d8763936ddb7"
+  integrity sha1-/v9ztmutMtglf/RjvRjYdjk23bc=
   dependencies:
     prefiks "^0.3"
     stylus "0.54.5"
