@@ -1,5 +1,7 @@
 # Space Jekyll
 
+> This was version 1 of my blog that I'm no longer using. This is archived just because.
+
 A simple and elegant Jekyll theme based on Spacemacs. The theme works well on mobile devices as well.
 
 See a live demo [here](https://victorvoid.github.io/space-jekyll-template/).
