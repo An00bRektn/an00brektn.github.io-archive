@@ -31,6 +31,6 @@
   "dependencies": {
     "jeet": "^6.1.4",
     "kouto-swiss": "^0.13.0",
-    "rupture": "^0.6.1"
+    "rupture": "^0.7.1"
   }
 }
